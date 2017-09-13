@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "lib": [
+      "es6",
+      "es2017.object",
+      "dom"
+    ],
+    "target": "es5",
+    "baseUrl": "src/main",
+    "paths": {
+      "router/*": [
+        "router/*"
+      ],
+      "routes/*": [
+        "routes/*"
+      ]
+    },
+    "typeRoots": [
+      "./node_modules/@types"
+    ]
+  }
+}
