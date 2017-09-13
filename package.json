@@ -1,0 +1,28 @@
+{
+  "name": "expressjs-template",
+  "version": "0.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=7.10.1"
+  },
+  "scripts": {
+    "start": "./node_modules/.bin/ts-node -r tsconfig-paths/register src/main/app.ts"
+  },
+  "dependencies": {
+    "@types/node": "^8.0.28",
+    "body-parser": "^1.18.1",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.4",
+    "express-nunjucks": "^2.2.3",
+    "gulp": "^3.9.1",
+    "nunjucks": "^3.0.1",
+    "require-directory": "^2.1.1",
+    "serve-favicon": "^2.4.4",
+    "ts-node": "^3.3.0",
+    "tsconfig-paths": "^2.3.0",
+    "typescript": "^2.5.2"
+  },
+  "devDependencies": {
+    "debug": "^3.0.1"
+  }
+}
