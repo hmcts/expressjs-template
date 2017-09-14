@@ -4,6 +4,7 @@ node_js:
 cache: yarn
 script:
   - yarn --version
+  - yarn lint
   - yarn test
   - yarn test:routes
 # needed for newer yarn for a little bit: https://github.com/travis-ci/travis-ci/issues/7566#issuecomment-324138144

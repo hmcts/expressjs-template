@@ -7,6 +7,7 @@
   },
   "scripts": {
     "start": "./node_modules/.bin/ts-node -r tsconfig-paths/register src/main/app.ts",
+    "lint": "tslint --project tsconfig.json --type-check && sass-lint -v -q",
     "test": "NODE_ENV=mocha LOG_LEVEL=OFF mocha --compilers ts:ts-node/register -r tsconfig-paths/register $(find src/test \\( -name '*.ts' -or -name '*.js' \\) ! -path '*a11y*' ! -path '*/routes/*') --reporter mochawesome --reporter-options reportFilename=unit,inlineAssets=true,reportTitle=expressjs-template-unit",
     "test:routes": "NODE_ENV=mocha LOG_LEVEL=OFF mocha --compilers ts:ts-node/register -r tsconfig-paths/register $(find src/test \\( -name '*.ts' -or -name '*.js' \\) -path '*/routes/*') --reporter mochawesome --reporter-options reportFilename=routes,inlineAssets=true,reportTitle=expressjs-template-routes"
   },
@@ -31,6 +32,9 @@
     "chai": "^4.1.1",
     "debug": "^3.0.1",
     "nock": "^9.0.13",
-    "supertest": "^3.0.0"
+    "sass-lint": "^1.10.2",
+    "supertest": "^3.0.0",
+    "tslint": "^5.5.0",
+    "tslint-config-standard": "^6.0.1"
   }
 }

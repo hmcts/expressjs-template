@@ -12,4 +12,4 @@ describe('Home page', () => {
         .expect(res => expect(res.statusCode).to.equal(200))
     })
   })
-});
+})
