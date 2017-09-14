@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - "8.4"
+cache: yarn
+script:
+  - yarn --version
+  - yarn lint
+  - yarn test
+  - yarn test:routes
+# needed for newer yarn for a little bit: https://github.com/travis-ci/travis-ci/issues/7566#issuecomment-324138144
+group: edge
+sudo: required
