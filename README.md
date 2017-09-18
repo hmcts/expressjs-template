@@ -15,6 +15,7 @@ If you need to create a new application, you can simply use this one as a starti
 The template is a working application with a minimal setup. It contains:
   * application skeleton
   * common dependencies
+  * Docker setup
   * static analysis set up
   * integration with Travis CI
   * HTTPS set up for development environment
@@ -47,7 +48,25 @@ $ gulp
 
 The applications's home page will be available at https://localhost:3100
 
-### TODO: Docker
+### Running with Docker
+
+Create docker image:
+
+```bash
+  docker-compose build
+```
+
+Run the application by executing the following command:
+
+```bash
+  docker-compose up
+```
+
+This will start the frontend container exposing the application's port
+(set to `3100` in this template app).
+
+In order to test if the application is up, you can visit http://localhost:3100 in your browser.
+You should get a very basic home page (no styles, etc.).
 
 ## Developing
 
