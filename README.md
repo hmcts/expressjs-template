@@ -50,7 +50,8 @@ The applications's home page will be available at https://localhost:3100
 
 ### Code style
 
-We use [TSLint](https://palantir.github.io/tslint/) with [StandardJS](http://standardjs.com/index.html) rules alongside [sass-lint](https://github.com/sasstools/sass-lint)
+We use [TSLint](https://palantir.github.io/tslint/) with their recommended set of rules
+alongside [sass-lint](https://github.com/sasstools/sass-lint)
 
 Running the linting:
 ```bash
