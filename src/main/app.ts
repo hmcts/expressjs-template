@@ -10,6 +10,18 @@ const env = process.env.NODE_ENV || "development";
 export const app: express.Express = express();
 app.locals.ENV = env;
 
+// TODO: adjust these values to your application
+logging.config({
+  environment: process.env.NODE_ENV,
+  microservice: "expressjs-template",
+  team: "platform-engineering",
+});
+
+const logger = logging.getLogger("app");
+
+// setup logging of HTTP requests
+app.use(logging.express.accessLogger());
+
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "njk");
