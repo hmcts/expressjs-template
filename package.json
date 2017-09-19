@@ -8,19 +8,24 @@
   "scripts": {
     "start": "./node_modules/.bin/ts-node -r tsconfig-paths/register src/main/app.ts",
     "lint": "tslint --project tsconfig.json --type-check && sass-lint -v -q",
+    "sass": "gulp sass copy-files",
     "test": "NODE_ENV=mocha LOG_LEVEL=OFF mocha --compilers ts:ts-node/register -r tsconfig-paths/register $(find src/test \\( -name '*.ts' -or -name '*.js' \\) ! -path '*a11y*' ! -path '*/routes/*') --reporter mochawesome --reporter-options reportFilename=unit,inlineAssets=true,reportTitle=expressjs-template-unit",
-    "test:routes": "NODE_ENV=mocha LOG_LEVEL=OFF mocha --compilers ts:ts-node/register -r tsconfig-paths/register $(find src/test \\( -name '*.ts' -or -name '*.js' \\) -path '*/routes/*') --reporter mochawesome --reporter-options reportFilename=routes,inlineAssets=true,reportTitle=expressjs-template-routes"
+    "test:routes": "NODE_ENV=mocha LOG_LEVEL=OFF mocha --compilers ts:ts-node/register -r tsconfig-paths/register $(find src/test \\( -name '*.ts' -or -name '*.js' \\) -path '*/routes/*') --reporter mochawesome --reporter-options reportFilename=routes,inlineAssets=true,reportTitle=expressjs-template-routes",
+    "test:nsp": "nsp check"
   },
   "dependencies": {
-    "@types/mocha": "*",
+    "@hmcts/nodejs-logging": "^1.2.0",
+    "@types/mocha": "^2.2.43",
     "@types/node": "^8.0.28",
     "body-parser": "^1.18.1",
     "cookie-parser": "^1.4.3",
     "express": "^4.15.4",
     "express-nunjucks": "^2.2.3",
-    "gulp": "^3.9.1",
-    "mocha": "^3.5.0",
-    "mochawesome": "^2.2.0",
+    "govuk-elements-sass": "^3.1.1",
+    "govuk_template_jinja": "0.22.3",
+    "jquery": "^3.2.1",
+    "mocha": "^3.5.3",
+    "mochawesome": "^2.3.0",
     "nunjucks": "^3.0.1",
     "require-directory": "^2.1.1",
     "serve-favicon": "^2.4.4",
@@ -29,12 +34,18 @@
     "typescript": "^2.5.2"
   },
   "devDependencies": {
-    "chai": "^4.1.1",
+    "chai": "^4.1.2",
     "debug": "^3.0.1",
-    "nock": "^9.0.13",
-    "sass-lint": "^1.10.2",
+    "gulp": "^3.9.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-replace": "^0.6.1",
+    "gulp-sass": "^3.1.0",
+    "nock": "^9.0.14",
+    "nsp": "^2.8.0",
+    "sass-lint": "^1.11.1",
     "supertest": "^3.0.0",
-    "tslint": "^5.5.0",
-    "tslint-config-standard": "^6.0.1"
+    "tslint": "^5.7.0"
   }
 }

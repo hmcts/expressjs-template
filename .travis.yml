@@ -4,6 +4,8 @@ node_js:
 cache: yarn
 script:
   - yarn --version
+  - yarn sass
+  - yarn check
   - yarn lint
   - yarn test
   - yarn test:routes
