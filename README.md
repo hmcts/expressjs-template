@@ -17,6 +17,7 @@ The template is a working application with a minimal setup. It contains:
   * common dependencies
   * static analysis set up
   * integration with Travis CI
+  * HTTPS set up for development environment
   * MIT license and contribution information
 
 ## Getting Started

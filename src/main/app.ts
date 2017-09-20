@@ -1,4 +1,3 @@
-import * as logging from "@hmcts/nodejs-logging";
 import * as bodyParser from "body-parser";
 import * as cookieParser from "cookie-parser";
 import * as express from "express";
@@ -6,8 +5,6 @@ import * as expressNunjucks from "express-nunjucks";
 import * as path from "path";
 import { RouterFinder } from "router/routerFinder";
 import * as favicon from "serve-favicon";
-
-const logger = logging.getLogger("app");
 
 const env = process.env.NODE_ENV || "development";
 export const app: express.Express = express();
@@ -36,11 +33,4 @@ app.use((err, req, res, next) => {
 
   res.status(err.status || 500);
   res.render("error");
-});
-
-// TODO: set the right port for your application
-const port: number = parseInt(process.env.PORT, 10) || 3100;
-
-app.listen(port, () => {
-  logger.info(`Application started: http://localhost:${port}`);
 });
