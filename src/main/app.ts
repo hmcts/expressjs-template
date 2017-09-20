@@ -5,6 +5,7 @@ import * as cookieParser from "cookie-parser";
 import * as csrf from "csurf";
 import * as express from "express";
 import * as expressNunjucks from "express-nunjucks";
+import { Helmet, IConfig as HelmetConfig } from "modules/helmet";
 import * as path from "path";
 import { RouterFinder } from "router/routerFinder";
 import * as favicon from "serve-favicon";
@@ -22,6 +23,9 @@ logging.config({
 
 // setup logging of HTTP requests
 app.use(logging.express.accessLogger());
+
+// secure the application by adding various HTTP headers to its responses
+new Helmet(config.get<HelmetConfig>("security")).enableFor(app);
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
