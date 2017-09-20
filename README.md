@@ -94,6 +94,26 @@ Here's how to run functional tests (the template contains just one sample test):
 $ yarn test:routes
 ```
 
+### Security
+
+#### CSRF prevention
+
+[Cross-Site Request Forgery](https://github.com/pillarjs/understanding-csrf) prevention has already been
+set up in this template, at the application level. However, you need to make sure that CSRF token
+is present in every HTML form that requires it. For that purpose you can use the `csrfProtection` macro,
+included in this template app. Your njk file would look like this:
+
+```
+{% from "macros/csrf.njk" import csrfProtection %}
+...
+<form ...>
+  ...
+    {{ csrfProtection(csrfToken) }}
+  ...
+</form>
+...
+```
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details

@@ -20,6 +20,7 @@
     "body-parser": "^1.18.1",
     "config": "^1.26.2",
     "cookie-parser": "^1.4.3",
+    "csurf": "^1.9.0",
     "express": "^4.15.4",
     "express-nunjucks": "^2.2.3",
     "govuk-elements-sass": "^3.1.1",
