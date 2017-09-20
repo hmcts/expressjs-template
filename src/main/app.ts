@@ -1,6 +1,8 @@
 import * as logging from "@hmcts/nodejs-logging";
 import * as bodyParser from "body-parser";
+import * as config from "config";
 import * as cookieParser from "cookie-parser";
+import * as csrf from "csurf";
 import * as express from "express";
 import * as expressNunjucks from "express-nunjucks";
 import * as path from "path";
@@ -33,6 +35,21 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 expressNunjucks(app);
+
+if (config.useCSRFProtection === true) {
+  const csrfOptions = {
+    cookie: {
+      httpOnly: true,
+      sameSite: "lax",
+      secure: true,
+    },
+  };
+
+  app.use(csrf(csrfOptions), (req, res, next) => {
+    res.locals.csrfToken = req.csrfToken();
+    next();
+  });
+}
 
 app.use("/", RouterFinder.findAll(path.join(__dirname, "routes")));
 
