@@ -77,7 +77,7 @@ alongside [sass-lint](https://github.com/sasstools/sass-lint)
 
 Running the linting:
 ```bash
-$ yarn lint`
+$ yarn lint
 ```
 
 ### Running the tests
