@@ -1,3 +1,4 @@
+import * as logging from "@hmcts/nodejs-logging";
 import * as bodyParser from "body-parser";
 import * as cookieParser from "cookie-parser";
 import * as express from "express";
@@ -16,8 +17,6 @@ logging.config({
   microservice: "expressjs-template",
   team: "platform-engineering",
 });
-
-const logger = logging.getLogger("app");
 
 // setup logging of HTTP requests
 app.use(logging.express.accessLogger());
