@@ -19,6 +19,8 @@ The template is a working application with a minimal setup. It contains:
   * static analysis set up
   * integration with Travis CI
   * HTTPS set up for development environment
+  * CSRF prevention set up
+  * Header-based security provided by [Helmet](https://helmetjs.github.io/)
   * basic health endpoint
   * MIT license and contribution information
 
