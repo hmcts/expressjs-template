@@ -14,6 +14,7 @@
     "test:nsp": "nsp check"
   },
   "dependencies": {
+    "@hmcts/nodejs-healthcheck": "^1.4.3",
     "@hmcts/nodejs-logging": "^1.2.3",
     "@types/mocha": "^2.2.43",
     "@types/node": "^8.0.28",

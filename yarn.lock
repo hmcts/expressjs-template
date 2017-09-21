@@ -2,6 +2,14 @@
 # yarn lockfile v1
 
 
+"@hmcts/nodejs-healthcheck@^1.4.3":
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/@hmcts/nodejs-healthcheck/-/nodejs-healthcheck-1.4.3.tgz#d26b72106411bd820b4ae43cf1a7ec9814ca8f58"
+  dependencies:
+    fs-extra "^3.0.1"
+    js-yaml "^3.8.4"
+    superagent "^3.5.1"
+
 "@hmcts/nodejs-logging@^1.2.3":
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/@hmcts/nodejs-logging/-/nodejs-logging-1.2.3.tgz#f735554898dc79c70ee628c6ac6a180c9e87e85c"
@@ -2310,7 +2318,7 @@ js-tokens@^3.0.0, js-tokens@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
 
-js-yaml@^3.4.6, js-yaml@^3.5.1, js-yaml@^3.5.4:
+js-yaml@^3.4.6, js-yaml@^3.5.1, js-yaml@^3.5.4, js-yaml@^3.8.4:
   version "3.10.0"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.10.0.tgz#2e78441646bd4682e963f22b6e92823c309c62dc"
   dependencies:
@@ -3994,7 +4002,7 @@ subcommand@^2.0.3:
     minimist "^1.2.0"
     xtend "^4.0.0"
 
-superagent@^3.0.0:
+superagent@^3.0.0, superagent@^3.5.1:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/superagent/-/superagent-3.6.0.tgz#eb679651057c3462199c7b902b696c25350e1b87"
   dependencies:
