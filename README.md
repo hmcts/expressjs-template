@@ -19,6 +19,7 @@ The template is a working application with a minimal setup. It contains:
   * static analysis set up
   * integration with Travis CI
   * HTTPS set up for development environment
+  * basic health endpoint
   * MIT license and contribution information
 
 ## Getting Started
@@ -146,6 +147,14 @@ Here's an example setup:
 ```
 
 Make sure you have those values set correctly for your application.
+
+### Healthcheck
+
+The application exposes a health endpoint (https://localhost:3100/health), created with the use of
+[Nodejs Healthcheck](https://github.com/hmcts/nodejs-healthcheck) library. This endpoint is defined
+in [health.ts](src/main/routes/health.ts) file. Make sure you adjust it correctly in your application.
+In particular, remember to replace the sample check with checks specific to your frontend app,
+e.g. the ones verifying the state of each service it depends on.
 
 ## License
 
