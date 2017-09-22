@@ -17,7 +17,6 @@
   "dependencies": {
     "@hmcts/nodejs-healthcheck": "^1.4.3",
     "@hmcts/nodejs-logging": "^1.2.3",
-    "@types/mocha": "^2.2.43",
     "@types/node": "^8.0.28",
     "body-parser": "^1.18.1",
     "config": "^1.26.2",
@@ -29,8 +28,6 @@
     "govuk_template_jinja": "^0.22.3",
     "helmet": "^3.8.1",
     "jquery": "^3.2.1",
-    "mocha": "^3.5.3",
-    "mochawesome": "^2.3.1",
     "nunjucks": "^3.0.1",
     "require-directory": "^2.1.1",
     "serve-favicon": "^2.4.4",
@@ -39,6 +36,7 @@
     "typescript": "^2.5.2"
   },
   "devDependencies": {
+    "@types/mocha": "^2.2.43",
     "chai": "^4.1.2",
     "debug": "^3.0.1",
     "gulp": "^3.9.1",
@@ -47,6 +45,8 @@
     "gulp-plumber": "^1.1.0",
     "gulp-replace": "^0.6.1",
     "gulp-sass": "^3.1.0",
+    "mocha": "^3.5.3",
+    "mochawesome": "^2.3.1",
     "nock": "^9.0.16",
     "nsp": "^2.8.0",
     "pa11y": "^4.13.0",
