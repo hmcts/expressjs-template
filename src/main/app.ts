@@ -24,6 +24,8 @@ logging.config({
 // setup logging of HTTP requests
 app.use(logging.express.accessLogger());
 
+const logger = logging.getLogger("app");
+
 // secure the application by adding various HTTP headers to its responses
 new Helmet(config.get<HelmetConfig>("security")).enableFor(app);
 
@@ -65,6 +67,8 @@ app.use((req, res, next) => {
 
 // error handler
 app.use((err, req, res, next) => {
+  logger.error(`${err.stack || err}`);
+
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = env === "development" ? err : {};
