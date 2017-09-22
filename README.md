@@ -22,6 +22,7 @@ The template is a working application with a minimal setup. It contains:
   * CSRF prevention set up
   * Header-based security provided by [Helmet](https://helmetjs.github.io/)
   * basic health endpoint
+  * pa11y set up for accessibility testing
   * MIT license and contribution information
 
 ## Getting Started
@@ -85,7 +86,7 @@ $ yarn lint
 
 ### Running the tests
 
-This template app uses [Mocha](https://mochajs.org/) as the test engine. You can rununit tests by executing
+This template app uses [Mocha](https://mochajs.org/) as the test engine. You can run unit tests by executing
 the following command:
 
 ```bash
@@ -93,9 +94,18 @@ $ yarn test
 ```
 
 Here's how to run functional tests (the template contains just one sample test):
+
 ```bash
 $ yarn test:routes
 ```
+
+Running accessibility tests:
+
+```bash
+$ yarn test:a11y
+```
+
+Make sure all the paths in your application are covered by accessibility tests (see [a11y.ts](src/test/a11y/a11y.ts)).
 
 ### Security
 
