@@ -17,7 +17,7 @@
   "dependencies": {
     "@hmcts/info-provider": "^1.0.0",
     "@hmcts/nodejs-healthcheck": "^1.4.3",
-    "@hmcts/nodejs-logging": "^1.2.3",
+    "@hmcts/nodejs-logging": "file:./../../hmcts/nodejs-logging",
     "@types/node": "^8.0.28",
     "body-parser": "^1.18.1",
     "config": "^1.26.2",
