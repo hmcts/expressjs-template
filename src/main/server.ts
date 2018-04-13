@@ -1,11 +1,11 @@
 #!/usr/bin/env node
-import * as logging from "@hmcts/nodejs-logging";
+import { Logger } from "@hmcts/nodejs-logging";
 import * as fs from "fs";
 import * as https from "https";
 import * as path from "path";
 import { app } from "./app";
 
-const logger = logging.getLogger("server");
+const logger = Logger.getLogger("server");
 
 // TODO: set the right port for your application
 const port: number = parseInt(process.env.PORT, 10) || 3100;
