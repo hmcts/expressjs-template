@@ -31,7 +31,7 @@ The template is a working application with a minimal setup. It contains:
 
 Running the application requires the following tools to be installed in your environment:
 
-  * [Node.js](https://nodejs.org/) v7.2.0 or later
+  * [Node.js](https://nodejs.org/) v12.0.0 or later
   * [yarn](https://yarnpkg.com/)
   * [Gulp](http://gulpjs.com/)
   * [Docker](https://www.docker.com)
