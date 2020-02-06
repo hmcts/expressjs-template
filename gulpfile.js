@@ -14,7 +14,7 @@ const assetsDirectory = './src/main/public'
 const stylesheetsDirectory = `${assetsDirectory}/stylesheets`
 
 // compile scss files
-gulp.task('sass', () => {
+gulp.task('sass', (done) => {
   gulp.src(stylesheetsDirectory + '/*.scss')
     .pipe(sass({
       includePaths: [
@@ -26,10 +26,11 @@ gulp.task('sass', () => {
     .pipe(sass())
     .pipe(gulp.dest(stylesheetsDirectory))
     .pipe(livereload())
+    done()
 })
 
 // copy js, stylesheets and images from dependencies to frontend's public directory
-gulp.task('copy-files', () => {
+gulp.task('copy-files', (done) => {
   gulp.src([
     './node_modules/jquery/dist/jquery.min.js',
     './node_modules/govuk_frontend_toolkit/javascripts/**/*.js',
@@ -48,15 +49,17 @@ gulp.task('copy-files', () => {
   ])
   .pipe(replace('images/', '/stylesheets/lib/images/', { skipBinary: true }))
   .pipe(gulp.dest(`${assetsDirectory}/stylesheets/lib/`))
+  done()
 })
 
 // compile scss files whenever they're changed
-gulp.task('watch', () => {
-  gulp.watch(stylesheetsDirectory + '/**/*.scss', [ 'sass' ])
+gulp.task('watch', (done) => {
+  gulp.watch(stylesheetsDirectory + '/**/*.scss', gulp.series('sass'))
+  done()
 })
 
 // start the application and watch for file changes (in which case it will be restarted)
-gulp.task('develop', () => {
+gulp.task('develop', (done) => {
   setTimeout(() => {
     livereload.listen()
 
@@ -67,11 +70,18 @@ gulp.task('develop', () => {
         livereload.changed(__dirname)
     })
   }, 500)
+  done()
 })
 
-gulp.task('default', [
-  'sass',
-  'copy-files',
-  'develop',
-  'watch'
-])
+gulp.task('default',
+  gulp.series(
+    gulp.parallel(
+      'sass',
+      'copy-files',
+    ),
+    gulp.parallel(
+      'develop',
+      'watch'
+    )
+  )
+)
