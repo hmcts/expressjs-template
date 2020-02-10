@@ -9,9 +9,10 @@ import * as path from "path";
 import { RouterFinder } from "router/routerFinder";
 import favicon from "serve-favicon";
 import { HTTPError } from "HttpError";
-
+import { Nunjucks } from 'modules/nunjucks'
 
 const env = process.env.NODE_ENV || "development";
+const developmentMode = env === 'development'
 
 export const app = express();
 app.locals.ENV = env;
@@ -21,12 +22,14 @@ app.use(Express.accessLogger());
 
 const logger = Logger.getLogger("app");
 
+
+new Nunjucks(developmentMode)
+  .enableFor(app)
 // secure the application by adding various HTTP headers to its responses
 new Helmet(config.get("security")).enableFor(app);
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "njk");
 
 app.use(express.static(path.join(__dirname, "public")));
 app.use(favicon(path.join(__dirname, "/public/img/favicon.ico")));
