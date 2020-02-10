@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { Logger } from "@hmcts/nodejs-logging";
+const { Logger } = require('@hmcts/nodejs-logging')
 import * as fs from "fs";
 import * as https from "https";
 import * as path from "path";

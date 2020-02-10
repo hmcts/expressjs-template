@@ -1,4 +1,5 @@
-import * as healthcheck from "@hmcts/nodejs-healthcheck";
+const healthcheck = require('@hmcts/nodejs-healthcheck')
+
 import * as express from "express";
 
 const router = express.Router();

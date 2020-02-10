@@ -1,12 +1,8 @@
 import * as express from "express";
-import * as helmet from "helmet";
+import helmet = require('helmet');
 
 export interface IConfig {
   referrerPolicy: string;
-  hpkp: {
-    maxAge: number;
-    sha256s: string[];
-  };
 }
 
 const googleAnalyticsDomain = "*.google-analytics.com";
@@ -21,16 +17,15 @@ export class Helmet {
   constructor(public config: IConfig) {
   }
 
-  public enableFor(app: express.Express) {
+  public enableFor(app: express.Express) : void {
     // include default helmet functions
     app.use(helmet());
 
     this.setContentSecurityPolicy(app);
     this.setReferrerPolicy(app, this.config.referrerPolicy);
-    this.setHttpPublicKeyPinning(app, this.config.hpkp);
   }
 
-  private setContentSecurityPolicy(app) {
+  private setContentSecurityPolicy(app: express.Express) {
     app.use(helmet.contentSecurityPolicy(
       {
         directives: {
@@ -46,18 +41,11 @@ export class Helmet {
     ));
   }
 
-  private setReferrerPolicy(app, policy) {
+  private setReferrerPolicy(app: express.Express, policy: string) {
     if (!policy) {
       throw new Error("Referrer policy configuration is required");
     }
 
     app.use(helmet.referrerPolicy({policy}));
-  }
-
-  private setHttpPublicKeyPinning(app, hpkpConfig) {
-    app.use(helmet.hpkp({
-      maxAge: hpkpConfig.maxAge,
-      sha256s: hpkpConfig.sha256s,
-    }));
   }
 }
