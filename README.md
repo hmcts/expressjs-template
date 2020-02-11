@@ -76,7 +76,7 @@ You should get a very basic home page (no styles, etc.).
 
 ### Code style
 
-We use [TSLint](https://palantir.github.io/tslint/) with their recommended set of rules
+We use [ESLint](https://github.com/typescript-eslint/typescript-eslint) 
 alongside [sass-lint](https://github.com/sasstools/sass-lint)
 
 Running the linting:

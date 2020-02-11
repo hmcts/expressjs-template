@@ -7,11 +7,11 @@
   },
   "scripts": {
     "start": "./node_modules/.bin/ts-node -r tsconfig-paths/register src/main/server.ts",
-    "lint": "tslint --project tsconfig.json --type-check && sass-lint -v -q",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx && sass-lint -v -q",
     "sass": "gulp sass copy-files",
     "test": "NODE_ENV=mocha LOG_LEVEL=OFF mocha -r tsconfig-paths/register $(find src/test \\( -name '*.ts' -or -name '*.js' \\) ! -path '*a11y*' ! -path '*/routes/*') --reporter mochawesome --reporter-options reportFilename=unit,inlineAssets=true,reportTitle=expressjs-template-unit",
     "test:routes": "NODE_ENV=mocha LOG_LEVEL=OFF  TS_NODE_PROJECT=tsconfig.json mocha --require ts-node/register $(find src/test \\( -name '*.ts' -or -name '*.js' \\) -path '*/routes/*') --require ts-node/register --reporter mochawesome --reporter-options reportFilename=routes,inlineAssets=true,reportTitle=expressjs-template-routes",
-    "test:a11y": "NODE_ENV=mocha LOG_LEVEL=ERROR mocha -r tsconfig-paths/register src/test/a11y --timeout 60000 --reporter mochawesome --require ts-node/register --reporter-options reportFilename=a11y,inlineAssets=true,reportTitle=expressjs-template-a11y",
+    "test:a11y": "NODE_ENV=mocha LOG_LEVEL=ERROR TS_NODE_PROJECT=tsconfig.json mocha --exit $(find src/test \\( -name '*.ts' -or -name '*.js' \\) -path '*/a11y/*') --timeout 60000 --reporter mochawesome --require ts-node/register --reporter-options reportFilename=a11y,inlineAssets=true,reportTitle=expressjs-template-a11y",
     "test:nsp": "nsp check"
   },
   "dependencies": {
@@ -48,9 +48,13 @@
     "@types/chai-as-promised": "^7.1.1",
     "@types/mocha": "^7.0.1",
     "@types/supertest": "^2.0.8",
+    "@typescript-eslint/eslint-plugin": "^2.19.2",
+    "@typescript-eslint/eslint-plugin-tslint": "^2.19.2",
+    "@typescript-eslint/parser": "^2.19.2",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
     "debug": "^4.1.1",
+    "eslint": "^6.8.0",
     "gulp": "^4.0.2",
     "gulp-livereload": "^4.0.2",
     "gulp-nodemon": "^2.4.2",
@@ -65,7 +69,6 @@
     "sass-lint": "^1.13.1",
     "sinon": "^8.1.1",
     "sinon-chai": "^3.4.0",
-    "supertest": "^4.0.2",
-    "tslint": "^6.0.0"
+    "supertest": "^4.0.2"
   }
 }
