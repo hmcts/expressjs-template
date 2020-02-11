@@ -7,8 +7,19 @@ import {app} from "../../main/app";
 const agent = supertest.agent(app);
 
 
-class Pa11yValidationError {
-  type: string
+class Pa11yResult {
+  documentTitle: string;
+  pageUrl: string;
+  issues: PallyIssue[];
+}
+
+class PallyIssue {
+  code: string;
+  context: string;
+  message: string;
+  selector: string;
+  type: string;
+  typeCode: number;
 }
 
 describe("Accessibility", () => {
@@ -25,11 +36,9 @@ function testAccessibility(url: string): void {
 
     it("should have no accessibility errors", (done) => {
       ensurePageCallWillSucceed(url)
-        .then(() =>
-        pa11y(agent.get(url).url),
-        )
-        .then((messages) => {
-          expectNoErrors(messages);
+        .then(() => pa11y(agent.get(url).url))
+        .then((result: Pa11yResult) => {
+          expectNoErrors(result.issues);
           done();
         })
         .catch((err) => done(err));
@@ -49,7 +58,7 @@ function ensurePageCallWillSucceed(url: string): Promise<void> {
     });
 }
 
-function expectNoErrors(messages : Pa11yValidationError[]) {
+function expectNoErrors(messages : PallyIssue[]) {
   const errors = messages.filter((m) => m.type === "error");
 
   if (errors.length > 0) {
