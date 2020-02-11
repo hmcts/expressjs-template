@@ -1,17 +1,7 @@
-FROM node:8.1.4
+FROM hmctspublic.azurecr.io/base/node:12-alpine
 
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
-
-COPY package.json yarn.lock /usr/src/app/
-RUN yarn install
-
-COPY src/main /usr/src/app/src/main
-COPY config /usr/src/app/config
-
-COPY gulpfile.js tsconfig.json /usr/src/app/
-RUN yarn sass
+COPY --chown=hmcts:hmcts . .
+RUN yarn install && yarn sass && rm -r node_modules/ && yarn install --production && rm -r ~/.cache/yarn
 
 # TODO: expose the right port for your application
 EXPOSE 3100
-CMD [ "yarn", "start" ]
