@@ -1,12 +1,15 @@
 import {fail} from "assert";
-import * as promisify from "es6-promisify";
-import * as pa11y from "pa11y";
+
+const pa11y = require('pa11y')
 import * as supertest from "supertest";
 import {app} from "../../main/app";
 
 const agent = supertest.agent(app);
-const pa11yTest = pa11y();
-const test = promisify(pa11yTest.run, pa11yTest);
+
+
+class Pa11yValidationError {
+  type: string
+}
 
 describe("Accessibility", () => {
 
@@ -23,7 +26,7 @@ function testAccessibility(url: string): void {
     it("should have no accessibility errors", (done) => {
       ensurePageCallWillSucceed(url)
         .then(() =>
-          test(agent.get(url).url),
+        pa11y(agent.get(url).url),
         )
         .then((messages) => {
           expectNoErrors(messages);
@@ -46,7 +49,7 @@ function ensurePageCallWillSucceed(url: string): Promise<void> {
     });
 }
 
-function expectNoErrors(messages) {
+function expectNoErrors(messages : Pa11yValidationError[]) {
   const errors = messages.filter((m) => m.type === "error");
 
   if (errors.length > 0) {

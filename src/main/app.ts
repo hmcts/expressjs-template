@@ -1,30 +1,35 @@
-import { Express as LoggingExpressMiddleware, Logger } from "@hmcts/nodejs-logging";
+const { Express, Logger } = require('@hmcts/nodejs-logging')
+
 import * as bodyParser from "body-parser";
-import * as config from "config";
-import * as cookieParser from "cookie-parser";
-import * as csrf from "csurf";
-import * as express from "express";
-import * as expressNunjucks from "express-nunjucks";
-import { Helmet, IConfig as HelmetConfig } from "modules/helmet";
+const config = require('config')
+import cookieParser from "cookie-parser";
+import express from "express";
+import { Helmet } from "modules/helmet";
 import * as path from "path";
 import { RouterFinder } from "router/routerFinder";
-import * as favicon from "serve-favicon";
+import favicon from "serve-favicon";
+import { HTTPError } from "HttpError";
+import { Nunjucks } from 'modules/nunjucks'
 
 const env = process.env.NODE_ENV || "development";
-export const app: express.Express = express();
+const developmentMode = env === 'development'
+
+export const app = express();
 app.locals.ENV = env;
 
 // setup logging of HTTP requests
-app.use(LoggingExpressMiddleware.accessLogger());
+app.use(Express.accessLogger());
 
 const logger = Logger.getLogger("app");
 
+
+new Nunjucks(developmentMode)
+  .enableFor(app)
 // secure the application by adding various HTTP headers to its responses
-new Helmet(config.get<HelmetConfig>("security")).enableFor(app);
+new Helmet(config.get("security")).enableFor(app);
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "njk");
 
 app.use(express.static(path.join(__dirname, "public")));
 app.use(favicon(path.join(__dirname, "/public/img/favicon.ico")));
@@ -33,22 +38,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-expressNunjucks(app);
-
-if (config.useCSRFProtection === true) {
-  const csrfOptions = {
-    cookie: {
-      httpOnly: true,
-      sameSite: "lax",
-      secure: true,
-    },
-  };
-
-  app.use(csrf(csrfOptions), (req, res, next) => {
-    res.locals.csrfToken = req.csrfToken();
-    next();
-  });
-}
 
 app.use("/", RouterFinder.findAll(path.join(__dirname, "routes")));
 
@@ -59,7 +48,7 @@ app.use((req, res, next) => {
 });
 
 // error handler
-app.use((err, req, res, next) => {
+app.use((err: HTTPError, req: express.Request, res: express.Response, next: express.NextFunction) => {
   logger.error(`${err.stack || err}`);
 
   // set locals, only providing error in development

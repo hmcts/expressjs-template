@@ -1,6 +1,11 @@
 {
   "compilerOptions": {
-    "alwaysStrict": true,
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es6",
+    "noImplicitAny": true,
+    "moduleResolution": "node",
     "noUnusedLocals": true,
     "experimentalDecorators": true,
     "skipLibCheck": true,
@@ -9,7 +14,6 @@
       "es2017.object",
       "dom"
     ],
-    "target": "es5",
     "baseUrl": "src/main",
     "paths": {
       "router/*": [

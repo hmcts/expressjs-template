@@ -1,5 +1,5 @@
 import { Router } from "express";
-import * as requireDirectory from "require-directory";
+const requireDirectory = require('require-directory')
 
 const options: object = {
   extensions: ["ts", "js"],
