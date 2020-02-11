@@ -4,12 +4,12 @@ import * as bodyParser from "body-parser";
 const config = require('config')
 import cookieParser from "cookie-parser";
 import express from "express";
-import { Helmet } from "modules/helmet";
+import { Helmet } from "./modules/helmet";
 import * as path from "path";
-import { RouterFinder } from "router/routerFinder";
+import { RouterFinder } from "./router/routerFinder";
 import favicon from "serve-favicon";
 import { HTTPError } from "HttpError";
-import { Nunjucks } from 'modules/nunjucks'
+import { Nunjucks } from './modules/nunjucks'
 
 const env = process.env.NODE_ENV || "development";
 const developmentMode = env === 'development'
