@@ -71,6 +71,11 @@
     "sinon": "^8.1.1",
     "sinon-chai": "^3.4.0",
     "supertest": "^4.0.2",
-    "tslint": "5.20.1"
+    "ts-loader": "^6.2.1",
+    "tslint": "5.20.1",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-node-externals": "^1.7.2"
   }
 }
