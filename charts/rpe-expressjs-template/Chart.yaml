@@ -4,5 +4,3 @@ description: A Helm chart for spring-boot-template App
 name: rpe-expressjs-template
 home: https://github.com/hmcts/spring-boot-template
 version: 0.0.1
-maintainers:
-  - name: HMCTS Platform engineering team

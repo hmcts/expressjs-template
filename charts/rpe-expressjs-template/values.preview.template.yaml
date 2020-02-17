@@ -1,4 +1,4 @@
-java:
+nodejs:
   environment:
   # Don't modify below here
   image: ${IMAGE_NAME}
