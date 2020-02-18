@@ -7,18 +7,6 @@ const miniCss = new MiniCssExtractPlugin({
   chunkFilename: '[id].css',
 });
 
-const scssRule = {
-  test: /\.s[ac]ss$/i,
-  use: [
-    // Creates `style` nodes from JS strings
-    'style-loader',
-    // Translates CSS into CommonJS
-    'css-loader',
-    // Compiles Sass to CSS
-    'sass-loader',
-  ],
-};
-
 const miniCssOptions = {
   loader: MiniCssExtractPlugin.loader,
 };
@@ -29,7 +17,10 @@ const miniCssRule = {
 };
 
 module.exports = {
-  rules: [scssRule, miniCssRule],
+  rules: [{
+    test: /\.scss$/,
+    use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+  }],
   plugins: [miniCss]
 };
 
