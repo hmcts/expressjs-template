@@ -1,51 +1,27 @@
 const path = require('path');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
-const config = {
-  mode: 'production',
-  devtool: 'source-map',
-  optimization: {
-    minimizer: [
-      new UglifyJsPlugin({
-        cache: true,
-        parallel: true,
-        sourceMap: true,
-        uglifyOptions: {
-          warnings: false,
-          compress: {
-            ie8: true,
-          },
-          mangle: {
-            ie8: true
-          },
-          output: {
-            comments: false,
-            ie8: true
-          }
-        }
-      })
-    ]
-  },
-  entry: './src/main/assets/main.js',
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const miniCss = new MiniCssExtractPlugin({
+  // Options similar to the same options in webpackOptions.output
+  // both options are optional
+  filename: '[name].css',
+  chunkFilename: '[id].css',
+});
+
+
+module.exports = {
+  plugins: [miniCss],
+  mode: "development",
   module: {
     rules: [
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
-        }
+        test: /\.scss$/,
+        use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
       }
     ]
   },
   output: {
-    path: path.resolve(__dirname, 'public'),
-    filename: '[name].js',
-    sourceMapFilename: '[name].js.map'
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'main.js',
   }
 };
-
-module.exports = config;

@@ -21,3 +21,4 @@ npm-debug.log.*
 .project
 .settings/
 dist/
+public/
