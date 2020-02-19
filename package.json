@@ -12,7 +12,8 @@
     "test": "NODE_ENV=mocha LOG_LEVEL=OFF mocha -r tsconfig-paths/register $(find src/test \\( -name '*.ts' -or -name '*.js' \\) ! -path '*a11y*' ! -path '*/routes/*') --reporter mochawesome --reporter-options reportFilename=unit,inlineAssets=true,reportTitle=expressjs-template-unit",
     "test:routes": "NODE_ENV=mocha LOG_LEVEL=OFF  TS_NODE_PROJECT=tsconfig.json mocha --require ts-node/register $(find src/test \\( -name '*.ts' -or -name '*.js' \\) -path '*/routes/*') --require ts-node/register --reporter mochawesome --reporter-options reportFilename=routes,inlineAssets=true,reportTitle=expressjs-template-routes",
     "test:a11y": "NODE_ENV=mocha LOG_LEVEL=ERROR TS_NODE_PROJECT=tsconfig.json mocha --exit $(find src/test \\( -name '*.ts' -or -name '*.js' \\) -path '*/a11y/*') --timeout 60000 --reporter mochawesome --require ts-node/register --reporter-options reportFilename=a11y,inlineAssets=true,reportTitle=expressjs-template-a11y",
-    "test:nsp": "nsp check"
+    "test:nsp": "nsp check",
+    "cichecks": "yarn && yarn sass && yarn lint  && yarn test && yarn test:routes &&  yarn test:a11y"
   },
   "dependencies": {
     "@hmcts/info-provider": "^1.0.0",
