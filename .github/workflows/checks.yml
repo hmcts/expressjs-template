@@ -18,4 +18,4 @@ jobs:
           node-version: 12
       - run: npm install --global gulp-cli
       - run: yarn --version
-      - run: cichecks
+      - run: yarn cichecks
