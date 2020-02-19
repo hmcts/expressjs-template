@@ -1,0 +1,25 @@
+name: CI Checks
+
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: yarn --version
+      - run: yarn sass
+      - run: yarn check
+      - run: yarn lint
+      - run: yarn test
+      - run: yarn test:routes
+      - run: yarn test:a11y
