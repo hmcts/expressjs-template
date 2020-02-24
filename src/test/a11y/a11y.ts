@@ -34,7 +34,7 @@ function testAccessibility(url: string): void {
 
   describe(`Page ${url}`, () => {
 
-    it("should have no accessibility errors", (done) => {
+    test("should have no accessibility errors", (done) => {
       ensurePageCallWillSucceed(url)
         .then(() => pa11y(agent.get(url).url))
         .then((result: Pa11yResult) => {

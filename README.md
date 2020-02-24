@@ -76,7 +76,7 @@ You should get a very basic home page (no styles, etc.).
 
 ### Code style
 
-We use [ESLint](https://github.com/typescript-eslint/typescript-eslint) 
+We use [ESLint](https://github.com/typescript-eslint/typescript-eslint)
 alongside [sass-lint](https://github.com/sasstools/sass-lint)
 
 Running the linting:
@@ -86,7 +86,7 @@ $ yarn lint
 
 ### Running the tests
 
-This template app uses [Mocha](https://mochajs.org/) as the test engine. You can run unit tests by executing
+This template app uses [Jest](https://jestjs.io//) as the test engine. You can run unit tests by executing
 the following command:
 
 ```bash
