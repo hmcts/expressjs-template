@@ -134,27 +134,16 @@ to the responses. Apart from default Helmet functions, following headers are set
 
 * [Referrer-Policy](https://helmetjs.github.io/docs/referrer-policy/)
 * [Content-Security-Policy](https://helmetjs.github.io/docs/csp/)
-* [Public-Key-Pins](https://helmetjs.github.io/docs/hpkp/)
 
 There is a configuration section related with those headers, where you can specify:
 * `referrerPolicy` - value of the `Referrer-Policy` header
-* `hpkp` - settings for `Public-Key-Pins` header:
-  * `sha256s` - [Base64-encoded SHA-256 certificate hashes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Public_Key_Pinning)
-  * `maxAge` - time, in seconds, that the browser should remember that this site is only to be accessed using one
-  of the defined keys
+
 
 Here's an example setup:
 
 ```json
     "security": {
       "referrerPolicy": "origin",
-      "hpkp": {
-        "maxAge": 2592000,
-        "sha256s": [
-          "M1J37nfPyNUdZgLkE3Iyz2BBqsK8Zjd344S5DVrnTVE=",
-          "A1PTZTeHlA0idWnJThBl7rrbt1CoynD2vWcziKGDfkY="
-        ]
-      }
     }
 ```
 
