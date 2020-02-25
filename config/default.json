@@ -1,10 +1,6 @@
 {
   "useCSRFProtection": true,
   "security": {
-    "referrerPolicy": "origin",
-    "hpkp": {
-      "maxAge": 2592000,
-      "sha256s": ["TODO", "Set proper SHA256s"]
-    }
+    "referrerPolicy": "origin"
   }
 }
