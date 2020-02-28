@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const { Logger } = require('@hmcts/nodejs-logging')
 import * as fs from "fs";
 import * as https from "https";

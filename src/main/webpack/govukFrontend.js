@@ -11,8 +11,8 @@ const images = path.resolve(assets, 'images');
 const fonts = path.resolve(assets, 'fonts');
 
 const copyGovukTemplateAssets = new CopyWebpackPlugin([
-  { from: images, to: 'images' },
-  { from: fonts, to: 'fonts' }
+  { from: images, to: 'assets/images' },
+  { from: fonts, to: 'assets/fonts' }
 ]);
 
 module.exports = {

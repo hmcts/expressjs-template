@@ -1,9 +1,14 @@
-<html lang="en">
-  <head>
-    <title>Express application template</title>
-  </head>
-  <body>
-    <h1>Home page</h1>
-    <p>TODO: replace with a proper template in your application</p>
-  </body>
-</html>
+{% extends "govuk/template.njk" %}
+
+{% block head %}
+    <link href="main.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+  <h1 class="govuk-heading-xl">Default page template</h1>
+{% endblock %}
+
+{% block bodyEnd %}
+  {# Run JavaScript at end of the <body>, to avoid blocking the initial render. #}
+  <script src="main.js"></script>
+{% endblock %}
