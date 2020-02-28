@@ -12,7 +12,7 @@
     "build:prod": " yarn webpack --mode production --config webpack.config.js",
     "test": "jest",
     "test:routes": "jest -c jest.routes.config.js",
-    "test:a11y": "jest -c jest.a11y.config.js --maxworkers 15",
+    "test:a11y": "jest -c jest.a11y.config.js --maxWorkers 15",
     "cichecks": "yarn && yarn build && yarn lint  && yarn test && yarn test:routes &&  yarn test:a11y"
   },
   "dependencies": {
