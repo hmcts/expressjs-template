@@ -5,8 +5,6 @@ const root = path.resolve(__dirname, './../../');
 const sass = path.resolve(root, './main/assets/scss');
 const images = path.resolve(root, './main/assets/images');
 
-console.log(sass);
-
 const copyLookAndFeelAssets = new CopyWebpackPlugin(
   [{ from: images, to: 'images' }]
 );

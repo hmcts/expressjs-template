@@ -1,0 +1,10 @@
+{% extends "govuk/template.njk" %}
+
+{% block head %}
+    <link href="main.css" rel="stylesheet">
+{% endblock %}
+
+{% block bodyEnd %}
+  {# Run JavaScript at end of the <body>, to avoid blocking the initial render. #}
+  <script src="main.js"></script>
+{% endblock %}

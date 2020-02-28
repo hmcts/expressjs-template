@@ -19,7 +19,6 @@ export class Nunjucks {
       govUkFrontendPath
     ], {
       autoescape: true,
-      //throwOnUndefined: true,
       watch: this.developmentMode,
       express: app
     })
