@@ -22,6 +22,10 @@ class PallyIssue {
   typeCode: number;
 }
 
+beforeAll((done /* call it or remove it*/) => {
+done(); // calling it
+});
+
 describe("Accessibility", () => {
 
   // testing accessibility of the home page
