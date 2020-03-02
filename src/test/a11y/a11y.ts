@@ -22,6 +22,10 @@ class PallyIssue {
   typeCode: number;
 }
 
+beforeAll((done /* call it or remove it*/) => {
+done(); // calling it
+});
+
 describe("Accessibility", () => {
 
   // testing accessibility of the home page
@@ -36,14 +40,20 @@ function testAccessibility(url: string): void {
 
     test("should have no accessibility errors", (done) => {
       ensurePageCallWillSucceed(url)
-        .then(() => pa11y(agent.get(url).url))
-        .then((result: Pa11yResult) => {
+        .then(() => runPally(agent.get(url).url))
+          .then((result: Pa11yResult) => {
           expectNoErrors(result.issues);
           done();
         })
-        .catch((err) => done(err));
+        .catch((err: Error) => done(err));
     });
   });
+}
+
+function runPally(url: string): Pa11yResult {
+      return pa11y(url,{
+          hideElements: '.govuk-footer__licence-logo, .govuk-header__logotype-crown'
+      })
 }
 
 function ensurePageCallWillSucceed(url: string): Promise<void> {

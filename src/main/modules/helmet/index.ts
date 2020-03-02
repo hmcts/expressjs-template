@@ -6,7 +6,6 @@ export interface IConfig {
 }
 
 const googleAnalyticsDomain = "*.google-analytics.com";
-const hmctsPiwikDomain = "hmctspiwik.useconnect.co.uk";
 const self = "'self'";
 
 /**
@@ -32,9 +31,9 @@ export class Helmet {
           connectSrc: [self],
           defaultSrc: ["'none'"],
           fontSrc: [self, "data:"],
-          imgSrc: [self, googleAnalyticsDomain, hmctsPiwikDomain],
+          imgSrc: [self, googleAnalyticsDomain],
           objectSrc: [self],
-          scriptSrc: [self, googleAnalyticsDomain, hmctsPiwikDomain],
+          scriptSrc: [self, googleAnalyticsDomain, "'sha256-+6WnXIl4mbFTCARd8N3COQmT3bJJmo32N8q8ZSQAIcU='"],
           styleSrc: [self],
         },
       },

@@ -33,7 +33,6 @@ Running the application requires the following tools to be installed in your env
 
   * [Node.js](https://nodejs.org/) v12.0.0 or later
   * [yarn](https://yarnpkg.com/)
-  * [Gulp](http://gulpjs.com/)
   * [Docker](https://www.docker.com)
 
 ### Running the application
@@ -43,11 +42,16 @@ Install dependencies by executing the following command:
  ```bash
 $ yarn install
  ```
+Bundle:
+
+```bash
+$ yarn webpack
+```
 
 Run:
 
 ```bash
-$ gulp
+$ yarn start
 ```
 
 The applications's home page will be available at https://localhost:3100

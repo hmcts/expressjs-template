@@ -28,17 +28,15 @@ new Nunjucks(developmentMode)
 // secure the application by adding various HTTP headers to its responses
 new Helmet(config.get("security")).enableFor(app);
 
-// view engine setup
-app.set("views", path.join(__dirname, "views"));
-
-app.use(express.static(path.join(__dirname, "public")));
 app.use(favicon(path.join(__dirname, "/public/img/favicon.ico")));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
-
-
+app.use((req, res, next) => {
+    res.setHeader('Cache-Control', 'no-cache, max-age=0, must-revalidate, no-store');
+    next();
+  });
 app.use("/", RouterFinder.findAll(path.join(__dirname, "routes")));
 
 // returning "not found" page for requests with paths not resolved by the router
@@ -54,7 +52,6 @@ app.use((err: HTTPError, req: express.Request, res: express.Response, next: expr
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = env === "development" ? err : {};
-
   res.status(err.status || 500);
   res.render("error");
 });
