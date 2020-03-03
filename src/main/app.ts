@@ -1,4 +1,4 @@
-const { Express, Logger } = require('@hmcts/nodejs-logging')
+const{Express, Logger}= require('@hmcts/nodejs-logging')
 
 import * as bodyParser from "body-parser";
 const config = require('config')
@@ -10,6 +10,7 @@ import { RouterFinder } from "./router/routerFinder";
 import favicon from "serve-favicon";
 import { HTTPError } from "HttpError";
 import { Nunjucks } from './modules/nunjucks'
+const setupDev = require('./development');
 
 const env = process.env.NODE_ENV || "development";
 const developmentMode = env === 'development'
@@ -21,7 +22,6 @@ app.locals.ENV = env;
 app.use(Express.accessLogger());
 
 const logger = Logger.getLogger("app");
-
 
 new Nunjucks(developmentMode)
   .enableFor(app)
@@ -38,7 +38,9 @@ app.use((req, res, next) => {
     next();
   });
 app.use("/", RouterFinder.findAll(path.join(__dirname, "routes")));
-
+if(developmentMode){
+  setupDev(app);
+}
 // returning "not found" page for requests with paths not resolved by the router
 app.use((req, res, next) => {
   res.status(404);
