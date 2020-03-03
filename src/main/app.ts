@@ -10,7 +10,7 @@ import { RouterFinder } from "./router/routerFinder";
 import favicon from "serve-favicon";
 import { HTTPError } from "HttpError";
 import { Nunjucks } from './modules/nunjucks'
-const setupDev = require('./development');
+const {setupDev}  = require('./development');
 
 const env = process.env.NODE_ENV || "development";
 const developmentMode = env === 'development'
