@@ -10,6 +10,7 @@ import { RouterFinder } from "./router/routerFinder";
 import favicon from "serve-favicon";
 import { HTTPError } from "HttpError";
 import { Nunjucks } from './modules/nunjucks'
+const { setupDev } = require('./development');
 
 const env = process.env.NODE_ENV || "development";
 const developmentMode = env === 'development'
@@ -22,7 +23,6 @@ app.use(Express.accessLogger());
 
 const logger = Logger.getLogger("app");
 
-
 new Nunjucks(developmentMode)
   .enableFor(app)
 // secure the application by adding various HTTP headers to its responses
@@ -30,15 +30,17 @@ new Helmet(config.get("security")).enableFor(app);
 
 app.use(favicon(path.join(__dirname, "/public/img/favicon.ico")));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.use((req, res, next) => {
-    res.setHeader('Cache-Control', 'no-cache, max-age=0, must-revalidate, no-store');
-    next();
-  });
+  res.setHeader('Cache-Control', 'no-cache, max-age=0, must-revalidate, no-store');
+  next();
+});
 app.use("/", RouterFinder.findAll(path.join(__dirname, "routes")));
-
+if (developmentMode) {
+  setupDev(app);
+}
 // returning "not found" page for requests with paths not resolved by the router
 app.use((req, res, next) => {
   res.status(404);
