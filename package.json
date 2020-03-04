@@ -9,7 +9,7 @@
     "start": "NODE_ENV=production ./node_modules/.bin/ts-node -r tsconfig-paths/register src/main/server.ts",
     "start:dev": "nodemon --config nodemon.json",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx && sass-lint -v -q",
-    "lint:fix": "eslint --fix . --ext .js,.jsx,.ts,.tsx --fix && sass-lint -v -q",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix && sass-lint -v -q",
     "build": "yarn webpack",
     "build:prod": " yarn webpack --mode production --config webpack.config.js",
     "test": "jest",
