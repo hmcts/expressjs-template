@@ -12,5 +12,5 @@ def product = "rpe"
 def component = "expressjs-template"
 
 withNightlyPipeline(type, product, component) {
-enableSlackNotifications('#rpe-build-notices')
+
 }
