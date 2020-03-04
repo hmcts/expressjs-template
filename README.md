@@ -1,7 +1,5 @@
 # Express application template
 
-[![Build Status](https://travis-ci.org/hmcts/expressjs-template.svg?branch=master)](https://travis-ci.org/hmcts/expressjs-template)
-
 ## Purpose
 
 The purpose of this template is to speed up the creation of new [Express](http://expressjs.com/) frontend
