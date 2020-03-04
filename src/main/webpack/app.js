@@ -6,7 +6,7 @@ const sass = path.resolve(root, './main/assets/scss');
 const images = path.resolve(root, './main/assets/images');
 
 const copyLookAndFeelAssets = new CopyWebpackPlugin(
-  [{ from: images, to: 'images' }]
+  [{ from: images, to: 'images' }],
 );
 
 module.exports = {
