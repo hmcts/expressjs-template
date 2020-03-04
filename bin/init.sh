@@ -43,5 +43,8 @@ done
 # Rename title to slug
 perl -i -pe "s/.*\n/# ${product}-${component}\n/g if 1 .. 1" README.md
 
+# remove ci checks github actions.
+rm -r .github/workflows
+
 # Self-destruct
 rm bin/init.sh
