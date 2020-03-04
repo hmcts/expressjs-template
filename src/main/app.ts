@@ -1,19 +1,19 @@
-const { Express, Logger } = require('@hmcts/nodejs-logging')
+const { Express, Logger } = require('@hmcts/nodejs-logging');
 
-import * as bodyParser from "body-parser";
-const config = require('config')
-import cookieParser from "cookie-parser";
-import express from "express";
-import { Helmet } from "./modules/helmet";
-import * as path from "path";
-import { RouterFinder } from "./router/routerFinder";
-import favicon from "serve-favicon";
-import { HTTPError } from "HttpError";
-import { Nunjucks } from './modules/nunjucks'
+import * as bodyParser from 'body-parser';
+import config = require('config');
+import cookieParser from 'cookie-parser';
+import express from 'express';
+import { Helmet } from './modules/helmet';
+import * as path from 'path';
+import { RouterFinder } from './router/routerFinder';
+import favicon from 'serve-favicon';
+import { HTTPError } from 'HttpError';
+import { Nunjucks } from './modules/nunjucks';
 const { setupDev } = require('./development');
 
-const env = process.env.NODE_ENV || "development";
-const developmentMode = env === 'development'
+const env = process.env.NODE_ENV || 'development';
+const developmentMode = env === 'development';
 
 export const app = express();
 app.locals.ENV = env;
@@ -21,39 +21,41 @@ app.locals.ENV = env;
 // setup logging of HTTP requests
 app.use(Express.accessLogger());
 
-const logger = Logger.getLogger("app");
+const logger = Logger.getLogger('app');
 
-new Nunjucks(developmentMode)
-  .enableFor(app)
+new Nunjucks(developmentMode).enableFor(app);
 // secure the application by adding various HTTP headers to its responses
-new Helmet(config.get("security")).enableFor(app);
+new Helmet(config.get('security')).enableFor(app);
 
-app.use(favicon(path.join(__dirname, "/public/img/favicon.ico")));
+app.use(favicon(path.join(__dirname, '/public/img/favicon.ico')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use((req, res, next) => {
-  res.setHeader('Cache-Control', 'no-cache, max-age=0, must-revalidate, no-store');
+  res.setHeader(
+    'Cache-Control',
+    'no-cache, max-age=0, must-revalidate, no-store',
+  );
   next();
 });
-app.use("/", RouterFinder.findAll(path.join(__dirname, "routes")));
+app.use('/', RouterFinder.findAll(path.join(__dirname, 'routes')));
 if (developmentMode) {
   setupDev(app);
 }
 // returning "not found" page for requests with paths not resolved by the router
-app.use((req, res, next) => {
+app.use((req, res) => {
   res.status(404);
-  res.render("not-found");
+  res.render('not-found');
 });
 
 // error handler
-app.use((err: HTTPError, req: express.Request, res: express.Response, next: express.NextFunction) => {
+app.use((err: HTTPError, req: express.Request, res: express.Response) => {
   logger.error(`${err.stack || err}`);
 
   // set locals, only providing error in development
   res.locals.message = err.message;
-  res.locals.error = env === "development" ? err : {};
+  res.locals.error = env === 'development' ? err : {};
   res.status(err.status || 500);
-  res.render("error");
+  res.render('error');
 });
