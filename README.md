@@ -1,7 +1,5 @@
 # Express application template
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/hmcts/expressjs-template.svg)](https://greenkeeper.io/)
-
 [![Build Status](https://travis-ci.org/hmcts/expressjs-template.svg?branch=master)](https://travis-ci.org/hmcts/expressjs-template)
 
 ## Purpose
@@ -24,6 +22,10 @@ The template is a working application with a minimal setup. It contains:
   * basic health endpoint
   * pa11y set up for accessibility testing
   * MIT license and contribution information
+
+## Setup
+
+Located in `./bin/init.sh`. Simply run and follow the explanation how to execute it.
 
 ## Getting Started
 
