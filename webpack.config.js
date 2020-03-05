@@ -4,9 +4,10 @@ const sourcePath = path.resolve(__dirname, 'src/main/');
 
 const govukFrontend = require(path.resolve(sourcePath, 'webpack/govukFrontend'));
 const scss = require(path.resolve(sourcePath,'webpack/scss'));
+const HtmlWebpack = require(path.resolve(sourcePath,'webpack/htmlWebpack'));
 
 module.exports = {
-  plugins: [...govukFrontend.plugins, ...scss.plugins],
+  plugins: [...govukFrontend.plugins, ...scss.plugins, ...HtmlWebpack.plugins ],
   entry: path.resolve(sourcePath, 'index.js') ,
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   module: {
@@ -14,6 +15,6 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'src/main/public/'),
-    filename: 'main.js',
+    filename: 'main.[contenthash].js',
   },
 };
