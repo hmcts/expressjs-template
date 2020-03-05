@@ -1,10 +1,10 @@
 {% extends "govuk/template.njk" %}
 
 {% block head %}
-    <link href="<%= htmlWebpackPlugin.files.css %>" rel="stylesheet">
+    <link href="<%= htmlWebpackPlugin.files.css[0].substr(htmlWebpackPlugin.files.publicPath.length) %>" rel="stylesheet">
 {% endblock %}
 
 {% block bodyEnd %}
   {# Run JavaScript at end of the <body>, to avoid blocking the initial render. #}
-  /*<script src="<%= htmlWebpackPlugin.files.js %>"></script>*/
+  <script src="<%= htmlWebpackPlugin.files.js[0].substr(htmlWebpackPlugin.files.publicPath.length) %>"></script>
 {% endblock %}
