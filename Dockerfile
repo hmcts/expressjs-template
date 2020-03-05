@@ -7,7 +7,6 @@ RUN yarn install --production \
 # ---- Build image ----
 FROM base as build
 RUN yarn install && yarn build:prod
-RUN ls
 
 # ---- Runtime image ----
 FROM base as runtime
