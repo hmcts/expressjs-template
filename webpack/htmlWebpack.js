@@ -1,7 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-const cssPath = path.resolve(__dirname, '../views/webpack/css.njk');
-const jsPath= path.resolve(__dirname, '../views/webpack/js.njk');
+const cssPath = path.resolve(__dirname, '../src/main/views/webpack/css.njk');
+const jsPath= path.resolve(__dirname, '../src/main/views/webpack/js.njk');
 
 
 const cssWebPackPlugin = new HtmlWebpackPlugin({
