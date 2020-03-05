@@ -4,14 +4,10 @@ const sourcePath = path.resolve(__dirname, 'src/main/');
 
 const govukFrontend = require(path.resolve(sourcePath, 'webpack/govukFrontend'));
 const scss = require(path.resolve(sourcePath,'webpack/scss'));
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpack = require(path.resolve(sourcePath,'webpack/htmlWebpack'));
 
 module.exports = {
-  plugins: [...govukFrontend.plugins, ...scss.plugins,new HtmlWebpackPlugin({
-                                                          template: 'src/main/views/template.njk',
-                                                          filename: '../views/template.njk',
-                                                          inject: false
-                                                        }) ],
+  plugins: [...govukFrontend.plugins, ...scss.plugins, ...HtmlWebpack.plugins ],
   entry: path.resolve(sourcePath, 'index.js') ,
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   module: {
