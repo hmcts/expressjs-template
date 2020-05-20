@@ -32,6 +32,9 @@ done
 # Rename directory to provided package name
 git mv charts/rpe-expressjs-template/ charts/${product}-${component}
 
+# Rename CNP file
+git mv Jenkinsfile_CNP.disabled Jenkinsfile_CNP
+
 declare -a headers_to_delete=("Purpose" "What's inside" "Setup" )
 
 # Clean-up README file

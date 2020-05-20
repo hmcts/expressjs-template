@@ -7,6 +7,5 @@ def product = "rpe"
 def component = "expressjs-template"
 
 withPipeline(type, product, component) {
-  installCharts()
   disableLegacyDeployment()
 }
