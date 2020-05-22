@@ -2,5 +2,6 @@ nodejs:
   applicationPort: 3100
   aadIdentityName: rpe
   ingressHost: rpe-expressjs-template.{{ .Values.global.environment }}.platform.hmcts.net
+  image: 'hmctspublic.azurecr.io/rpe/expressjs-template:latest'
   environment:
-    image: 'hmctspublic.azurecr.io/rpe/expressjs-template:latest'
+
