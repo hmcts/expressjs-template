@@ -14,6 +14,7 @@
     "test": "jest",
     "test:routes": "jest -c jest.routes.config.js",
     "test:a11y": "jest -c jest.a11y.config.js --maxWorkers 15",
+    "sonar-scan": "sonar-scanner",
     "cichecks": "yarn && yarn build && yarn lint  && yarn test && yarn test:routes &&  yarn test:a11y"
   },
   "dependencies": {
@@ -77,6 +78,7 @@
     "sass-loader": "^8.0.2",
     "sinon": "^8.1.1",
     "sinon-chai": "^3.4.0",
+    "sonar-scanner": "^3.1.0",
     "style-loader": "^1.1.3",
     "supertest": "^4.0.2",
     "ts-jest": "^25.2.1",
