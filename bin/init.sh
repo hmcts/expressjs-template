@@ -49,8 +49,5 @@ perl -i -pe "s/.*\n/# ${product}-${component}\n/g if 1 .. 1" README.md
 # remove ci checks github actions.
 rm -r .github/workflows
 
-# Rename Sonar project name
-perl -i -pe "s/expressjs-template/${component}/g;" sonar-project.properties
-
 # Self-destruct
 rm bin/init.sh
