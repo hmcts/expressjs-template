@@ -15,6 +15,8 @@
     "test:routes": "jest -c jest.routes.config.js",
     "test:a11y": "jest -c jest.a11y.config.js --maxWorkers 15",
     "sonar-scan": "sonar-scanner",
+    "test:smoke": "exit 0",
+    "test:functional": "exit 0",
     "cichecks": "yarn && yarn build && yarn lint  && yarn test && yarn test:routes &&  yarn test:a11y"
   },
   "dependencies": {
