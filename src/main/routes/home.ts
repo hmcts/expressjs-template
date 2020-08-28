@@ -1,10 +1,9 @@
-import * as express from 'express';
+import { Application } from 'express';
 
-const router = express.Router();
+export default function(app: Application) {
 
-/* GET home page. */
-router.get('/', (req, res) => {
-  res.render('home');
-});
+  app.get('/', (req, res) => {
+    res.render('home');
+  });
 
-module.exports = router;
+}
