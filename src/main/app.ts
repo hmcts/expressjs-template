@@ -1,15 +1,16 @@
+import { glob } from "glob";
+
 const { Express, Logger } = require('@hmcts/nodejs-logging');
 
-import { readdirSync } from 'fs';
 import * as bodyParser from 'body-parser';
 import config = require('config');
 import cookieParser from 'cookie-parser';
 import express from 'express';
 import { Helmet } from './modules/helmet';
+import * as path from 'path';
 import favicon from 'serve-favicon';
 import { HTTPError } from 'HttpError';
 import { Nunjucks } from './modules/nunjucks';
-import { join, extname } from 'path';
 const { setupDev } = require('./development');
 
 const env = process.env.NODE_ENV || 'development';
@@ -27,11 +28,11 @@ new Nunjucks(developmentMode).enableFor(app);
 // secure the application by adding various HTTP headers to its responses
 new Helmet(config.get('security')).enableFor(app);
 
-app.use(favicon(join(__dirname, '/public/assets/images/favicon.ico')));
+app.use(favicon(path.join(__dirname, '/public/assets/images/favicon.ico')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use((req, res, next) => {
   res.setHeader(
     'Cache-Control',
@@ -40,9 +41,8 @@ app.use((req, res, next) => {
   next();
 });
 
-readdirSync(join(__dirname, 'routes'))
-  .filter(file => ['.js', '.ts'].includes(extname(file)))
-  .map(file => require(join(__dirname, 'routes', file)))
+glob.sync(__dirname + '/routes/**/*.+(ts|js)')
+  .map(filename => require(filename))
   .forEach(route => route.default(app));
 
 setupDev(app,developmentMode);
