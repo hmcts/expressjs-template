@@ -9,7 +9,7 @@ import { Helmet } from './modules/helmet';
 import favicon from 'serve-favicon';
 import { HTTPError } from 'HttpError';
 import { Nunjucks } from './modules/nunjucks';
-import { join } from 'path';
+import { join, extname } from 'path';
 const { setupDev } = require('./development');
 
 const env = process.env.NODE_ENV || 'development';
@@ -41,6 +41,7 @@ app.use((req, res, next) => {
 });
 
 readdirSync(join(__dirname, 'routes'))
+  .filter(file => ['.js', '.ts'].includes(extname(file)))
   .map(file => require(join(__dirname, 'routes', file)))
   .forEach(route => route.default(app));
 
