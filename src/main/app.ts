@@ -1,3 +1,5 @@
+import { glob } from 'glob';
+
 const { Express, Logger } = require('@hmcts/nodejs-logging');
 
 import * as bodyParser from 'body-parser';
@@ -6,7 +8,6 @@ import cookieParser from 'cookie-parser';
 import express from 'express';
 import { Helmet } from './modules/helmet';
 import * as path from 'path';
-import { RouterFinder } from './router/routerFinder';
 import favicon from 'serve-favicon';
 import { HTTPError } from 'HttpError';
 import { Nunjucks } from './modules/nunjucks';
@@ -39,7 +40,11 @@ app.use((req, res, next) => {
   );
   next();
 });
-app.use('/', RouterFinder.findAll(path.join(__dirname, 'routes')));
+
+glob.sync(__dirname + '/routes/**/*.+(ts|js)')
+  .map(filename => require(filename))
+  .forEach(route => route.default(app));
+
 setupDev(app,developmentMode);
 // returning "not found" page for requests with paths not resolved by the router
 app.use((req, res) => {
