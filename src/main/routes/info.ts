@@ -3,7 +3,7 @@ import * as os from 'os';
 import { infoRequestHandler } from '@hmcts/info-provider';
 import { Router } from 'express';
 
-export default function(app: Router) {
+export default function(app: Router): void {
   app.get(
     '/info',
     infoRequestHandler({
