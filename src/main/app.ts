@@ -1,4 +1,4 @@
-import { glob } from "glob";
+import { glob } from 'glob';
 
 const { Express, Logger } = require('@hmcts/nodejs-logging');
 
