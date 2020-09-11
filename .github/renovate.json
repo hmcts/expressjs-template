@@ -1,5 +1,5 @@
 {
-  "enabledManagers": ["helm-requirements"],
+  "enabledManagers": ["helm-requirements", "nvm"],
   "helm-requirements":
   {
     "fileMatch": ["\\Chart.yaml$"],
