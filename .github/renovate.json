@@ -1,5 +1,6 @@
 {
-  "enabledManagers": ["helm-requirements"],
+  "enabledManagers": ["helm-requirements", "nvm"],
+  "automerge": true,
   "helm-requirements":
   {
     "fileMatch": ["\\Chart.yaml$"],
