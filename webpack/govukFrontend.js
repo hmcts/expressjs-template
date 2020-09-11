@@ -10,10 +10,12 @@ const assets = path.resolve(root, 'assets');
 const images = path.resolve(assets, 'images');
 const fonts = path.resolve(assets, 'fonts');
 
-const copyGovukTemplateAssets = new CopyWebpackPlugin([
-  { from: images, to: 'assets/images' },
-  { from: fonts, to: 'assets/fonts' },
-]);
+const copyGovukTemplateAssets = new CopyWebpackPlugin({
+  patterns: [
+    { from: images, to: 'assets/images' },
+    { from: fonts, to: 'assets/fonts' },
+  ],
+});
 
 module.exports = {
   paths: { template: root, components, sass, javascript, assets },
