@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 #
 # Script to initialise project by executing steps as follows:
 #   - Replace port number
