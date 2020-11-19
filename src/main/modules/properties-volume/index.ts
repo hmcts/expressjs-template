@@ -9,9 +9,14 @@ export class PropertiesVolume {
     if (server.locals.ENV !== 'development') {
       propertiesVolume.addTo(config);
 
-      if (config.has('secrets.rpe.AppInsightsInstrumentationKey')) {
-        set(config, 'appInsights.instrumentationKey', get(config, 'secrets.rpe.AppInsightsInstrumentationKey'));
-      }
+      this.setSecret('secrets.rpe.AppInsightsInstrumentationKey', 'appInsights.instrumentationKey');
     }
   }
+
+  private setSecret(fromPath: string, toPath: string): void {
+    if (config.has(fromPath)) {
+      set(config, toPath, get(config, fromPath));
+    }
+  }
+
 }
