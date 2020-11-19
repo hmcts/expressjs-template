@@ -5,7 +5,7 @@ import { get, set } from 'lodash';
 
 export class PropertiesVolume {
 
-  enableFor(server: Application) {
+  enableFor(server: Application): void {
     if (server.locals.ENV !== 'development') {
       propertiesVolume.addTo(config);
 
