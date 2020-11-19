@@ -3,4 +3,9 @@ nodejs:
   aadIdentityName: rpe
   ingressHost: rpe-expressjs-template.{{ .Values.global.environment }}.platform.hmcts.net
   image: 'hmctspublic.azurecr.io/rpe/expressjs-template:latest'
+  keyVaults:
+    rpe:
+      resourceGroup: rpe
+      secrets:
+        - AppInsightsInstrumentationKey
   environment:

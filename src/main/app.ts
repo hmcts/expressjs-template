@@ -1,6 +1,6 @@
 import { glob } from 'glob';
 
-const { Express, Logger } = require('@hmcts/nodejs-logging');
+const { Logger } = require('@hmcts/nodejs-logging');
 
 import * as bodyParser from 'body-parser';
 import config = require('config');
@@ -11,6 +11,8 @@ import * as path from 'path';
 import favicon from 'serve-favicon';
 import { HTTPError } from 'HttpError';
 import { Nunjucks } from './modules/nunjucks';
+import { PropertiesVolume } from './modules/properties-volume';
+import { AppInsights } from './modules/appinsights';
 const { setupDev } = require('./development');
 
 const env = process.env.NODE_ENV || 'development';
@@ -19,13 +21,11 @@ const developmentMode = env === 'development';
 export const app = express();
 app.locals.ENV = env;
 
-// setup logging of HTTP requests
-app.use(Express.accessLogger());
-
 const logger = Logger.getLogger('app');
 
+new PropertiesVolume().enableFor(app);
+new AppInsights().enableFor(app);
 new Nunjucks(developmentMode).enableFor(app);
-// secure the application by adding various HTTP headers to its responses
 new Helmet(config.get('security')).enableFor(app);
 
 app.use(favicon(path.join(__dirname, '/public/assets/images/favicon.ico')));
