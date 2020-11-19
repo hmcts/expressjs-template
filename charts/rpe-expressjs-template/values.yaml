@@ -5,7 +5,6 @@ nodejs:
   image: 'hmctspublic.azurecr.io/rpe/expressjs-template:latest'
   keyVaults:
     rpe:
-      resourceGroup: rpe
       secrets:
         - AppInsightsInstrumentationKey
   environment:
