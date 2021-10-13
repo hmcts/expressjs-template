@@ -6,6 +6,6 @@ home: https://github.com/hmcts/rpe-expressjs-template
 version: 0.0.1
 dependencies:
   - name: nodejs
-    version: 2.3.4
+    version: 2.3.8
     repository: '@hmctspublic'
 
