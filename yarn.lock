@@ -986,10 +986,10 @@
     on-finished "^2.3.0"
     winston "^2.4.5"
 
-"@hmcts/properties-volume@^0.0.9":
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/@hmcts/properties-volume/-/properties-volume-0.0.9.tgz#1c2b29a563fcad9041231442476a4a3b7a8abf7d"
-  integrity sha512-qW6XDDnJT8wPfSrrFNFkoQXbtWS/KE55ifeRzXeHAXB8CB9r8e8H33jCql/3WYz/LX6PGQRlrZrU27mtQaNQ4g==
+"@hmcts/properties-volume@^0.0.11":
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/@hmcts/properties-volume/-/properties-volume-0.0.11.tgz#0a06807c549d430fa39da28b1a02fe34354f0154"
+  integrity sha512-Nf+bUm6qd4NN7KegN2zPlxP533KNVJcocvrnR50c14au5UEjIMD/kR7JpUkd/SzgMFIF/Jrgp4rP7MKHxQ8F4w==
   dependencies:
     "@hmcts/nodejs-logging" "^3.0.0"
     lodash "^4.17.11"
