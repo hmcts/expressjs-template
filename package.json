@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "engines": {
-    "node": ">=12.0.0"
+    "node": ">=14.0.0"
   },
   "scripts": {
     "start": "NODE_ENV=production ./node_modules/.bin/ts-node -r tsconfig-paths/register src/main/server.ts",
@@ -65,7 +65,7 @@
     "@types/supertest": "^2.0.8",
     "@types/webpack-dev-middleware": "^3.7.0",
     "@typescript-eslint/eslint-plugin": "^2.19.2",
-    "@typescript-eslint/eslint-plugin-tslint": "^2.19.2",
+    "@typescript-eslint/eslint-plugin-tslint": "^5.2.0",
     "@typescript-eslint/parser": "^2.19.2",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.0.6",
