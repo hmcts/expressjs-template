@@ -47,8 +47,11 @@ done
 perl -i -pe "s/.*\n/# ${product}-${component}\n/g if 1 .. 1" README.md
 
 # Create private key and self-signed certificate to expose application locally via HTTPS
+# When prompted to enter country enter your country 2-letter code, and hit enter for the subsequent prompts
 openssl req -nodes -x509 -newkey rsa:4096 -keyout src/main/resources/localhost-ssl/localhost.key -out src/main/resources/localhost-ssl/localhost.crt -sha256 -days 3650
-
+# git-ignore the private key and certificate files
+echo 'src/main/resources/localhost-ssl/localhost.key' >> .gitignore
+echo 'src/main/resources/localhost-ssl/localhost.crt' >> .gitignore
 
 # remove ci checks github actions.
 rm -r .github/workflows

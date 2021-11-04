@@ -22,3 +22,5 @@ npm-debug.log.*
 .settings/
 dist/
 public/
+src/main/resources/localhost-ssl/localhost.key
+src/main/resources/localhost-ssl/localhost.crt
