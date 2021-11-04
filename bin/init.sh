@@ -46,6 +46,10 @@ done
 # Rename title to slug
 perl -i -pe "s/.*\n/# ${product}-${component}\n/g if 1 .. 1" README.md
 
+# Create private key and self-signed certificate to expose application locally via HTTPS
+openssl req -nodes -x509 -newkey rsa:4096 -keyout src/main/resources/localhost-ssl/localhost.key -out src/main/resources/localhost-ssl/localhost.crt -sha256 -days 3650
+
+
 # remove ci checks github actions.
 rm -r .github/workflows
 
