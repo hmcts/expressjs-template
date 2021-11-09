@@ -6,10 +6,18 @@
 
 localhost_ssh_folder="src/main/resources/localhost-ssl"
 
-if [ -f "$localhost_ssh_folder"/localhost.key -a -f "$localhost_ssh_folder"/localhost.crt ]
+if [ ! -f "$localhost_ssh_folder"/localhost.key -o ! -f "$localhost_ssh_folder"/localhost.crt ]
 then
-  echo "SSL files exist already. Going to re-use them"
-else
   mkdir -p "$localhost_ssh_folder"
-  openssl req -nodes -x509 -newkey rsa:4096 -keyout "$localhost_ssh_folder"/localhost.key -out "$localhost_ssh_folder"/localhost.crt -sha256 -days 3650 -subj "/C=GB/ST=A/L=B/O=C/OU=D/CN=E"
+  openssl req \
+    -nodes \
+    -x509 \
+    -newkey rsa:4096 \
+    -keyout "$localhost_ssh_folder"/localhost.key \
+    -out "$localhost_ssh_folder"/localhost.crt \
+    -sha256 \
+    -days 3650 \
+    -subj "/C=GB/ST=A/L=B/O=C/OU=D/CN=E" \
+    -addext "subjectAltName = DNS:hmcts.net,IP:127.0.0.1,IP:198.168.1.1" \
+    -addext "extendedKeyUsage = serverAuth"
 fi
