@@ -24,7 +24,7 @@ then
       -subj "/C=GB/ST=A/L=B/O=C/OU=D/CN=E" \
       -extensions v3_new \
       -config <(cat /System/Library/OpenSSL/openssl.cnf \
-      <(printf '[v3_new]\nsubjectAltName=DNS:hmcts.net\nextendedKeyUsage=serverAuth'))
+      <(printf '[v3_new]\nsubjectAltName=DNS:host.docker.internal,DNS:localhost,IP:127.0.0.1\nextendedKeyUsage=serverAuth'))
   else
     openssl req \
       -nodes \
