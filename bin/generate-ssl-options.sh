@@ -6,18 +6,27 @@
 
 localhost_ssl_folder="src/main/resources/localhost-ssl"
 
+openssl_command="openssl req \
+               -nodes \
+               -x509 \
+               -newkey rsa:4096 \
+               -keyout "$localhost_ssl_folder"/localhost.key \
+               -out "$localhost_ssl_folder"/localhost.crt \
+               -sha256 \
+               -days 3650 \
+               -subj "/C=GB/ST=A/L=B/O=C/OU=D/CN=E"";
+
+openssl_command_macos_extension=" -extensions v3_new \
+               -config <(cat /System/Library/OpenSSL/openssl.cnf \
+               <(printf '[v3_new]\nsubjectAltName=DNS:hmcts.net\nextendedKeyUsage=serverAuth'))";
+
+if [[ $OSTYPE == "darwin"* ]]
+then
+  openssl_command="$openssl_command""$openssl_command_macos_extension";
+fi
+
 if [ ! -f "$localhost_ssl_folder"/localhost.key -o ! -f "$localhost_ssl_folder"/localhost.crt ]
 then
   mkdir -p "$localhost_ssl_folder"
-  openssl req \
-    -nodes \
-    -x509 \
-    -newkey rsa:4096 \
-    -keyout "$localhost_ssl_folder"/localhost.key \
-    -out "$localhost_ssl_folder"/localhost.crt \
-    -sha256 \
-    -days 3650 \
-    -subj "/C=GB/ST=A/L=B/O=C/OU=D/CN=E" \
-    -addext "subjectAltName = DNS:hmcts.net,IP:127.0.0.1,IP:198.168.1.1" \
-    -addext "extendedKeyUsage = serverAuth"
+  $openssl_command
 fi
