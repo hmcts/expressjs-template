@@ -35,7 +35,7 @@ then
       -sha256 \
       -days 3650 \
       -subj "/C=GB/ST=A/L=B/O=C/OU=D/CN=E" \
-      -addext "subjectAltName = DNS:foo.co.uk,IP:127.0.0.1,IP:192.168.1.1" \
+      -addext "subjectAltName = DNS:hmcts.net,IP:127.0.0.1,IP:192.168.1.1" \
       -addext "extendedKeyUsage = serverAuth"
   fi
 fi
