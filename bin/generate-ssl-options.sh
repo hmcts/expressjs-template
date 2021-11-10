@@ -3,6 +3,7 @@
 # Script to generate private RSA key and a self-signed certificate under src/main/resources/localhost-ssl (git-ignored)
 # These resources are used for exposing the application via HTTPS in development environment. They must not be used
 # in other environments, as their purpose is to provide consistency, not security.
+# Note the openssl command extension for macOS. For further details refer to: https://stackoverflow.com/a/64309893
 
 localhost_ssl_folder="src/main/resources/localhost-ssl"
 
