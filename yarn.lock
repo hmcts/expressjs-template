@@ -22,10 +22,10 @@
     "@azure/abort-controller" "^1.0.0"
     tslib "^2.2.0"
 
-"@azure/core-http@^2.2.0":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@azure/core-http/-/core-http-2.2.1.tgz#9998f04b9e2f0255f4368034d423903ba90c75db"
-  integrity sha512-7ATnV3OGzCO2K9kMrh3NKUM8b4v+xasmlUhkNZz6uMbm+8XH/AexLkhRGsoo0GyKNlEGvyGEfytqTk0nUY2I4A==
+"@azure/core-http@^2.2.2":
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/@azure/core-http/-/core-http-2.2.3.tgz#8c0d94e8bb6e8003c6c390e9f1902073a1ed37c8"
+  integrity sha512-xr8AeszxP418rI//W38NfJDDr0kbVAPZkURZnZ+Fle+lLWeURjDE5zNIuocA1wUPoKSP8iXc0ApW6nPtbLGswA==
   dependencies:
     "@azure/abort-controller" "^1.0.0"
     "@azure/core-asynciterator-polyfill" "^1.0.0"
@@ -35,7 +35,7 @@
     "@types/node-fetch" "^2.5.0"
     "@types/tunnel" "^0.0.3"
     form-data "^4.0.0"
-    node-fetch "^2.6.0"
+    node-fetch "^2.6.6"
     process "^0.11.10"
     tough-cookie "^4.0.0"
     tslib "^2.2.0"
@@ -2359,12 +2359,12 @@ anymatch@^3.0.0, anymatch@^3.0.3, anymatch@~3.1.1, anymatch@~3.1.2:
     normalize-path "^3.0.0"
     picomatch "^2.0.4"
 
-applicationinsights@^2.1.8:
-  version "2.1.8"
-  resolved "https://registry.yarnpkg.com/applicationinsights/-/applicationinsights-2.1.8.tgz#3b6b6d12c3b41b044ac7afd274d572da6300df20"
-  integrity sha512-ehdYEKMkpm/1CPFX5UwvEUmI45U4v8EnPnvRIGC5hqkGDt7ARMfivwneK+ArbSabotUYWOYdvogmB8CrdJye/g==
+applicationinsights@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/applicationinsights/-/applicationinsights-2.2.0.tgz#286f00b60d6eada12f592231a2d1283fe67c9124"
+  integrity sha512-zb6b1wchJwnCH+PghmxDbygQtWW11lz8YsHbZ6o89kR8EbE/2lO9VwNCxMtU1H1f7RQbiIZuNEnFR7wb8Ah4qA==
   dependencies:
-    "@azure/core-http" "^2.2.0"
+    "@azure/core-http" "^2.2.2"
     "@opentelemetry/api" "^1.0.3"
     "@opentelemetry/core" "^0.23.0"
     "@opentelemetry/semantic-conventions" "^0.24.0"
@@ -7452,10 +7452,10 @@ nock@^13.0.4:
     lodash.set "^4.3.2"
     propagate "^2.0.0"
 
-node-fetch@^2.6.0:
-  version "2.6.5"
-  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.5.tgz#42735537d7f080a7e5f78b6c549b7146be1742fd"
-  integrity sha512-mmlIVHJEu5rnIxgEgez6b9GgWXbkZj5YZ7fx+2r94a2E+Uirsp6HsPTPlomfdHtpt/B0cdKviwkoaM6pyvUOpQ==
+node-fetch@^2.6.6:
+  version "2.6.7"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.7.tgz#24de9fba827e3b4ae44dc8b20256a379160052ad"
+  integrity sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==
   dependencies:
     whatwg-url "^5.0.0"
 
