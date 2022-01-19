@@ -1,4 +1,5 @@
 const path = require('path');
+
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const packageJson = require.resolve('govuk-frontend/package.json');
