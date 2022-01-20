@@ -1,12 +1,18 @@
 # ---- Base image ----
-FROM hmctspublic.azurecr.io/base/node:14-alpine as base
+FROM hmctspublic.azurecr.io/base/node:16-alpine as base
 COPY --chown=hmcts:hmcts . .
 RUN yarn install --production \
   && yarn cache clean
 
 # ---- Build image ----
 FROM base as build
-RUN yarn install && yarn build:prod
+
+USER root
+# Remove when switched to dart-sass
+RUN apk add --update --no-cache python3
+USER hmcts
+
+RUN PUPPETEER_SKIP_DOWNLOAD=true yarn install && yarn build:prod
 
 # ---- Runtime image ----
 FROM base as runtime
