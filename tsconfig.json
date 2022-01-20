@@ -10,22 +10,12 @@
     "noUnusedLocals": true,
     "experimentalDecorators": true,
     "skipLibCheck": true,
-    "lib": [
-      "es6",
-      "es2017.object",
-      "dom"
-    ],
+    "lib": ["es6", "es2017.object", "dom"],
     "baseUrl": "src/main",
     "paths": {
-      "router/*": [
-        "router/*"
-      ],
-      "routes/*": [
-        "routes/*"
-      ]
+      "router/*": ["router/*"],
+      "routes/*": ["routes/*"]
     },
-    "typeRoots": [
-      "./node_modules/@types"
-    ]
+    "typeRoots": ["./node_modules/@types"]
   }
 }

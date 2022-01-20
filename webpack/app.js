@@ -1,4 +1,5 @@
 const path = require('path');
+
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const root = path.resolve(__dirname, './../../');
@@ -11,5 +12,5 @@ const copyLookAndFeelAssets = new CopyWebpackPlugin({
 
 module.exports = {
   paths: { root, sass },
-  plugins: [ copyLookAndFeelAssets ],
+  plugins: [copyLookAndFeelAssets],
 };

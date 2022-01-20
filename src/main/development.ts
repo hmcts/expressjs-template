@@ -6,9 +6,11 @@ const setupDev = (app: express.Express, developmentMode: boolean): void => {
     const webpack = require('webpack');
     const webpackconfig = require('../../webpack.config');
     const compiler = webpack(webpackconfig);
-    app.use(webpackDev(compiler, {
-      publicPath: '/',
-    }));
+    app.use(
+      webpackDev(compiler, {
+        publicPath: '/',
+      })
+    );
   }
 };
 

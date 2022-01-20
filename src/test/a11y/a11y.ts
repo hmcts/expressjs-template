@@ -1,8 +1,8 @@
-import { fail } from 'assert';
+import * as supertest from 'supertest';
+
+import { app } from '../../main/app';
 
 const pa11y = require('pa11y');
-import * as supertest from 'supertest';
-import { app } from '../../main/app';
 
 const agent = supertest.agent(app);
 
@@ -21,16 +21,10 @@ class PallyIssue {
   typeCode: number;
 }
 
-beforeAll((done /* call it or remove it*/) => {
-  done(); // calling it
-});
-
 function ensurePageCallWillSucceed(url: string): Promise<void> {
   return agent.get(url).then((res: supertest.Response) => {
     if (res.redirect) {
-      throw new Error(
-        `Call to ${url} resulted in a redirect to ${res.get('Location')}`,
-      );
+      throw new Error(`Call to ${url} resulted in a redirect to ${res.get('Location')}`);
     }
     if (res.serverError) {
       throw new Error(`Call to ${url} resulted in internal server error`);
@@ -38,7 +32,7 @@ function ensurePageCallWillSucceed(url: string): Promise<void> {
   });
 }
 
-function runPally(url: string): Pa11yResult {
+function runPally(url: string): Promise<Pa11yResult> {
   return pa11y(url, {
     hideElements: '.govuk-footer__licence-logo, .govuk-header__logotype-crown',
   });
@@ -49,20 +43,17 @@ function expectNoErrors(messages: PallyIssue[]): void {
 
   if (errors.length > 0) {
     const errorsAsJson = `${JSON.stringify(errors, null, 2)}`;
-    fail(`There are accessibility issues: \n${errorsAsJson}\n`);
+    throw new Error(`There are accessibility issues: \n${errorsAsJson}\n`);
   }
 }
 
 function testAccessibility(url: string): void {
   describe(`Page ${url}`, () => {
-    test('should have no accessibility errors', done => {
-      ensurePageCallWillSucceed(url)
-        .then(() => runPally(agent.get(url).url))
-        .then((result: Pa11yResult) => {
-          expectNoErrors(result.issues);
-          done();
-        })
-        .catch((err: Error) => done(err));
+    test('should have no accessibility errors', async () => {
+      await ensurePageCallWillSucceed(url);
+      const result = await runPally(agent.get(url).url);
+      expect(result.issues).toEqual(expect.any(Array));
+      expectNoErrors(result.issues);
     });
   });
 }
