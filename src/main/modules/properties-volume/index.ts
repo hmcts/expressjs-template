@@ -1,10 +1,9 @@
-import config from 'config';
 import * as propertiesVolume from '@hmcts/properties-volume';
+import config from 'config';
 import { Application } from 'express';
 import { get, set } from 'lodash';
 
 export class PropertiesVolume {
-
   enableFor(server: Application): void {
     if (server.locals.ENV !== 'development') {
       propertiesVolume.addTo(config);
@@ -18,5 +17,4 @@ export class PropertiesVolume {
       set(config, toPath, get(config, fromPath));
     }
   }
-
 }

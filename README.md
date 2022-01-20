@@ -9,17 +9,18 @@ If you need to create a new application, you can simply use this one as a starti
 ## What's inside
 
 The template is a working application with a minimal setup. It contains:
-  * application skeleton
-  * common dependencies
-  * Docker setup
-  * static analysis set up
-  * integration with Travis CI
-  * HTTPS set up for development environment
-  * CSRF prevention set up
-  * Header-based security provided by [Helmet](https://helmetjs.github.io/)
-  * basic health endpoint
-  * pa11y set up for accessibility testing
-  * MIT license and contribution information
+
+- application skeleton
+- common dependencies
+- Docker setup
+- static analysis set up
+- integration with Travis CI
+- HTTPS set up for development environment
+- CSRF prevention set up
+- Header-based security provided by [Helmet](https://helmetjs.github.io/)
+- basic health endpoint
+- pa11y set up for accessibility testing
+- MIT license and contribution information
 
 ## Setup
 
@@ -31,17 +32,18 @@ Located in `./bin/init.sh`. Simply run and follow the explanation how to execute
 
 Running the application requires the following tools to be installed in your environment:
 
-  * [Node.js](https://nodejs.org/) v12.0.0 or later
-  * [yarn](https://yarnpkg.com/)
-  * [Docker](https://www.docker.com)
+- [Node.js](https://nodejs.org/) v12.0.0 or later
+- [yarn](https://yarnpkg.com/)
+- [Docker](https://www.docker.com)
 
 ### Running the application
 
 Install dependencies by executing the following command:
 
- ```bash
+```bash
 $ yarn install
- ```
+```
+
 Bundle:
 
 ```bash
@@ -84,6 +86,7 @@ We use [ESLint](https://github.com/typescript-eslint/typescript-eslint)
 alongside [sass-lint](https://github.com/sasstools/sass-lint)
 
 Running the linting with auto fix:
+
 ```bash
 $ yarn lint --fix
 ```
@@ -136,12 +139,12 @@ included in this template app. Your njk file would look like this:
 This application uses [Helmet](https://helmetjs.github.io/), which adds various security-related HTTP headers
 to the responses. Apart from default Helmet functions, following headers are set:
 
-* [Referrer-Policy](https://helmetjs.github.io/docs/referrer-policy/)
-* [Content-Security-Policy](https://helmetjs.github.io/docs/csp/)
+- [Referrer-Policy](https://helmetjs.github.io/docs/referrer-policy/)
+- [Content-Security-Policy](https://helmetjs.github.io/docs/csp/)
 
 There is a configuration section related with those headers, where you can specify:
-* `referrerPolicy` - value of the `Referrer-Policy` header
 
+- `referrerPolicy` - value of the `Referrer-Policy` header
 
 Here's an example setup:
 
