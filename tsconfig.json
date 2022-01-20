@@ -1,31 +1,25 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
+    "outDir": "./src/",
     "module": "commonjs",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "target": "es6",
+    "target": "ES2020",
+    "strict": true,
     "noImplicitAny": true,
+    "noImplicitThis": false,
     "moduleResolution": "node",
     "noUnusedLocals": true,
     "experimentalDecorators": true,
+    "useUnknownInCatchVariables": false,
     "skipLibCheck": true,
-    "lib": [
-      "es6",
-      "es2017.object",
-      "dom"
-    ],
+    "lib": ["es2020", "dom", "dom.iterable"],
     "baseUrl": "src/main",
     "paths": {
-      "router/*": [
-        "router/*"
-      ],
-      "routes/*": [
-        "routes/*"
-      ]
+      "router/*": ["router/*"],
+      "routes/*": ["routes/*"]
     },
-    "typeRoots": [
-      "./node_modules/@types"
-    ]
-  }
+    "typeRoots": ["./node_modules/@types"]
+  },
+  "exclude": ["**/*.test.ts", "**/codecept.conf.ts", "**/__mocks__/*"]
 }
