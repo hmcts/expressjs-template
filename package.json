@@ -82,7 +82,7 @@
     "husky": "^7.0.4",
     "jest": "^27.4.7",
     "jest-html-reporter": "^3.4.2",
-    "lint-staged": "^12.2.1",
+    "lint-staged": "^12.3.4",
     "mini-css-extract-plugin": "^2.5.2",
     "nock": "^13.0.4",
     "node-sass": "^7.0.1",
