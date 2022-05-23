@@ -2763,6 +2763,13 @@ axios-debug-log@^0.8.4:
     "@types/debug" "^4.0.0"
     debug "^4.0.0"
 
+axios@^0.21.1:
+  version "0.21.4"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.4.tgz#c67b90dc0568e5c1cf2b0b858c43ba28e2eda575"
+  integrity sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==
+  dependencies:
+    follow-redirects "^1.14.0"
+
 axios@^0.26.0:
   version "0.26.0"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.26.0.tgz#9a318f1c69ec108f8cd5f3c3d390366635e13928"
@@ -4956,6 +4963,11 @@ fn-args@^4.0.0:
   resolved "https://registry.yarnpkg.com/fn-args/-/fn-args-4.0.0.tgz#2e912f7a74c5e9ef25060bd60127d6a8680237a5"
   integrity sha512-M9XSagc92ejQhi+7kjpFPAO59xKbGRsbOg/9dfwSj84DfzB0pj+Q81DVD1pKr084Xf2oICwUNI0pCvGORmD9zg==
 
+follow-redirects@^1.14.0:
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.0.tgz#06441868281c86d0dda4ad8bdaead2d02dca89d4"
+  integrity sha512-aExlJShTV4qOUOL7yF1U5tvLCB0xQuudbf6toyYA0E/acBNw71mvjFTnLaRp50aQaYocMR0a/RMMBIHeZnGyjQ==
+
 follow-redirects@^1.14.8:
   version "1.14.8"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.8.tgz#016996fb9a11a100566398b1c6839337d7bfa8fc"
@@ -5463,15 +5475,10 @@ he@1.2.0, he@^1.2.0:
   resolved "https://registry.yarnpkg.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
 
-helmet@*:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/helmet/-/helmet-5.0.2.tgz#3264ec6bab96c82deaf65e3403c369424cb2366c"
-  integrity sha512-QWlwUZZ8BtlvwYVTSDTBChGf8EOcQ2LkGMnQJxSzD1mUu8CCjXJZq/BXP8eWw4kikRnzlhtYo3lCk0ucmYA3Vg==
-
-helmet@^5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/helmet/-/helmet-5.0.1.tgz#e8b2aacf881dd5cffadbb640f23155f23de485ae"
-  integrity sha512-iyYpGYH2nbQVaQtauYDnemWg45S2RyGvJ+iKj+V9jp7Dc1NTtAJHmD+hFOSYS7Xdwe1GeyVEYSydggXLOg6TKQ==
+helmet@*, helmet@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/helmet/-/helmet-5.1.0.tgz#e98a5d4bf89ab8119c856018a3bcc82addadcd47"
+  integrity sha512-klsunXs8rgNSZoaUrNeuCiWUxyc+wzucnEnFejUg3/A+CaF589k9qepLZZ1Jehnzig7YbD4hEuscGXuBY3fq+g==
 
 hexoid@1.0.0:
   version "1.0.0"
