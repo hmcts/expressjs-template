@@ -16,7 +16,6 @@
     "test:coverage": "jest --coverage",
     "test:routes": "jest -c jest.routes.config.js",
     "test:a11y": "jest -c jest.a11y.config.js --maxWorkers 15",
-    "sonar-scan": "sonar-scanner",
     "test:smoke": "NODE_TLS_REJECT_UNAUTHORIZED=0 jest -c jest.smoke.config.js",
     "test:functional": "NODE_TLS_REJECT_UNAUTHORIZED=0 codeceptjs --config ./src/test/functional/codecept.conf.js run --steps",
     "cichecks": "yarn && yarn build && yarn lint  && yarn test && yarn test:routes &&  yarn test:a11y"
@@ -96,7 +95,6 @@
     "sass-loader": "^12.4.0",
     "sinon": "^12.0.1",
     "sinon-chai": "^3.4.0",
-    "sonar-scanner": "^3.1.0",
     "style-loader": "^3.3.1",
     "supertest": "^6.1.6",
     "ts-jest": "^27.1.3",
