@@ -2,16 +2,16 @@ module.exports = {
   root: true,
   env: { browser: true, es6: true, node: true },
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'prettier', 'import', 'jest'],
+  plugins: ['@typescript-eslint', 'import', 'jest'],
   extends: [
     'eslint:recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
     'plugin:jest/recommended',
-    'plugin:prettier/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
+    'prettier',
   ],
   parserOptions: {
     ecmaVersion: 2018,
