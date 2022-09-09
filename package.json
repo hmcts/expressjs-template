@@ -8,7 +8,8 @@
   "scripts": {
     "start": "NODE_ENV=production ./node_modules/.bin/ts-node -r tsconfig-paths/register src/main/server.ts",
     "start:dev": "nodemon --config nodemon.json",
-    "lint": "sass-lint -v -q && eslint . --ext .js,.ts",
+    "lint": "sass-lint -v -q && eslint . --ext .js,.ts && prettier --check .",
+    "lint:fix": "prettier --write . && eslint --fix .",
     "build": "yarn webpack --config webpack.config.js",
     "build:prod": "NODE_ENV=production yarn webpack --mode production --config webpack.config.js",
     "test": "npx if-env ${CI} && yarn test:unit || exit 0",
@@ -18,7 +19,8 @@
     "test:a11y": "jest -c jest.a11y.config.js --maxWorkers 15",
     "test:smoke": "NODE_TLS_REJECT_UNAUTHORIZED=0 jest -c jest.smoke.config.js",
     "test:functional": "NODE_TLS_REJECT_UNAUTHORIZED=0 codeceptjs --config ./src/test/functional/codecept.conf.js run --steps",
-    "cichecks": "yarn && yarn build && yarn lint  && yarn test && yarn test:routes &&  yarn test:a11y"
+    "cichecks": "yarn && yarn build && yarn lint  && yarn test && yarn test:routes &&  yarn test:a11y",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@hmcts/info-provider": "^1.0.0",
@@ -77,7 +79,6 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jest": "^27.0.1",
-    "eslint-plugin-prettier": "^4.0.0",
     "html-webpack-plugin": "^5.5.0",
     "husky": "^7.0.4",
     "jest": "^27.4.7",
@@ -104,13 +105,8 @@
     "webpack-dev-middleware": "^5.3.0",
     "webpack-node-externals": "^3.0.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown",
-    "**/*.{js,ts}": "eslint --fix"
+    "*.{js,ts}": "eslint --cache --fix",
+    "*.{js,css,md,html,json}": "prettier --write"
   }
 }
