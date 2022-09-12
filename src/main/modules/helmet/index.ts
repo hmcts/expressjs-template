@@ -1,10 +1,6 @@
 import * as express from 'express';
 import helmet from 'helmet';
 
-export interface HelmetConfig {
-  referrerPolicy: string;
-}
-
 const googleAnalyticsDomain = '*.google-analytics.com';
 const self = "'self'";
 
@@ -12,8 +8,6 @@ const self = "'self'";
  * Module that enables helmet in the application
  */
 export class Helmet {
-  constructor(public config: HelmetConfig) {}
-
   public enableFor(app: express.Express): void {
     // include default helmet functions
     app.use(helmet());
