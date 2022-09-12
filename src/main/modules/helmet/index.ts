@@ -19,7 +19,7 @@ export class Helmet {
     app.use(helmet());
 
     this.setContentSecurityPolicy(app);
-    this.setReferrerPolicy(app, this.config.referrerPolicy);
+    this.setReferrerPolicy(app);
   }
 
   private setContentSecurityPolicy(app: express.Express): void {
@@ -38,11 +38,7 @@ export class Helmet {
     );
   }
 
-  private setReferrerPolicy(app: express.Express, policy: string): void {
-    if (!policy) {
-      throw new Error('Referrer policy configuration is required');
-    }
-
-    app.use(helmet.referrerPolicy({ policy }));
+  private setReferrerPolicy(app: express.Express): void {
+    app.use(helmet.referrerPolicy({ policy: 'origin' }));
   }
 }
