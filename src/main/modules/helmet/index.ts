@@ -1,10 +1,6 @@
 import * as express from 'express';
 import helmet from 'helmet';
 
-export interface HelmetConfig {
-  referrerPolicy: string;
-}
-
 const googleAnalyticsDomain = '*.google-analytics.com';
 const self = "'self'";
 
@@ -12,14 +8,12 @@ const self = "'self'";
  * Module that enables helmet in the application
  */
 export class Helmet {
-  constructor(public config: HelmetConfig) {}
-
   public enableFor(app: express.Express): void {
     // include default helmet functions
     app.use(helmet());
 
     this.setContentSecurityPolicy(app);
-    this.setReferrerPolicy(app, this.config.referrerPolicy);
+    this.setReferrerPolicy(app);
   }
 
   private setContentSecurityPolicy(app: express.Express): void {
@@ -38,11 +32,7 @@ export class Helmet {
     );
   }
 
-  private setReferrerPolicy(app: express.Express, policy: string): void {
-    if (!policy) {
-      throw new Error('Referrer policy configuration is required');
-    }
-
-    app.use(helmet.referrerPolicy({ policy }));
+  private setReferrerPolicy(app: express.Express): void {
+    app.use(helmet.referrerPolicy({ policy: 'origin' }));
   }
 }
