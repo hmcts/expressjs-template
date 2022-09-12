@@ -1,7 +1,6 @@
 import * as path from 'path';
 
 import * as bodyParser from 'body-parser';
-import config = require('config');
 import cookieParser from 'cookie-parser';
 import express from 'express';
 import { glob } from 'glob';
