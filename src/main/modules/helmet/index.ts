@@ -10,29 +10,21 @@ const self = "'self'";
 export class Helmet {
   public enableFor(app: express.Express): void {
     // include default helmet functions
-    app.use(helmet());
-
-    this.setContentSecurityPolicy(app);
-    this.setReferrerPolicy(app);
-  }
-
-  private setContentSecurityPolicy(app: express.Express): void {
     app.use(
-      helmet.contentSecurityPolicy({
-        directives: {
-          connectSrc: [self],
-          defaultSrc: ["'none'"],
-          fontSrc: [self, 'data:'],
-          imgSrc: [self, googleAnalyticsDomain],
-          objectSrc: [self],
-          scriptSrc: [self, googleAnalyticsDomain, "'sha256-+6WnXIl4mbFTCARd8N3COQmT3bJJmo32N8q8ZSQAIcU='"],
-          styleSrc: [self],
+      helmet({
+        contentSecurityPolicy: {
+          directives: {
+            connectSrc: [self],
+            defaultSrc: ["'none'"],
+            fontSrc: [self, 'data:'],
+            imgSrc: [self, googleAnalyticsDomain],
+            objectSrc: [self],
+            scriptSrc: [self, googleAnalyticsDomain, "'sha256-+6WnXIl4mbFTCARd8N3COQmT3bJJmo32N8q8ZSQAIcU='"],
+            styleSrc: [self],
+          },
         },
+        referrerPolicy: { policy: 'origin' },
       })
     );
-  }
-
-  private setReferrerPolicy(app: express.Express): void {
-    app.use(helmet.referrerPolicy({ policy: 'origin' }));
   }
 }
