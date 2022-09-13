@@ -1,10 +1,5 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:base", ":dependencyDashboard"],
-  "labels": ["dependencies"],
-  "helm-requirements":
-    {
-      "enabled": true,
-      "fileMatch": ["\\Chart.yaml|requirements.yaml$"]
-    }
+  "labels": ["dependencies"]
 }
