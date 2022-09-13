@@ -29,7 +29,14 @@ module.exports = {
             url: false,
           },
         },
-        'sass-loader',
+        {
+          loader: 'sass-loader',
+          options: {
+            sassOptions: {
+              quietDeps: true,
+            },
+          },
+        },
       ],
     },
   ],
