@@ -11,11 +11,11 @@ COPY --chown=hmcts:hmcts . .
 FROM base as build
 
 # the yarn install is needed for some reason in Docker even with zero-install, it's very quick though
-#RUN PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=true \
-#    PUPPETEER_SKIP_DOWNLOAD=true \
-#    yarn install --immutable-cache && \
-#    yarn build:prod && \
-#    rm -rf webpack/ webpack.config.js
+RUN PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=true \
+    PUPPETEER_SKIP_DOWNLOAD=true \
+    yarn install --immutable-cache && \
+    yarn build:prod && \
+    rm -rf webpack/ webpack.config.js
 
 # ---- Runtime image ----
 FROM base as runtime
