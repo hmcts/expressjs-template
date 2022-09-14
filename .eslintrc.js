@@ -1,5 +1,6 @@
 module.exports = {
   root: true,
+  ignorePatterns: ['src/main/views/govuk/**'],
   env: { browser: true, es6: true, node: true },
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint', 'import', 'jest'],

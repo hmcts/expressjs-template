@@ -23,6 +23,7 @@ npm-debug.log.*
 .settings/
 dist/
 public/
+src/main/views/govuk
 
 .eslintcache
 
