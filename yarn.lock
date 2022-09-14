@@ -3266,9 +3266,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"applicationinsights@npm:^2.3.4":
-  version: 2.3.4
-  resolution: "applicationinsights@npm:2.3.4"
+"applicationinsights@npm:2.3.5":
+  version: 2.3.5
+  resolution: "applicationinsights@npm:2.3.5"
   dependencies:
     "@azure/core-http": ^2.2.3
     "@microsoft/applicationinsights-web-snippet": ^1.0.1
@@ -3285,7 +3285,7 @@ __metadata:
   peerDependenciesMeta:
     applicationinsights-native-metrics:
       optional: true
-  checksum: c7ae7ccbbeaf4f4789d86d71c9fd0433e3aaf4cb69e4139c28db201550c96aaa40b355643a9b1205bf30775fd00ac204f9be5f1e1d9d33d4e675728ffc692259
+  checksum: 48ab24d11dca9122c5e1ecaf0ff3619aa0d2fed813bc7b7f49c7bdaa21e852c2e5e9fc7808901f7b044a623dd790e2c148d4ed9e66bf41ef9e37e6c5fff7237c
   languageName: node
   linkType: hard
 
@@ -10705,7 +10705,7 @@ __metadata:
     "@types/supertest": ^2.0.12
     "@typescript-eslint/eslint-plugin": ^5.37.0
     "@typescript-eslint/parser": ^5.37.0
-    applicationinsights: ^2.3.4
+    applicationinsights: 2.3.5
     axios: ^0.27.2
     axios-debug-log: ^0.8.4
     babel-loader: ^8.2.5
