@@ -96,7 +96,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["pa11y", "npm:6.2.3"],\
             ["playwright", "npm:1.25.2"],\
             ["prettier", "npm:2.7.1"],\
-            ["puppeteer", "npm:17.1.3"],\
             ["request", "npm:2.88.2"],\
             ["require-directory", "npm:2.1.1"],\
             ["sass", "npm:1.54.9"],\
@@ -6681,16 +6680,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["cross-fetch", [\
-        ["npm:3.1.5", {\
-          "packageLocation": "./.yarn/cache/cross-fetch-npm-3.1.5-e414995db9-f6b8c6ee3e.zip/node_modules/cross-fetch/",\
-          "packageDependencies": [\
-            ["cross-fetch", "npm:3.1.5"],\
-            ["node-fetch", "virtual:e9a012ddd7ebe6b0d904a8e9e9e271777511d8af9971ae287e96e5357c7b52a59e5a63e98d7f598f6fb8a8262ff489ac06679e7ed6a72b001718547ba802c4cf#npm:2.6.7"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["cross-spawn", [\
         ["npm:7.0.3", {\
           "packageLocation": "./.yarn/cache/cross-spawn-npm-7.0.3-e4ff3e65b3-671cc7c728.zip/node_modules/cross-spawn/",\
@@ -7087,13 +7076,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["devtools-protocol", [\
-        ["npm:0.0.1036444", {\
-          "packageLocation": "./.yarn/cache/devtools-protocol-npm-0.0.1036444-161f9f2a28-6975c8def9.zip/node_modules/devtools-protocol/",\
-          "packageDependencies": [\
-            ["devtools-protocol", "npm:0.0.1036444"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:0.0.869402", {\
           "packageLocation": "./.yarn/cache/devtools-protocol-npm-0.0.869402-893483e855-939bddd137.zip/node_modules/devtools-protocol/",\
           "packageDependencies": [\
@@ -13042,24 +13024,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["puppeteer", [\
-        ["npm:17.1.3", {\
-          "packageLocation": "./.yarn/unplugged/puppeteer-npm-17.1.3-151d8d3699/node_modules/puppeteer/",\
-          "packageDependencies": [\
-            ["puppeteer", "npm:17.1.3"],\
-            ["cross-fetch", "npm:3.1.5"],\
-            ["debug", "virtual:f0d3031a6145da2387f6c4c9a90dd69e2412297abf688347f8e8996ecd3cd2aa5d59a7c8e190c712a10cbdbb0a3cc5de7e22fd8ab2db4044bcb420a038a6d64d#npm:4.3.4"],\
-            ["devtools-protocol", "npm:0.0.1036444"],\
-            ["extract-zip", "npm:2.0.1"],\
-            ["https-proxy-agent", "npm:5.0.1"],\
-            ["progress", "npm:2.0.3"],\
-            ["proxy-from-env", "npm:1.1.0"],\
-            ["rimraf", "npm:3.0.2"],\
-            ["tar-fs", "npm:2.1.1"],\
-            ["unbzip2-stream", "npm:1.4.3"],\
-            ["ws", "virtual:151d8d36999bdab98f75ba53988237e1fbac8f403be5e33a5b71e83883854f59386aa69cd5476ec27e97180841aeb3f02dd72bca9065b2eebac1b0f03af5dfb5#npm:8.8.1"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:9.1.1", {\
           "packageLocation": "./.yarn/unplugged/puppeteer-npm-9.1.1-e9a012ddd7/node_modules/puppeteer/",\
           "packageDependencies": [\
@@ -13749,7 +13713,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["pa11y", "npm:6.2.3"],\
             ["playwright", "npm:1.25.2"],\
             ["prettier", "npm:2.7.1"],\
-            ["puppeteer", "npm:17.1.3"],\
             ["request", "npm:2.88.2"],\
             ["require-directory", "npm:2.1.1"],\
             ["sass", "npm:1.54.9"],\
@@ -16032,30 +15995,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ws", "npm:7.5.9"]\
           ],\
           "linkType": "SOFT"\
-        }],\
-        ["npm:8.8.1", {\
-          "packageLocation": "./.yarn/cache/ws-npm-8.8.1-955e8c9f58-2152cf862c.zip/node_modules/ws/",\
-          "packageDependencies": [\
-            ["ws", "npm:8.8.1"]\
-          ],\
-          "linkType": "SOFT"\
-        }],\
-        ["virtual:151d8d36999bdab98f75ba53988237e1fbac8f403be5e33a5b71e83883854f59386aa69cd5476ec27e97180841aeb3f02dd72bca9065b2eebac1b0f03af5dfb5#npm:8.8.1", {\
-          "packageLocation": "./.yarn/__virtual__/ws-virtual-af821266bf/0/cache/ws-npm-8.8.1-955e8c9f58-2152cf862c.zip/node_modules/ws/",\
-          "packageDependencies": [\
-            ["ws", "virtual:151d8d36999bdab98f75ba53988237e1fbac8f403be5e33a5b71e83883854f59386aa69cd5476ec27e97180841aeb3f02dd72bca9065b2eebac1b0f03af5dfb5#npm:8.8.1"],\
-            ["@types/bufferutil", null],\
-            ["@types/utf-8-validate", null],\
-            ["bufferutil", null],\
-            ["utf-8-validate", null]\
-          ],\
-          "packagePeers": [\
-            "@types/bufferutil",\
-            "@types/utf-8-validate",\
-            "bufferutil",\
-            "utf-8-validate"\
-          ],\
-          "linkType": "HARD"\
         }],\
         ["virtual:e9a012ddd7ebe6b0d904a8e9e9e271777511d8af9971ae287e96e5357c7b52a59e5a63e98d7f598f6fb8a8262ff489ac06679e7ed6a72b001718547ba802c4cf#npm:7.5.9", {\
           "packageLocation": "./.yarn/__virtual__/ws-virtual-854d08c50d/0/cache/ws-npm-7.5.9-26f12a5ed6-c3c100a181.zip/node_modules/ws/",\
