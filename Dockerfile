@@ -1,17 +1,21 @@
 # ---- Base image ----
 FROM hmctspublic.azurecr.io/base/node:16-alpine as base
+
+USER root
+RUN corepack enable
+USER hmcts
+
 COPY --chown=hmcts:hmcts . .
-RUN yarn install --production \
-  && yarn cache clean
 
 # ---- Build image ----
 FROM base as build
 
-RUN PUPPETEER_SKIP_DOWNLOAD=true yarn install && yarn build:prod
+RUN yarn build:prod && \
+    rm -rf webpack/ webpack.config.js
 
 # ---- Runtime image ----
 FROM base as runtime
-RUN rm -rf webpack/ webpack.config.js
+
 COPY --from=build $WORKDIR/src/main ./src/main
 # TODO: expose the right port for your application
 EXPOSE 3100
