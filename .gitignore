@@ -27,15 +27,14 @@ src/main/views/govuk
 
 .eslintcache
 
-# yarn v2 zero-install
-!.pnp.cjs
-!.yarn/unplugged
-!.yarn/plugins
-!.yarn/cache
-
 # yarn v2
 .yarn/*
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
-.local-chromium
+
+# yarn v2 zero-install
+!.pnp.cjs
+!.yarn/unplugged
+!.yarn/plugins
+!.yarn/cache
