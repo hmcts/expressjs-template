@@ -12,11 +12,9 @@ import express from 'express';
 import { glob } from 'glob';
 import favicon from 'serve-favicon';
 
-
 const { setupDev } = require('./development');
 
 const { Logger } = require('@hmcts/nodejs-logging');
-
 
 const env = process.env.NODE_ENV || 'development';
 const developmentMode = env === 'development';

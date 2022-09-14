@@ -2,7 +2,6 @@ import { config as testConfig } from '../config';
 
 import { setHeadlessWhen } from '@codeceptjs/configure';
 
-
 setHeadlessWhen(testConfig.TestHeadlessBrowser);
 
 export const config: CodeceptJS.Config = {
