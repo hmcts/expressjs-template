@@ -91,7 +91,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lodash", "npm:4.17.21"],\
             ["mini-css-extract-plugin", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:2.6.1"],\
             ["nock", "npm:13.2.9"],\
-            ["nodemon", "npm:2.0.19"],\
+            ["nodemon", "npm:2.0.20"],\
             ["nunjucks", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.2.3"],\
             ["pa11y", "npm:6.2.3"],\
             ["playwright", "npm:1.25.2"],\
@@ -6891,10 +6891,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["virtual:5d6fa595c641abcb43d18b774684bacd52037a1e3ff8c4155feb531408a1913bd7a19513bf820252cfaae35026a75a776e3349943c7c05cd54bf6c51005e9d45#npm:3.2.7", {\
-          "packageLocation": "./.yarn/__virtual__/debug-virtual-9f0f33c158/0/cache/debug-npm-3.2.7-754e818c7a-b3d8c59407.zip/node_modules/debug/",\
+        ["virtual:2fea8f7bf934d589dd2afccb55bdd68145a88b9aa55a29410057bbb8228035ad3d548659b5b68d9a9ac84d437a7692cb2fa244c9ab467fa2df8198a52edaac16#npm:3.2.7", {\
+          "packageLocation": "./.yarn/__virtual__/debug-virtual-59668cc157/0/cache/debug-npm-3.2.7-754e818c7a-b3d8c59407.zip/node_modules/debug/",\
           "packageDependencies": [\
-            ["debug", "virtual:5d6fa595c641abcb43d18b774684bacd52037a1e3ff8c4155feb531408a1913bd7a19513bf820252cfaae35026a75a776e3349943c7c05cd54bf6c51005e9d45#npm:3.2.7"],\
+            ["debug", "virtual:2fea8f7bf934d589dd2afccb55bdd68145a88b9aa55a29410057bbb8228035ad3d548659b5b68d9a9ac84d437a7692cb2fa244c9ab467fa2df8198a52edaac16#npm:3.2.7"],\
             ["@types/supports-color", null],\
             ["ms", "npm:2.1.3"],\
             ["supports-color", "npm:5.5.0"]\
@@ -11999,12 +11999,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["nodemon", [\
-        ["npm:2.0.19", {\
-          "packageLocation": "./.yarn/unplugged/nodemon-npm-2.0.19-5d6fa595c6/node_modules/nodemon/",\
+        ["npm:2.0.20", {\
+          "packageLocation": "./.yarn/unplugged/nodemon-npm-2.0.20-2fea8f7bf9/node_modules/nodemon/",\
           "packageDependencies": [\
-            ["nodemon", "npm:2.0.19"],\
+            ["nodemon", "npm:2.0.20"],\
             ["chokidar", "npm:3.5.3"],\
-            ["debug", "virtual:5d6fa595c641abcb43d18b774684bacd52037a1e3ff8c4155feb531408a1913bd7a19513bf820252cfaae35026a75a776e3349943c7c05cd54bf6c51005e9d45#npm:3.2.7"],\
+            ["debug", "virtual:2fea8f7bf934d589dd2afccb55bdd68145a88b9aa55a29410057bbb8228035ad3d548659b5b68d9a9ac84d437a7692cb2fa244c9ab467fa2df8198a52edaac16#npm:3.2.7"],\
             ["ignore-by-default", "npm:1.0.1"],\
             ["minimatch", "npm:3.1.2"],\
             ["pstree.remy", "npm:1.1.8"],\
@@ -13708,7 +13708,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lodash", "npm:4.17.21"],\
             ["mini-css-extract-plugin", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:2.6.1"],\
             ["nock", "npm:13.2.9"],\
-            ["nodemon", "npm:2.0.19"],\
+            ["nodemon", "npm:2.0.20"],\
             ["nunjucks", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.2.3"],\
             ["pa11y", "npm:6.2.3"],\
             ["playwright", "npm:1.25.2"],\
