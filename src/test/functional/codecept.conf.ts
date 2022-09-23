@@ -1,14 +1,15 @@
 import { config as testConfig } from '../config';
 
-import { setHeadlessWhen } from '@codeceptjs/configure';
+const { setHeadlessWhen } = require('codeceptjs-configure-temp-fork');
 
 setHeadlessWhen(testConfig.TestHeadlessBrowser);
 
-export const config: CodeceptJS.Config = {
+export const config: CodeceptJS.MainConfig = {
   name: 'functional',
   gherkin: testConfig.Gherkin,
   output: '../../../functional-output/functional/reports',
   helpers: testConfig.helpers,
+  tests: './src/test/functional',
   plugins: {
     allure: {
       enabled: true,
