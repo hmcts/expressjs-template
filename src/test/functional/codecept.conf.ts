@@ -1,6 +1,6 @@
 import { config as testConfig } from '../config';
 
-const { setHeadlessWhen } = require('codeceptjs-configure-temp-fork');
+const { setHeadlessWhen } = require('@codeceptjs/configure');
 
 setHeadlessWhen(testConfig.TestHeadlessBrowser);
 
