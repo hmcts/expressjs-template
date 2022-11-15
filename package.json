@@ -74,7 +74,7 @@
     "@typescript-eslint/eslint-plugin": "^5.37.0",
     "@typescript-eslint/parser": "^5.37.0",
     "axios-debug-log": "^0.8.4",
-    "babel-loader": "^8.2.5",
+    "babel-loader": "^9.0.0",
     "chai": "^4.3.6",
     "chai-as-promised": "^7.1.1",
     "codeceptjs": "^3.3.6",
