@@ -3517,15 +3517,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios-debug-log@npm:^0.8.4":
-  version: 0.8.4
-  resolution: "axios-debug-log@npm:0.8.4"
+"axios-debug-log@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "axios-debug-log@npm:1.0.0"
   dependencies:
     "@types/debug": ^4.0.0
     debug: ^4.0.0
   peerDependencies:
-    axios: ">=0.17.0"
-  checksum: 529222882e58d97e74df5be82904763e6df8673c005d82aff4310a9e7f28aff75d9f33e3e8ea96c1e944e85346d0c64fd591d48d43590bee70a47cf25bd13e88
+    axios: ">=1.0.0"
+  checksum: db41f20439027a75ead8e32a14d8b3350635674c11fd72335dbcfcaf1a828246c7c28109cb6964b969c0991431218dfbda5d570ea275d1c57e979f89cd25fcfd
   languageName: node
   linkType: hard
 
@@ -10378,7 +10378,7 @@ __metadata:
     "@typescript-eslint/parser": ^5.37.0
     applicationinsights: ^2.3.4
     axios: ^1.0.0
-    axios-debug-log: ^0.8.4
+    axios-debug-log: ^1.0.0
     babel-loader: ^9.0.0
     body-parser: ^1.20.0
     chai: ^4.3.6
