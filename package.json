@@ -69,7 +69,7 @@
     "@babel/preset-env": "^7.19.0",
     "@codeceptjs/configure": "^0.10.0",
     "@types/chai-as-promised": "^7.1.5",
-    "@types/jest": "^29.0.2",
+    "@types/jest": "^29.4.0",
     "@types/supertest": "^2.0.12",
     "@typescript-eslint/eslint-plugin": "^5.37.0",
     "@typescript-eslint/parser": "^5.37.0",
@@ -114,5 +114,5 @@
     "*.{js,ts}": "eslint --cache --fix",
     "*.{js,ts,css,md,html,json}": "prettier --write"
   },
-  "packageManager": "yarn@3.4.1"
+  "packageManager": "yarn@3.3.0"
 }
