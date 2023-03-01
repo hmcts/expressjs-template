@@ -63,13 +63,13 @@ The applications's home page will be available at https://localhost:3100
 Create docker image:
 
 ```bash
-  docker-compose build
+docker-compose build
 ```
 
 Run the application by executing the following command:
 
 ```bash
-  docker-compose up
+docker-compose up
 ```
 
 This will start the frontend container exposing the application's port
