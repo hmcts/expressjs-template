@@ -41,19 +41,19 @@ Running the application requires the following tools to be installed in your env
 Install dependencies by executing the following command:
 
 ```bash
-$ yarn install
+yarn install
 ```
 
 Bundle:
 
 ```bash
-$ yarn webpack
+yarn webpack
 ```
 
 Run:
 
 ```bash
-$ yarn start
+yarn start
 ```
 
 The applications's home page will be available at https://localhost:3100
@@ -88,7 +88,7 @@ alongside [sass-lint](https://github.com/sasstools/sass-lint)
 Running the linting with auto fix:
 
 ```bash
-$ yarn lint --fix
+yarn lint --fix
 ```
 
 ### Running the tests
@@ -97,19 +97,19 @@ This template app uses [Jest](https://jestjs.io//) as the test engine. You can r
 the following command:
 
 ```bash
-$ yarn test
+yarn test
 ```
 
 Here's how to run functional tests (the template contains just one sample test):
 
 ```bash
-$ yarn test:routes
+yarn test:routes
 ```
 
 Running accessibility tests:
 
 ```bash
-$ yarn test:a11y
+yarn test:a11y
 ```
 
 Make sure all the paths in your application are covered by accessibility tests (see [a11y.ts](src/test/a11y/a11y.ts)).
