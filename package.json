@@ -70,7 +70,6 @@
     "@codeceptjs/configure": "^0.10.0",
     "@types/chai-as-promised": "^7.1.5",
     "@types/jest": "^29.4.0",
-    "@types/mocha": "^10.0.1",
     "@types/supertest": "^2.0.12",
     "@typescript-eslint/eslint-plugin": "^5.37.0",
     "@typescript-eslint/parser": "^5.37.0",

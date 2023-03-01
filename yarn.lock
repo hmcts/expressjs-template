@@ -2469,13 +2469,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/mocha@npm:^10.0.1":
-  version: 10.0.1
-  resolution: "@types/mocha@npm:10.0.1"
-  checksum: 224ea9fce7b1734ccdb9aa99a622d902a538ce1847bca7fd22c5fb38adcf3ed536f50f48f587085db988a4bb3c2eb68f4b98e1cd6a38bc5547bd3bbbedc54495
-  languageName: node
-  linkType: hard
-
 "@types/ms@npm:*":
   version: 0.7.31
   resolution: "@types/ms@npm:0.7.31"
@@ -10376,7 +10369,6 @@ __metadata:
     "@types/helmet": ^4.0.0
     "@types/jest": ^29.4.0
     "@types/lodash": ^4.14.185
-    "@types/mocha": ^10.0.1
     "@types/node": ^18.7.18
     "@types/nunjucks": ^3.2.1
     "@types/require-directory": ^2.1.2

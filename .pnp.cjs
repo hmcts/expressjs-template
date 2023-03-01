@@ -47,7 +47,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/helmet", "npm:4.0.0"],\
             ["@types/jest", "npm:29.4.0"],\
             ["@types/lodash", "npm:4.14.185"],\
-            ["@types/mocha", "npm:10.0.1"],\
             ["@types/node", "npm:18.7.18"],\
             ["@types/nunjucks", "npm:3.2.1"],\
             ["@types/require-directory", "npm:2.1.2"],\
@@ -3928,15 +3927,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-minimist-npm-1.2.2-a445de65da-b8da83c66e.zip/node_modules/@types/minimist/",\
           "packageDependencies": [\
             ["@types/minimist", "npm:1.2.2"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@types/mocha", [\
-        ["npm:10.0.1", {\
-          "packageLocation": "./.yarn/cache/@types-mocha-npm-10.0.1-7c94e9e170-224ea9fce7.zip/node_modules/@types/mocha/",\
-          "packageDependencies": [\
-            ["@types/mocha", "npm:10.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -13396,7 +13386,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/helmet", "npm:4.0.0"],\
             ["@types/jest", "npm:29.4.0"],\
             ["@types/lodash", "npm:4.14.185"],\
-            ["@types/mocha", "npm:10.0.1"],\
             ["@types/node", "npm:18.7.18"],\
             ["@types/nunjucks", "npm:3.2.1"],\
             ["@types/require-directory", "npm:2.1.2"],\
