@@ -6,4 +6,8 @@ module.exports = {
   transform: {
     '^.+\\.ts?$': 'ts-jest',
   },
+  fakeTimers: {
+    enableGlobally: true,
+    legacyFakeTimers: true,
+  },
 };
