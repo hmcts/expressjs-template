@@ -9,9 +9,9 @@ def component = "expressjs-template"
 def yarnBuilder = new uk.gov.hmcts.contino.YarnBuilder(this)
 
 withPipeline(type, product, component) {
-  after('build') {
+  afterAlways('build') {
     yarnBuilder.yarn('rebuild puppeteer')
     yarnBuilder.yarn('build')
   }
-  
+
 }
