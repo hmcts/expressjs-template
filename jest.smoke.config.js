@@ -10,10 +10,10 @@ module.exports = {
   reporters: [
     'default',
     [
-      './node_modules/jest-html-reporter',
+      'jest-html-reporter',
       {
         pageTitle: 'Smoke Test Report',
-        outputPath: './smoke-output/reports/test-report.html',
+        outputPath: '<rootDir>/smoke-output/reports/test-report.html',
         includeFailureMsg: true,
       },
     ],
