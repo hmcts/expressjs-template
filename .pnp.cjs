@@ -59,7 +59,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["axios-debug-log", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:1.0.0"],\
             ["babel-loader", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:9.1.0"],\
             ["body-parser", "npm:1.20.0"],\
-            ["chai", "npm:4.3.6"],\
+            ["chai", "npm:4.3.7"],\
             ["chai-as-promised", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:7.1.1"],\
             ["codeceptjs", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.3.6"],\
             ["config", "npm:3.3.8"],\
@@ -5985,13 +5985,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["chai", [\
-        ["npm:4.3.6", {\
-          "packageLocation": "./.yarn/cache/chai-npm-4.3.6-dba90e4b0b-acff93fd53.zip/node_modules/chai/",\
+        ["npm:4.3.7", {\
+          "packageLocation": "./.yarn/cache/chai-npm-4.3.7-48fdcf2584-0bba7d2678.zip/node_modules/chai/",\
           "packageDependencies": [\
-            ["chai", "npm:4.3.6"],\
+            ["chai", "npm:4.3.7"],\
             ["assertion-error", "npm:1.1.0"],\
             ["check-error", "npm:1.0.2"],\
-            ["deep-eql", "npm:3.0.1"],\
+            ["deep-eql", "npm:4.1.3"],\
             ["get-func-name", "npm:2.0.0"],\
             ["loupe", "npm:2.3.4"],\
             ["pathval", "npm:1.1.1"],\
@@ -6013,7 +6013,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["chai-as-promised", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:7.1.1"],\
             ["@types/chai", null],\
-            ["chai", "npm:4.3.6"],\
+            ["chai", "npm:4.3.7"],\
             ["check-error", "npm:1.0.2"]\
           ],\
           "packagePeers": [\
@@ -6036,7 +6036,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["chai-deep-match", "virtual:61c0c1146b25b545bf477210e09b280b90c3e6bea8a62a68f3994df9bdc2483fbd3b1298a42f7e94656dbe8cc6bc64c37851a77f8dc229ad154211b61df384ac#npm:1.2.1"],\
             ["@types/chai", null],\
-            ["chai", "npm:4.3.6"],\
+            ["chai", "npm:4.3.7"],\
             ["deep-keys", "npm:0.5.0"],\
             ["lodash", "npm:4.17.21"],\
             ["lodash-pickdeep", "npm:1.0.2"]\
@@ -6345,7 +6345,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["allure-js-commons", "npm:1.3.2"],\
             ["arrify", "npm:2.0.1"],\
             ["axios", "npm:0.21.4"],\
-            ["chai", "npm:4.3.6"],\
+            ["chai", "npm:4.3.7"],\
             ["chai-deep-match", "virtual:61c0c1146b25b545bf477210e09b280b90c3e6bea8a62a68f3994df9bdc2483fbd3b1298a42f7e94656dbe8cc6bc64c37851a77f8dc229ad154211b61df384ac#npm:1.2.1"],\
             ["chalk", "npm:4.1.2"],\
             ["commander", "npm:2.20.3"],\
@@ -7041,10 +7041,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["deep-eql", [\
-        ["npm:3.0.1", {\
-          "packageLocation": "./.yarn/cache/deep-eql-npm-3.0.1-9a66c09c65-4f4c9fb79e.zip/node_modules/deep-eql/",\
+        ["npm:4.1.3", {\
+          "packageLocation": "./.yarn/cache/deep-eql-npm-4.1.3-020a64f862-7f6d30cb41.zip/node_modules/deep-eql/",\
           "packageDependencies": [\
-            ["deep-eql", "npm:3.0.1"],\
+            ["deep-eql", "npm:4.1.3"],\
             ["type-detect", "npm:4.0.8"]\
           ],\
           "linkType": "HARD"\
@@ -13488,7 +13488,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["axios-debug-log", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:1.0.0"],\
             ["babel-loader", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:9.1.0"],\
             ["body-parser", "npm:1.20.0"],\
-            ["chai", "npm:4.3.6"],\
+            ["chai", "npm:4.3.7"],\
             ["chai-as-promised", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:7.1.1"],\
             ["codeceptjs", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.3.6"],\
             ["config", "npm:3.3.8"],\
@@ -13953,7 +13953,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["sinon-chai", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.7.0"],\
             ["@types/chai", null],\
             ["@types/sinon", null],\
-            ["chai", "npm:4.3.6"],\
+            ["chai", "npm:4.3.7"],\
             ["sinon", "npm:15.0.0"]\
           ],\
           "packagePeers": [\
