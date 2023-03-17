@@ -43,7 +43,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/csurf", "npm:1.11.2"],\
             ["@types/es6-promisify", "npm:6.0.1"],\
             ["@types/express", "npm:4.17.17"],\
-            ["@types/glob", "npm:8.0.0"],\
+            ["@types/glob", "npm:8.1.0"],\
             ["@types/helmet", "npm:4.0.0"],\
             ["@types/jest", "npm:29.4.0"],\
             ["@types/lodash", "npm:4.14.191"],\
@@ -74,7 +74,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-jest", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:27.2.1"],\
             ["express", "npm:4.18.2"],\
             ["express-nunjucks", "npm:2.2.5"],\
-            ["glob", "npm:8.0.3"],\
+            ["glob", "npm:8.1.0"],\
             ["govuk-frontend", "npm:4.5.0"],\
             ["helmet", "npm:6.0.1"],\
             ["html-webpack-plugin", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:5.5.0"],\
@@ -5415,10 +5415,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/glob", [\
-        ["npm:8.0.0", {\
-          "packageLocation": "./.yarn/cache/@types-glob-npm-8.0.0-02bd6d4d05-1817b05f5a.zip/node_modules/@types/glob/",\
+        ["npm:8.1.0", {\
+          "packageLocation": "./.yarn/cache/@types-glob-npm-8.1.0-bdb9d0520c-9101f3a906.zip/node_modules/@types/glob/",\
           "packageDependencies": [\
-            ["@types/glob", "npm:8.0.0"],\
+            ["@types/glob", "npm:8.1.0"],\
             ["@types/minimatch", "npm:5.1.2"],\
             ["@types/node", "npm:18.7.16"]\
           ],\
@@ -10466,6 +10466,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["once", "npm:1.4.0"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:8.1.0", {\
+          "packageLocation": "./.yarn/cache/glob-npm-8.1.0-65f64af8b1-92fbea3221.zip/node_modules/glob/",\
+          "packageDependencies": [\
+            ["glob", "npm:8.1.0"],\
+            ["fs.realpath", "npm:1.0.0"],\
+            ["inflight", "npm:1.0.6"],\
+            ["inherits", "npm:2.0.4"],\
+            ["minimatch", "npm:5.1.0"],\
+            ["once", "npm:1.4.0"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["glob-parent", [\
@@ -12256,7 +12268,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["js-beautify", "npm:1.14.6"],\
             ["config-chain", "npm:1.1.13"],\
             ["editorconfig", "npm:0.15.3"],\
-            ["glob", "npm:8.0.3"],\
+            ["glob", "npm:8.1.0"],\
             ["nopt", "npm:6.0.0"]\
           ],\
           "linkType": "HARD"\
@@ -15113,7 +15125,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/csurf", "npm:1.11.2"],\
             ["@types/es6-promisify", "npm:6.0.1"],\
             ["@types/express", "npm:4.17.17"],\
-            ["@types/glob", "npm:8.0.0"],\
+            ["@types/glob", "npm:8.1.0"],\
             ["@types/helmet", "npm:4.0.0"],\
             ["@types/jest", "npm:29.4.0"],\
             ["@types/lodash", "npm:4.14.191"],\
@@ -15144,7 +15156,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-jest", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:27.2.1"],\
             ["express", "npm:4.18.2"],\
             ["express-nunjucks", "npm:2.2.5"],\
-            ["glob", "npm:8.0.3"],\
+            ["glob", "npm:8.1.0"],\
             ["govuk-frontend", "npm:4.5.0"],\
             ["helmet", "npm:6.0.1"],\
             ["html-webpack-plugin", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:5.5.0"],\
