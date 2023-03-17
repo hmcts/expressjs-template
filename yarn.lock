@@ -1560,13 +1560,13 @@ __metadata:
   linkType: hard
 
 "@hmcts/nodejs-healthcheck@npm:^1.7.3":
-  version: 1.7.3
-  resolution: "@hmcts/nodejs-healthcheck@npm:1.7.3"
+  version: 1.8.0
+  resolution: "@hmcts/nodejs-healthcheck@npm:1.8.0"
   dependencies:
     "@hmcts/nodejs-logging": ^4.0.4
     js-yaml: ^3.8.4
     superagent: 7
-  checksum: 650d489f7f876ae325cd2fabab471a20ca4b21a69d9fde21bc96b398fe1f59fb600ada5704682a8dc594db4080ec286a4e7c220abfba19bd24101eb4ee56c3ef
+  checksum: 8412f6a36b2a16a6be25d98c9cb083650bc55ba8b490aa5bc438cca3d1f5e2d17a936cd5ae5f0aa577b1e7de41ac647d0b4866dd89d7ab68b37518a72eef97b9
   languageName: node
   linkType: hard
 
