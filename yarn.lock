@@ -12378,8 +12378,8 @@ __metadata:
   linkType: hard
 
 "webpack-dev-middleware@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "webpack-dev-middleware@npm:6.0.0"
+  version: 6.0.1
+  resolution: "webpack-dev-middleware@npm:6.0.1"
   dependencies:
     colorette: ^2.0.10
     memfs: ^3.4.12
@@ -12388,7 +12388,7 @@ __metadata:
     schema-utils: ^4.0.0
   peerDependencies:
     webpack: ^5.0.0
-  checksum: 18a79ac6d3e96d05ba7d952bda41740e6c46491747e372dda4de08ccef42d7207637b1ef7cfc81018e401d8c6f6e0ba7da4a749084e7b1d361a1a1f97d66289f
+  checksum: eeda09cf4a1fdb09ee95f96ab657b0fb8d32c56f4d20c7f4499457a015c703f243711fda0b5bc0d103ff9e7c7b9b60568210a4c0fbd6d02361d09d2387cd723a
   languageName: node
   linkType: hard
 
