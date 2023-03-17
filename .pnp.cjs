@@ -47,7 +47,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/helmet", "npm:4.0.0"],\
             ["@types/jest", "npm:29.4.0"],\
             ["@types/lodash", "npm:4.14.191"],\
-            ["@types/node", "npm:18.7.18"],\
+            ["@types/node", "npm:18.15.3"],\
             ["@types/nunjucks", "npm:3.2.2"],\
             ["@types/require-directory", "npm:2.1.2"],\
             ["@types/serve-favicon", "npm:2.5.3"],\
@@ -4016,17 +4016,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/node", [\
+        ["npm:18.15.3", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-18.15.3-d092b0c75c-31b1d92475.zip/node_modules/@types/node/",\
+          "packageDependencies": [\
+            ["@types/node", "npm:18.15.3"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:18.7.16", {\
           "packageLocation": "./.yarn/cache/@types-node-npm-18.7.16-f7271d701b-01a3d35c76.zip/node_modules/@types/node/",\
           "packageDependencies": [\
             ["@types/node", "npm:18.7.16"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["npm:18.7.18", {\
-          "packageLocation": "./.yarn/cache/@types-node-npm-18.7.18-5bcc3f839f-8aec61f0f9.zip/node_modules/@types/node/",\
-          "packageDependencies": [\
-            ["@types/node", "npm:18.7.18"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -13592,7 +13592,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/helmet", "npm:4.0.0"],\
             ["@types/jest", "npm:29.4.0"],\
             ["@types/lodash", "npm:4.14.191"],\
-            ["@types/node", "npm:18.7.18"],\
+            ["@types/node", "npm:18.15.3"],\
             ["@types/nunjucks", "npm:3.2.2"],\
             ["@types/require-directory", "npm:2.1.2"],\
             ["@types/serve-favicon", "npm:2.5.3"],\
@@ -15232,7 +15232,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@tsconfig/node12", "npm:1.0.11"],\
             ["@tsconfig/node14", "npm:1.0.3"],\
             ["@tsconfig/node16", "npm:1.0.3"],\
-            ["@types/node", "npm:18.7.18"],\
+            ["@types/node", "npm:18.15.3"],\
             ["@types/swc__core", null],\
             ["@types/swc__wasm", null],\
             ["@types/typescript", null],\
