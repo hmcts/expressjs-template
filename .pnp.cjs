@@ -62,7 +62,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chai", "npm:4.3.7"],\
             ["chai-as-promised", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:7.1.1"],\
             ["codeceptjs", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.3.6"],\
-            ["config", "npm:3.3.8"],\
+            ["config", "npm:3.3.9"],\
             ["cookie-parser", "npm:1.4.6"],\
             ["copy-webpack-plugin", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:9.1.0"],\
             ["css-loader", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:6.7.3"],\
@@ -6581,11 +6581,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["config", [\
-        ["npm:3.3.8", {\
-          "packageLocation": "./.yarn/cache/config-npm-3.3.8-46e6756218-8ae3b1a073.zip/node_modules/config/",\
+        ["npm:3.3.9", {\
+          "packageLocation": "./.yarn/cache/config-npm-3.3.9-7e0be6fe2e-2c29e40be2.zip/node_modules/config/",\
           "packageDependencies": [\
-            ["config", "npm:3.3.8"],\
-            ["json5", "npm:2.2.1"]\
+            ["config", "npm:3.3.9"],\
+            ["json5", "npm:2.2.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -13570,7 +13570,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chai", "npm:4.3.7"],\
             ["chai-as-promised", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:7.1.1"],\
             ["codeceptjs", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.3.6"],\
-            ["config", "npm:3.3.8"],\
+            ["config", "npm:3.3.9"],\
             ["cookie-parser", "npm:1.4.6"],\
             ["copy-webpack-plugin", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:9.1.0"],\
             ["css-loader", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:6.7.3"],\
