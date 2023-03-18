@@ -94,7 +94,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["request", "npm:2.88.2"],\
             ["require-directory", "npm:2.1.1"],\
             ["sass", "npm:1.59.3"],\
-            ["sass-loader", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:13.2.0"],\
+            ["sass-loader", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:13.2.1"],\
             ["serve-favicon", "npm:2.5.0"],\
             ["sinon", "npm:15.0.2"],\
             ["sinon-chai", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.7.0"],\
@@ -12477,10 +12477,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["klona", [\
-        ["npm:2.0.5", {\
-          "packageLocation": "./.yarn/cache/klona-npm-2.0.5-5d403f2d77-8c976126ea.zip/node_modules/klona/",\
+        ["npm:2.0.6", {\
+          "packageLocation": "./.yarn/cache/klona-npm-2.0.6-bc83268fb1-ac9ee3732e.zip/node_modules/klona/",\
           "packageDependencies": [\
-            ["klona", "npm:2.0.5"]\
+            ["klona", "npm:2.0.6"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -15183,7 +15183,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["request", "npm:2.88.2"],\
             ["require-directory", "npm:2.1.1"],\
             ["sass", "npm:1.59.3"],\
-            ["sass-loader", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:13.2.0"],\
+            ["sass-loader", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:13.2.1"],\
             ["serve-favicon", "npm:2.5.0"],\
             ["sinon", "npm:15.0.2"],\
             ["sinon-chai", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.7.0"],\
@@ -15299,24 +15299,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["sass-loader", [\
-        ["npm:13.2.0", {\
-          "packageLocation": "./.yarn/cache/sass-loader-npm-13.2.0-6421c5ff7b-ed6cdb5f55.zip/node_modules/sass-loader/",\
+        ["npm:13.2.1", {\
+          "packageLocation": "./.yarn/cache/sass-loader-npm-13.2.1-ed65f5d43d-5823b5f19d.zip/node_modules/sass-loader/",\
           "packageDependencies": [\
-            ["sass-loader", "npm:13.2.0"]\
+            ["sass-loader", "npm:13.2.1"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:13.2.0", {\
-          "packageLocation": "./.yarn/__virtual__/sass-loader-virtual-b4860e1845/0/cache/sass-loader-npm-13.2.0-6421c5ff7b-ed6cdb5f55.zip/node_modules/sass-loader/",\
+        ["virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:13.2.1", {\
+          "packageLocation": "./.yarn/__virtual__/sass-loader-virtual-649af07d5c/0/cache/sass-loader-npm-13.2.1-ed65f5d43d-5823b5f19d.zip/node_modules/sass-loader/",\
           "packageDependencies": [\
-            ["sass-loader", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:13.2.0"],\
+            ["sass-loader", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:13.2.1"],\
             ["@types/fibers", null],\
             ["@types/node-sass", null],\
             ["@types/sass", null],\
             ["@types/sass-embedded", null],\
             ["@types/webpack", null],\
             ["fibers", null],\
-            ["klona", "npm:2.0.5"],\
+            ["klona", "npm:2.0.6"],\
             ["neo-async", "npm:2.6.2"],\
             ["node-sass", null],\
             ["sass", "npm:1.59.3"],\
