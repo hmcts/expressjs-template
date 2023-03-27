@@ -52,7 +52,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@azure/core-tracing@npm:^1.0.1":
+"@azure/core-tracing@npm:^1.0.0, @azure/core-tracing@npm:^1.0.1":
   version: 1.0.1
   resolution: "@azure/core-tracing@npm:1.0.1"
   dependencies:
@@ -77,6 +77,20 @@ __metadata:
   dependencies:
     tslib: ^2.2.0
   checksum: f3443c70c678a7449a5f3be09488a0a15711c506c9da6a81fa9e43178128ddf5db3abc02c99359d188e4ef47d703c5e5f206df71b0e01884245de3220ab1205b
+  languageName: node
+  linkType: hard
+
+"@azure/opentelemetry-instrumentation-azure-sdk@npm:^1.0.0-beta.2":
+  version: 1.0.0-beta.2
+  resolution: "@azure/opentelemetry-instrumentation-azure-sdk@npm:1.0.0-beta.2"
+  dependencies:
+    "@azure/core-tracing": ^1.0.0
+    "@azure/logger": ^1.0.0
+    "@opentelemetry/api": ^1.2.0
+    "@opentelemetry/core": ^1.7.0
+    "@opentelemetry/instrumentation": ^0.33.0
+    tslib: ^2.2.0
+  checksum: 126925c6b7ac0bd9a1067f792eded9cb633816f28f1ee58071d90a0cd15ee95afc61822b40c5aecd1cee2271310f310f691c551beb99b36970abbfe00653f63d
   languageName: node
   linkType: hard
 
@@ -2579,6 +2593,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@opentelemetry/api-metrics@npm:0.33.0":
+  version: 0.33.0
+  resolution: "@opentelemetry/api-metrics@npm:0.33.0"
+  dependencies:
+    "@opentelemetry/api": ^1.0.0
+  checksum: 8c4fc342e96bc3bea8d5f152faab7dec479c75b9a9b0796a4a8f17525734dcabab2366c0ea0f3d1f3e575d5e26315086b0ddf6ceda5625f5bd6322f425a2c074
+  languageName: node
+  linkType: hard
+
+"@opentelemetry/api@npm:^1.0.0, @opentelemetry/api@npm:^1.2.0":
+  version: 1.4.1
+  resolution: "@opentelemetry/api@npm:1.4.1"
+  checksum: e783c40d1a518abf9c4c5d65223237c1392cd9a6c53ac6e2c3ef0c05ff7266e3dfc4fd9874316dae0dcb7a97950878deb513bcbadfaad653d48f0215f2a0911b
+  languageName: node
+  linkType: hard
+
 "@opentelemetry/api@npm:^1.0.4":
   version: 1.2.0
   resolution: "@opentelemetry/api@npm:1.2.0"
@@ -2594,6 +2624,31 @@ __metadata:
   peerDependencies:
     "@opentelemetry/api": ">=1.0.0 <1.3.0"
   checksum: ae3e6773c1109509f3bb58ec9281b4455fb8843754979e5e1cd12991c19f405be6b99468895d58766a1c359528fac90abc047a09aeb257cae414ba4c2e8c1601
+  languageName: node
+  linkType: hard
+
+"@opentelemetry/core@npm:^1.7.0":
+  version: 1.10.1
+  resolution: "@opentelemetry/core@npm:1.10.1"
+  dependencies:
+    "@opentelemetry/semantic-conventions": 1.10.1
+  peerDependencies:
+    "@opentelemetry/api": ">=1.0.0 <1.5.0"
+  checksum: 31e3c803e9b5e72e1284da4a9672f95661978da166a16ce9329f4eb99373e253051910bd3053c9a4e8cc40de046139d2218f323ed64347528df9f55e69ed2c0b
+  languageName: node
+  linkType: hard
+
+"@opentelemetry/instrumentation@npm:^0.33.0":
+  version: 0.33.0
+  resolution: "@opentelemetry/instrumentation@npm:0.33.0"
+  dependencies:
+    "@opentelemetry/api-metrics": 0.33.0
+    require-in-the-middle: ^5.0.3
+    semver: ^7.3.2
+    shimmer: ^1.2.1
+  peerDependencies:
+    "@opentelemetry/api": ^1.0.0
+  checksum: c6e4f3738af78cf5fc8eeff64c67422a170f8ed6a9727394984846ae8d7db79d2bcb2aa1f8b08e9e6a4f41ab345f8ffd116b1b088fc006f4809ede7daee29f82
   languageName: node
   linkType: hard
 
@@ -2619,6 +2674,13 @@ __metadata:
   peerDependencies:
     "@opentelemetry/api": ">=1.0.0 <1.3.0"
   checksum: e85176a57cd33aad05470ac07963d42c380779584462294cbd9dcf7ad26974cc12c674f053f461ab593dce56271da6b592b9c9bc1a3a490f5ae0a77c09798d36
+  languageName: node
+  linkType: hard
+
+"@opentelemetry/semantic-conventions@npm:1.10.1":
+  version: 1.10.1
+  resolution: "@opentelemetry/semantic-conventions@npm:1.10.1"
+  checksum: 3a4b2a7affab945e6dcbb0430b3b6d1a31d02ce9d7152ecb1e3cfa709ed5439c7014621277ccdbde0bebd38a6e8951c2df593253f0d953bc6af22965fad188d5
   languageName: node
   linkType: hard
 
@@ -3881,11 +3943,12 @@ __metadata:
   linkType: hard
 
 "applicationinsights@npm:^2.3.4":
-  version: 2.5.0
-  resolution: "applicationinsights@npm:2.5.0"
+  version: 2.5.1
+  resolution: "applicationinsights@npm:2.5.1"
   dependencies:
     "@azure/core-auth": ^1.4.0
     "@azure/core-rest-pipeline": ^1.10.0
+    "@azure/opentelemetry-instrumentation-azure-sdk": ^1.0.0-beta.2
     "@microsoft/applicationinsights-web-snippet": ^1.0.1
     "@opentelemetry/api": ^1.0.4
     "@opentelemetry/core": ^1.0.1
@@ -3900,7 +3963,7 @@ __metadata:
   peerDependenciesMeta:
     applicationinsights-native-metrics:
       optional: true
-  checksum: 992cc49a659598cfb76313dda4449902ef14f7d54d0f7b7530ad247535dd613f063c097f0b13735bb22c42c15d37ff727fa642f013916cd707b251825921f955
+  checksum: e2a060bea38fe06f26f92dcb0b5584389b8bbd5c43fd8297af91b4d053b1bfd01a4db75913d3286f9bda368321492054f028ac9e4e575f6cc7411c9bbbd529ab
   languageName: node
   linkType: hard
 
@@ -9575,6 +9638,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"module-details-from-path@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "module-details-from-path@npm:1.0.3"
+  checksum: 378a8a26013889aa3086bfb0776b7860c5bb957336253e1ba5d779c2f239a218930b145ca76e52c1dd7c8079d52b2af64b8eec30822f81ffdb0dfa27d6fe6f33
+  languageName: node
+  linkType: hard
+
 "moment@npm:^2.29.4":
   version: 2.29.4
   resolution: "moment@npm:2.29.4"
@@ -11049,6 +11119,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"require-in-the-middle@npm:^5.0.3":
+  version: 5.2.0
+  resolution: "require-in-the-middle@npm:5.2.0"
+  dependencies:
+    debug: ^4.1.1
+    module-details-from-path: ^1.0.3
+    resolve: ^1.22.1
+  checksum: 20bfdc0e9794ba10891867b2a7696bd4d189ef9dfd58196c06353ea57408f8cd29baa56a962ce4512de01aa679491f814d73e8d17cfe756cb294ebb4a16c64e0
+  languageName: node
+  linkType: hard
+
 "resolve-cwd@npm:^3.0.0":
   version: 3.0.0
   resolution: "resolve-cwd@npm:3.0.0"
@@ -11434,7 +11515,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:^7.3.8":
+"semver@npm:^7.3.2, semver@npm:^7.3.8":
   version: 7.3.8
   resolution: "semver@npm:7.3.8"
   dependencies:
@@ -11555,7 +11636,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"shimmer@npm:^1.1.0, shimmer@npm:^1.2.0":
+"shimmer@npm:^1.1.0, shimmer@npm:^1.2.0, shimmer@npm:^1.2.1":
   version: 1.2.1
   resolution: "shimmer@npm:1.2.1"
   checksum: aa0d6252ad1c682a4fdfda69e541be987f7a265ac7b00b1208e5e48cc68dc55f293955346ea4c71a169b7324b82c70f8400b3d3d2d60b2a7519f0a3522423250
