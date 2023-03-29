@@ -47,7 +47,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/helmet", "npm:4.0.0"],\
             ["@types/jest", "npm:29.5.0"],\
             ["@types/lodash", "npm:4.14.192"],\
-            ["@types/node", "npm:18.15.10"],\
+            ["@types/node", "npm:18.15.11"],\
             ["@types/nunjucks", "npm:3.2.2"],\
             ["@types/require-directory", "npm:2.1.2"],\
             ["@types/serve-favicon", "npm:2.5.3"],\
@@ -5690,10 +5690,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/node", [\
-        ["npm:18.15.10", {\
-          "packageLocation": "./.yarn/cache/@types-node-npm-18.15.10-93118095ab-9aeae0b683.zip/node_modules/@types/node/",\
+        ["npm:18.15.11", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-18.15.11-fd8ceaaffd-977b4ad047.zip/node_modules/@types/node/",\
           "packageDependencies": [\
-            ["@types/node", "npm:18.15.10"]\
+            ["@types/node", "npm:18.15.11"]\
           ],\
           "linkType": "HARD"\
         }],\
@@ -15392,7 +15392,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/helmet", "npm:4.0.0"],\
             ["@types/jest", "npm:29.5.0"],\
             ["@types/lodash", "npm:4.14.192"],\
-            ["@types/node", "npm:18.15.10"],\
+            ["@types/node", "npm:18.15.11"],\
             ["@types/nunjucks", "npm:3.2.2"],\
             ["@types/require-directory", "npm:2.1.2"],\
             ["@types/serve-favicon", "npm:2.5.3"],\
@@ -17033,7 +17033,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@tsconfig/node12", "npm:1.0.11"],\
             ["@tsconfig/node14", "npm:1.0.3"],\
             ["@tsconfig/node16", "npm:1.0.3"],\
-            ["@types/node", "npm:18.15.10"],\
+            ["@types/node", "npm:18.15.11"],\
             ["@types/swc__core", null],\
             ["@types/swc__wasm", null],\
             ["@types/typescript", null],\
