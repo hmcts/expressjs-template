@@ -1,9 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "github>hmcts/.github//renovate/global",
-    "github>hmcts/.github//renovate/automerge-all"
-  ],
+  "extends": ["github>hmcts/.github//renovate/global", "github>hmcts/.github//renovate/automerge-all"],
   "packageRules": [
     {
       "matchPackageNames": ["copy-webpack-plugin"],
