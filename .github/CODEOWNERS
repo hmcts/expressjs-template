@@ -1,1 +1,10 @@
 * @hmcts/platform-operations
+
+# Renovate files
+package.json
+yarn.lock
+.yarn
+.pnp.cjs
+.pnp.loader.mjs
+.nvmrc
+Dockerfile
