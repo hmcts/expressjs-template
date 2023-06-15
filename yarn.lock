@@ -6483,14 +6483,14 @@ __metadata:
   linkType: hard
 
 "express-nunjucks@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "express-nunjucks@npm:3.0.0"
+  version: 3.1.0
+  resolution: "express-nunjucks@npm:3.1.0"
   dependencies:
     nunjucks-async-loader: ^2.0.0
   peerDependencies:
     express: ^4.18.2
     nunjucks: ^3.2.4
-  checksum: 3b1913c7719175038e59b9f13997cdfff1a0a328b86fc7e09ea54dbafd56a5d4e84e1b769bf223b35876d3fa92dc0d59ff40ef2154d287ac2c3899f76a1e815d
+  checksum: c145d1cfebcad1d263b8db91acbc86289d9a0cd27dcd32d3081ffbe5b489fea912e79f978942090c746d94ed677a828cd051bdf305d170a9e06981046c75225e
   languageName: node
   linkType: hard
 
