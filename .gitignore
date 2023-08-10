@@ -31,14 +31,11 @@ version
 
 .eslintcache
 
-# yarn v2
-.yarn/*
-.yarn/build-state.yml
-.yarn/install-state.gz
 .pnp.*
-
-# yarn v2 zero-install
-!.pnp.cjs
-!.yarn/unplugged
+.yarn/*
+!.yarn/patches
 !.yarn/plugins
-!.yarn/cache
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
