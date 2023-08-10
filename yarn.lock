@@ -9770,7 +9770,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.4.21, postcss@npm:^8.4.25":
+"postcss@npm:^8.4.21, postcss@npm:^8.4.25, postcss@npm:^8.4.27":
   version: 8.4.27
   resolution: "postcss@npm:8.4.27"
   dependencies:
@@ -10478,6 +10478,7 @@ __metadata:
     nunjucks: ^3.2.4
     pa11y: ^6.2.3
     playwright: ^1.36.2
+    postcss: ^8.4.27
     prettier: ^2.8.8
     request: ^2.88.2
     require-directory: ^2.1.1

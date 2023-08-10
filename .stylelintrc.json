@@ -1,5 +1,6 @@
 {
   "extends": "stylelint-config-standard-scss",
+  "ignoreFiles": ["**/node_modules/**", ".yarn/**"],
   "rules": {
     "string-quotes": null,
     "selector-class-pattern": null
