@@ -111,6 +111,10 @@
     "webpack-dev-middleware": "^6.1.1",
     "webpack-node-externals": "^3.0.0"
   },
+  "resolutions": {
+    "@opentelemetry/instrumentation": "0.41.2",
+    "semver": "^7.5.2"
+  },
   "lint-staged": {
     "*.{js,ts}": "eslint --cache --fix",
     "*.{js,ts,css,md,html,json}": "prettier --write"
