@@ -18,7 +18,7 @@
     "test:routes": "jest -c jest.routes.config.js",
     "test:a11y": "jest --detectOpenHandles --forceExit -c jest.a11y.config.js --maxWorkers 15",
     "test:smoke": "NODE_TLS_REJECT_UNAUTHORIZED=0 jest -c jest.smoke.config.js",
-    "test:functional": "NODE_TLS_REJECT_UNAUTHORIZED=0 codeceptjs --config ./src/test/functional/codecept.conf.js run --steps",
+    "test:functional": "NODE_TLS_REJECT_UNAUTHORIZED=0 codeceptjs run --steps",
     "cichecks": "yarn build && yarn rebuild puppeteer && yarn lint && yarn test && yarn test:routes && yarn test:a11y",
     "prepare": "husky install"
   },
