@@ -1,5 +1,3 @@
-console.log('Debug: Entering codecept.conf.ts');
-
 const { setHeadlessWhen } = require('@codeceptjs/configure');
 
 setHeadlessWhen(testConfig.TestHeadlessBrowser);
