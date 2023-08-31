@@ -10,7 +10,7 @@ export const config: CodeceptJS.MainConfig = {
   plugins: {
     allure: {
       enabled: true,
-      require: '@codeceptjs/allure-legacy'
+      require: '@codeceptjs/allure-legacy',
     },
     pauseOnFail: {
       enabled: !testConfig.TestHeadlessBrowser,
