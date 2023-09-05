@@ -34,7 +34,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@codeceptjs/allure-legacy", "npm:1.0.2"],\
             ["@codeceptjs/configure", "virtual:57e6688ff3e39c507077493b772d3c5f5093fc5d2d28549816d7d566c3dc71f6cb378b20b1e3daa2a3eb02a17e034dde07a8b06fa7e6f045d5994dafd2852aee#npm:0.10.0"],\
             ["@hmcts/info-provider", "npm:1.1.0"],\
-            ["@hmcts/nodejs-healthcheck", "npm:1.8.0"],\
+            ["@hmcts/nodejs-healthcheck", "npm:1.8.3"],\
             ["@hmcts/nodejs-logging", "npm:4.0.4"],\
             ["@hmcts/properties-volume", "npm:1.0.0"],\
             ["@types/body-parser", "npm:1.19.2"],\
@@ -3402,10 +3402,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@hmcts/nodejs-healthcheck", [\
-        ["npm:1.8.0", {\
-          "packageLocation": "./.yarn/cache/@hmcts-nodejs-healthcheck-npm-1.8.0-e21336666f-8412f6a36b.zip/node_modules/@hmcts/nodejs-healthcheck/",\
+        ["npm:1.8.3", {\
+          "packageLocation": "./.yarn/cache/@hmcts-nodejs-healthcheck-npm-1.8.3-0b01c623ac-76f87a5a67.zip/node_modules/@hmcts/nodejs-healthcheck/",\
           "packageDependencies": [\
-            ["@hmcts/nodejs-healthcheck", "npm:1.8.0"],\
+            ["@hmcts/nodejs-healthcheck", "npm:1.8.3"],\
             ["@hmcts/nodejs-logging", "npm:4.0.4"],\
             ["js-yaml", "npm:3.14.1"],\
             ["superagent", "npm:7.1.5"]\
@@ -14070,7 +14070,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@codeceptjs/allure-legacy", "npm:1.0.2"],\
             ["@codeceptjs/configure", "virtual:57e6688ff3e39c507077493b772d3c5f5093fc5d2d28549816d7d566c3dc71f6cb378b20b1e3daa2a3eb02a17e034dde07a8b06fa7e6f045d5994dafd2852aee#npm:0.10.0"],\
             ["@hmcts/info-provider", "npm:1.1.0"],\
-            ["@hmcts/nodejs-healthcheck", "npm:1.8.0"],\
+            ["@hmcts/nodejs-healthcheck", "npm:1.8.3"],\
             ["@hmcts/nodejs-logging", "npm:4.0.4"],\
             ["@hmcts/properties-volume", "npm:1.0.0"],\
             ["@types/body-parser", "npm:1.19.2"],\
