@@ -82,7 +82,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["husky", "npm:8.0.3"],\
             ["jest", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:29.6.2"],\
             ["jest-html-reporter", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.10.1"],\
-            ["jquery", "npm:3.7.0"],\
+            ["jquery", "npm:3.7.1"],\
             ["lint-staged", "npm:13.2.3"],\
             ["lodash", "npm:4.17.21"],\
             ["mini-css-extract-plugin", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:2.7.6"],\
@@ -11172,10 +11172,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["jquery", [\
-        ["npm:3.7.0", {\
-          "packageLocation": "./.yarn/cache/jquery-npm-3.7.0-a02a382bf4-907785e133.zip/node_modules/jquery/",\
+        ["npm:3.7.1", {\
+          "packageLocation": "./.yarn/cache/jquery-npm-3.7.1-eeeac0f21e-4370b8139d.zip/node_modules/jquery/",\
           "packageDependencies": [\
-            ["jquery", "npm:3.7.0"]\
+            ["jquery", "npm:3.7.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -14159,7 +14159,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["husky", "npm:8.0.3"],\
             ["jest", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:29.6.2"],\
             ["jest-html-reporter", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.10.1"],\
-            ["jquery", "npm:3.7.0"],\
+            ["jquery", "npm:3.7.1"],\
             ["lint-staged", "npm:13.2.3"],\
             ["lodash", "npm:4.17.21"],\
             ["mini-css-extract-plugin", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:2.7.6"],\
