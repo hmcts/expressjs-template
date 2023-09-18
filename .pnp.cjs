@@ -37,7 +37,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@hmcts/nodejs-healthcheck", "npm:1.8.3"],\
             ["@hmcts/nodejs-logging", "npm:4.0.4"],\
             ["@hmcts/properties-volume", "npm:1.0.0"],\
-            ["@types/body-parser", "npm:1.19.2"],\
+            ["@types/body-parser", "npm:1.19.3"],\
             ["@types/chai-as-promised", "npm:7.1.6"],\
             ["@types/config", "npm:3.3.1"],\
             ["@types/cookie-parser", "npm:1.4.4"],\
@@ -4251,10 +4251,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/body-parser", [\
-        ["npm:1.19.2", {\
-          "packageLocation": "./.yarn/cache/@types-body-parser-npm-1.19.2-f845b7b538-e17840c7d7.zip/node_modules/@types/body-parser/",\
+        ["npm:1.19.3", {\
+          "packageLocation": "./.yarn/cache/@types-body-parser-npm-1.19.3-2449988991-932fa71437.zip/node_modules/@types/body-parser/",\
           "packageDependencies": [\
-            ["@types/body-parser", "npm:1.19.2"],\
+            ["@types/body-parser", "npm:1.19.3"],\
             ["@types/connect", "npm:3.4.35"],\
             ["@types/node", "npm:20.6.0"]\
           ],\
@@ -4383,7 +4383,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-express-npm-4.17.17-46fe8173db-0196dacc27.zip/node_modules/@types/express/",\
           "packageDependencies": [\
             ["@types/express", "npm:4.17.17"],\
-            ["@types/body-parser", "npm:1.19.2"],\
+            ["@types/body-parser", "npm:1.19.3"],\
             ["@types/express-serve-static-core", "npm:4.17.35"],\
             ["@types/qs", "npm:6.9.7"],\
             ["@types/serve-static", "npm:1.15.2"]\
@@ -14198,7 +14198,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@hmcts/nodejs-healthcheck", "npm:1.8.3"],\
             ["@hmcts/nodejs-logging", "npm:4.0.4"],\
             ["@hmcts/properties-volume", "npm:1.0.0"],\
-            ["@types/body-parser", "npm:1.19.2"],\
+            ["@types/body-parser", "npm:1.19.3"],\
             ["@types/chai-as-promised", "npm:7.1.6"],\
             ["@types/config", "npm:3.3.1"],\
             ["@types/cookie-parser", "npm:1.4.4"],\
