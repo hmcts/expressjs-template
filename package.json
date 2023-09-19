@@ -18,7 +18,7 @@
     "test:routes": "jest -c jest.routes.config.js",
     "test:a11y": "jest --detectOpenHandles --forceExit -c jest.a11y.config.js --maxWorkers 15",
     "test:smoke": "NODE_TLS_REJECT_UNAUTHORIZED=0 jest -c jest.smoke.config.js",
-    "test:functional": "npx install playwright && NODE_TLS_REJECT_UNAUTHORIZED=0 codeceptjs run --steps",
+    "test:functional": "npx install playwright chromium && NODE_TLS_REJECT_UNAUTHORIZED=0 codeceptjs run --steps",
     "cichecks": "yarn install && yarn build && yarn lint && yarn test && yarn test:routes && yarn test:a11y",
     "prepare": "husky install"
   },
