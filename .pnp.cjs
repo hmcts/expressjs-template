@@ -42,7 +42,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/config", "npm:3.3.1"],\
             ["@types/cookie-parser", "npm:1.4.4"],\
             ["@types/csurf", "npm:1.11.3"],\
-            ["@types/es6-promisify", "npm:6.0.1"],\
+            ["@types/es6-promisify", "npm:6.0.2"],\
             ["@types/express", "npm:4.17.17"],\
             ["@types/glob", "npm:8.1.0"],\
             ["@types/helmet", "npm:4.0.0"],\
@@ -4351,10 +4351,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/es6-promisify", [\
-        ["npm:6.0.1", {\
-          "packageLocation": "./.yarn/cache/@types-es6-promisify-npm-6.0.1-96b96ac7e3-a717113805.zip/node_modules/@types/es6-promisify/",\
+        ["npm:6.0.2", {\
+          "packageLocation": "./.yarn/cache/@types-es6-promisify-npm-6.0.2-b70b31d53b-c75e0e642d.zip/node_modules/@types/es6-promisify/",\
           "packageDependencies": [\
-            ["@types/es6-promisify", "npm:6.0.1"]\
+            ["@types/es6-promisify", "npm:6.0.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -14245,7 +14245,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/config", "npm:3.3.1"],\
             ["@types/cookie-parser", "npm:1.4.4"],\
             ["@types/csurf", "npm:1.11.3"],\
-            ["@types/es6-promisify", "npm:6.0.1"],\
+            ["@types/es6-promisify", "npm:6.0.2"],\
             ["@types/express", "npm:4.17.17"],\
             ["@types/glob", "npm:8.1.0"],\
             ["@types/helmet", "npm:4.0.0"],\
