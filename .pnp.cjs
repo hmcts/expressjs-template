@@ -51,7 +51,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:18.17.18"],\
             ["@types/nunjucks", "npm:3.2.4"],\
             ["@types/require-directory", "npm:2.1.3"],\
-            ["@types/serve-favicon", "npm:2.5.4"],\
+            ["@types/serve-favicon", "npm:2.5.5"],\
             ["@types/supertest", "npm:2.0.12"],\
             ["@typescript-eslint/eslint-plugin", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:5.62.0"],\
             ["@typescript-eslint/parser", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:5.62.0"],\
@@ -4658,10 +4658,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/serve-favicon", [\
-        ["npm:2.5.4", {\
-          "packageLocation": "./.yarn/cache/@types-serve-favicon-npm-2.5.4-5e7a52df3a-601173dfd5.zip/node_modules/@types/serve-favicon/",\
+        ["npm:2.5.5", {\
+          "packageLocation": "./.yarn/cache/@types-serve-favicon-npm-2.5.5-bfdc7a18f6-7e0b85c1a7.zip/node_modules/@types/serve-favicon/",\
           "packageDependencies": [\
-            ["@types/serve-favicon", "npm:2.5.4"],\
+            ["@types/serve-favicon", "npm:2.5.5"],\
             ["@types/express", "npm:4.17.18"]\
           ],\
           "linkType": "HARD"\
@@ -14254,7 +14254,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:18.17.18"],\
             ["@types/nunjucks", "npm:3.2.4"],\
             ["@types/require-directory", "npm:2.1.3"],\
-            ["@types/serve-favicon", "npm:2.5.4"],\
+            ["@types/serve-favicon", "npm:2.5.5"],\
             ["@types/supertest", "npm:2.0.12"],\
             ["@typescript-eslint/eslint-plugin", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:5.62.0"],\
             ["@typescript-eslint/parser", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:5.62.0"],\
