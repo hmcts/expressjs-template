@@ -113,7 +113,7 @@
     "webpack-node-externals": "^3.0.0"
   },
   "resolutions": {
-    "@opentelemetry/instrumentation": "0.43.0",
+    "@opentelemetry/instrumentation": "0.44.0",
     "semver": "^7.5.2"
   },
   "lint-staged": {
