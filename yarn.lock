@@ -3047,11 +3047,11 @@ __metadata:
   linkType: hard
 
 "@types/require-directory@npm:^2.1.2":
-  version: 2.1.3
-  resolution: "@types/require-directory@npm:2.1.3"
+  version: 2.1.4
+  resolution: "@types/require-directory@npm:2.1.4"
   dependencies:
     "@types/node": "*"
-  checksum: 409842c47940ba56c0cda6937ab36e7696458476b10967fed0af984b18ab12ac983e4161a6e279dbb28f5eca825505058af28f99827c93df9ef22781b685b849
+  checksum: d9ec01096b132d1dde4692a94a1acd343917d458ff952453a490893e21d4a9025b6eb4bc3f477704b26fe1395646333754d881f7f6d058fbe52c24c3b678de53
   languageName: node
   linkType: hard
 
