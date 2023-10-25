@@ -3073,11 +3073,11 @@ __metadata:
   linkType: hard
 
 "@types/serve-favicon@npm:^2.5.4":
-  version: 2.5.5
-  resolution: "@types/serve-favicon@npm:2.5.5"
+  version: 2.5.6
+  resolution: "@types/serve-favicon@npm:2.5.6"
   dependencies:
     "@types/express": "*"
-  checksum: 7e0b85c1a7f19b1b724d5346cc8eee6d5af33801b67b8c8c824fdf387e89564f9a52c9802d1c4704af4d347e3a26c854c0e467effc44743c627c1786840c810b
+  checksum: de0f439ae83559a01aa51abe1f2205bc94703775d598cccc8ccacacf53125195f514ee4279ae9a01b63b74e4d434e2b49deedb73bd6b95d55aab4fec72f8e2df
   languageName: node
   linkType: hard
 
