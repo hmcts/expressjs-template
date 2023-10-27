@@ -86,7 +86,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lint-staged", "npm:15.0.2"],\
             ["lodash", "npm:4.17.21"],\
             ["mini-css-extract-plugin", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:2.7.6"],\
-            ["nock", "npm:13.3.4"],\
+            ["nock", "npm:13.3.6"],\
             ["nodemon", "npm:3.0.1"],\
             ["nunjucks", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.2.4"],\
             ["pa11y", "npm:6.2.3"],\
@@ -12625,13 +12625,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["nock", [\
-        ["npm:13.3.4", {\
-          "packageLocation": "./.yarn/cache/nock-npm-13.3.4-02e3dc139c-34ba5fdc02.zip/node_modules/nock/",\
+        ["npm:13.3.6", {\
+          "packageLocation": "./.yarn/cache/nock-npm-13.3.6-2a56736aba-795f334a17.zip/node_modules/nock/",\
           "packageDependencies": [\
-            ["nock", "npm:13.3.4"],\
+            ["nock", "npm:13.3.6"],\
             ["debug", "virtual:4758feee42453c0e31b0d2032a7b1362d6b06281699830d2da9a056f2cca72bd2c5cfdb74005fdf03a64876be8eaca2dd7b0fc2dc59d14318badf19cb22ba18e#npm:4.3.4"],\
             ["json-stringify-safe", "npm:5.0.1"],\
-            ["lodash", "npm:4.17.21"],\
             ["propagate", "npm:2.0.1"]\
           ],\
           "linkType": "HARD"\
@@ -14375,7 +14374,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lint-staged", "npm:15.0.2"],\
             ["lodash", "npm:4.17.21"],\
             ["mini-css-extract-plugin", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:2.7.6"],\
-            ["nock", "npm:13.3.4"],\
+            ["nock", "npm:13.3.6"],\
             ["nodemon", "npm:3.0.1"],\
             ["nunjucks", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.2.4"],\
             ["pa11y", "npm:6.2.3"],\
