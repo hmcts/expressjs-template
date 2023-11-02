@@ -36,7 +36,7 @@
     "@types/glob": "^8.1.0",
     "@types/helmet": "^4.0.0",
     "@types/lodash": "^4.14.197",
-    "@types/node": "^18.17.12",
+    "@types/node": "^20.0.0",
     "@types/nunjucks": "^3.2.3",
     "@types/require-directory": "^2.1.2",
     "@types/serve-favicon": "^2.5.4",
