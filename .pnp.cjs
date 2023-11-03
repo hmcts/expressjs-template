@@ -48,7 +48,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/helmet", "npm:4.0.0"],\
             ["@types/jest", "npm:29.5.7"],\
             ["@types/lodash", "npm:4.14.200"],\
-            ["@types/node", "npm:18.18.8"],\
+            ["@types/node", "npm:20.8.10"],\
             ["@types/nunjucks", "npm:3.2.5"],\
             ["@types/require-directory", "npm:2.1.4"],\
             ["@types/serve-favicon", "npm:2.5.6"],\
@@ -86,7 +86,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lint-staged", "npm:15.0.2"],\
             ["lodash", "npm:4.17.21"],\
             ["mini-css-extract-plugin", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:2.7.6"],\
-            ["nock", "npm:13.3.7"],\
+            ["nock", "npm:13.3.8"],\
             ["nodemon", "npm:3.0.1"],\
             ["nunjucks", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.2.4"],\
             ["pa11y", "npm:6.2.3"],\
@@ -4616,14 +4616,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/node", [\
-        ["npm:18.18.8", {\
-          "packageLocation": "./.yarn/cache/@types-node-npm-18.18.8-5aef4defda-d6a82bfc28.zip/node_modules/@types/node/",\
-          "packageDependencies": [\
-            ["@types/node", "npm:18.18.8"],\
-            ["undici-types", "npm:5.26.5"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:20.8.10", {\
           "packageLocation": "./.yarn/cache/@types-node-npm-20.8.10-29d985f3e4-7c61190e43.zip/node_modules/@types/node/",\
           "packageDependencies": [\
@@ -12737,10 +12729,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["nock", [\
-        ["npm:13.3.7", {\
-          "packageLocation": "./.yarn/cache/nock-npm-13.3.7-ac07c48ca0-837db07552.zip/node_modules/nock/",\
+        ["npm:13.3.8", {\
+          "packageLocation": "./.yarn/cache/nock-npm-13.3.8-21028cd1e0-98f7d9d1c6.zip/node_modules/nock/",\
           "packageDependencies": [\
-            ["nock", "npm:13.3.7"],\
+            ["nock", "npm:13.3.8"],\
             ["debug", "virtual:4758feee42453c0e31b0d2032a7b1362d6b06281699830d2da9a056f2cca72bd2c5cfdb74005fdf03a64876be8eaca2dd7b0fc2dc59d14318badf19cb22ba18e#npm:4.3.4"],\
             ["json-stringify-safe", "npm:5.0.1"],\
             ["propagate", "npm:2.0.1"]\
@@ -14455,7 +14447,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/helmet", "npm:4.0.0"],\
             ["@types/jest", "npm:29.5.7"],\
             ["@types/lodash", "npm:4.14.200"],\
-            ["@types/node", "npm:18.18.8"],\
+            ["@types/node", "npm:20.8.10"],\
             ["@types/nunjucks", "npm:3.2.5"],\
             ["@types/require-directory", "npm:2.1.4"],\
             ["@types/serve-favicon", "npm:2.5.6"],\
@@ -14493,7 +14485,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lint-staged", "npm:15.0.2"],\
             ["lodash", "npm:4.17.21"],\
             ["mini-css-extract-plugin", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:2.7.6"],\
-            ["nock", "npm:13.3.7"],\
+            ["nock", "npm:13.3.8"],\
             ["nodemon", "npm:3.0.1"],\
             ["nunjucks", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.2.4"],\
             ["pa11y", "npm:6.2.3"],\
@@ -16017,7 +16009,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@tsconfig/node12", "npm:1.0.11"],\
             ["@tsconfig/node14", "npm:1.0.3"],\
             ["@tsconfig/node16", "npm:1.0.4"],\
-            ["@types/node", "npm:18.18.8"],\
+            ["@types/node", "npm:20.8.10"],\
             ["@types/swc__core", null],\
             ["@types/swc__wasm", null],\
             ["@types/typescript", null],\
