@@ -48,7 +48,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/helmet", "npm:4.0.0"],\
             ["@types/jest", "npm:29.5.7"],\
             ["@types/lodash", "npm:4.14.200"],\
-            ["@types/node", "npm:18.18.8"],\
+            ["@types/node", "npm:20.8.10"],\
             ["@types/nunjucks", "npm:3.2.5"],\
             ["@types/require-directory", "npm:2.1.4"],\
             ["@types/serve-favicon", "npm:2.5.6"],\
@@ -92,7 +92,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["pa11y", "npm:6.2.3"],\
             ["playwright", "npm:1.37.1"],\
             ["postcss", "npm:8.4.31"],\
-            ["prettier", "npm:2.8.8"],\
+            ["prettier", "npm:3.0.3"],\
             ["request", "npm:2.88.2"],\
             ["require-directory", "npm:2.1.1"],\
             ["sass", "npm:1.69.5"],\
@@ -4616,14 +4616,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/node", [\
-        ["npm:18.18.8", {\
-          "packageLocation": "./.yarn/cache/@types-node-npm-18.18.8-5aef4defda-d6a82bfc28.zip/node_modules/@types/node/",\
-          "packageDependencies": [\
-            ["@types/node", "npm:18.18.8"],\
-            ["undici-types", "npm:5.26.5"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:20.8.10", {\
           "packageLocation": "./.yarn/cache/@types-node-npm-20.8.10-29d985f3e4-7c61190e43.zip/node_modules/@types/node/",\
           "packageDependencies": [\
@@ -13739,10 +13731,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["prettier", [\
-        ["npm:2.8.8", {\
-          "packageLocation": "./.yarn/cache/prettier-npm-2.8.8-430828a36c-b49e409431.zip/node_modules/prettier/",\
+        ["npm:3.0.3", {\
+          "packageLocation": "./.yarn/unplugged/prettier-npm-3.0.3-fced695dae/node_modules/prettier/",\
           "packageDependencies": [\
-            ["prettier", "npm:2.8.8"]\
+            ["prettier", "npm:3.0.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -14455,7 +14447,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/helmet", "npm:4.0.0"],\
             ["@types/jest", "npm:29.5.7"],\
             ["@types/lodash", "npm:4.14.200"],\
-            ["@types/node", "npm:18.18.8"],\
+            ["@types/node", "npm:20.8.10"],\
             ["@types/nunjucks", "npm:3.2.5"],\
             ["@types/require-directory", "npm:2.1.4"],\
             ["@types/serve-favicon", "npm:2.5.6"],\
@@ -14499,7 +14491,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["pa11y", "npm:6.2.3"],\
             ["playwright", "npm:1.37.1"],\
             ["postcss", "npm:8.4.31"],\
-            ["prettier", "npm:2.8.8"],\
+            ["prettier", "npm:3.0.3"],\
             ["request", "npm:2.88.2"],\
             ["require-directory", "npm:2.1.1"],\
             ["sass", "npm:1.69.5"],\
@@ -16017,7 +16009,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@tsconfig/node12", "npm:1.0.11"],\
             ["@tsconfig/node14", "npm:1.0.3"],\
             ["@tsconfig/node16", "npm:1.0.4"],\
-            ["@types/node", "npm:18.18.8"],\
+            ["@types/node", "npm:20.8.10"],\
             ["@types/swc__core", null],\
             ["@types/swc__wasm", null],\
             ["@types/typescript", null],\
