@@ -98,7 +98,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["sass", "npm:1.69.5"],\
             ["sass-loader", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:13.3.2"],\
             ["serve-favicon", "npm:2.5.0"],\
-            ["sinon", "npm:15.2.0"],\
+            ["sinon", "npm:17.0.1"],\
             ["sinon-chai", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.7.0"],\
             ["style-loader", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.3.3"],\
             ["stylelint", "npm:15.11.0"],\
@@ -4186,6 +4186,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@sinonjs-fake-timers-npm-10.3.0-7417f876b4-614d30cb4d.zip/node_modules/@sinonjs/fake-timers/",\
           "packageDependencies": [\
             ["@sinonjs/fake-timers", "npm:10.3.0"],\
+            ["@sinonjs/commons", "npm:3.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:11.2.2", {\
+          "packageLocation": "./.yarn/cache/@sinonjs-fake-timers-npm-11.2.2-eb695fcf3c-68c29b0e18.zip/node_modules/@sinonjs/fake-timers/",\
+          "packageDependencies": [\
+            ["@sinonjs/fake-timers", "npm:11.2.2"],\
             ["@sinonjs/commons", "npm:3.0.0"]\
           ],\
           "linkType": "HARD"\
@@ -12696,10 +12704,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["nise", [\
-        ["npm:5.1.4", {\
-          "packageLocation": "./.yarn/cache/nise-npm-5.1.4-66667508d6-bc57c10eae.zip/node_modules/nise/",\
+        ["npm:5.1.5", {\
+          "packageLocation": "./.yarn/cache/nise-npm-5.1.5-847a2de198-c763dc62c5.zip/node_modules/nise/",\
           "packageDependencies": [\
-            ["nise", "npm:5.1.4"],\
+            ["nise", "npm:5.1.5"],\
             ["@sinonjs/commons", "npm:2.0.0"],\
             ["@sinonjs/fake-timers", "npm:10.3.0"],\
             ["@sinonjs/text-encoding", "npm:0.7.2"],\
@@ -14497,7 +14505,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["sass", "npm:1.69.5"],\
             ["sass-loader", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:13.3.2"],\
             ["serve-favicon", "npm:2.5.0"],\
-            ["sinon", "npm:15.2.0"],\
+            ["sinon", "npm:17.0.1"],\
             ["sinon-chai", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.7.0"],\
             ["style-loader", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.3.3"],\
             ["stylelint", "npm:15.11.0"],\
@@ -14874,15 +14882,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["sinon", [\
-        ["npm:15.2.0", {\
-          "packageLocation": "./.yarn/cache/sinon-npm-15.2.0-ba6c0831db-1641b9af8a.zip/node_modules/sinon/",\
+        ["npm:17.0.1", {\
+          "packageLocation": "./.yarn/cache/sinon-npm-17.0.1-997c13081d-a807c2997d.zip/node_modules/sinon/",\
           "packageDependencies": [\
-            ["sinon", "npm:15.2.0"],\
+            ["sinon", "npm:17.0.1"],\
             ["@sinonjs/commons", "npm:3.0.0"],\
-            ["@sinonjs/fake-timers", "npm:10.3.0"],\
+            ["@sinonjs/fake-timers", "npm:11.2.2"],\
             ["@sinonjs/samsam", "npm:8.0.0"],\
             ["diff", "npm:5.1.0"],\
-            ["nise", "npm:5.1.4"],\
+            ["nise", "npm:5.1.5"],\
             ["supports-color", "npm:7.2.0"]\
           ],\
           "linkType": "HARD"\
@@ -14903,7 +14911,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/chai", null],\
             ["@types/sinon", null],\
             ["chai", "npm:4.3.10"],\
-            ["sinon", "npm:15.2.0"]\
+            ["sinon", "npm:17.0.1"]\
           ],\
           "packagePeers": [\
             "@types/chai",\
