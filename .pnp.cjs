@@ -40,7 +40,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/body-parser", "npm:1.19.5"],\
             ["@types/chai-as-promised", "npm:7.1.8"],\
             ["@types/config", "npm:3.3.2"],\
-            ["@types/cookie-parser", "npm:1.4.5"],\
+            ["@types/cookie-parser", "npm:1.4.6"],\
             ["@types/csurf", "npm:1.11.4"],\
             ["@types/es6-promisify", "npm:6.0.3"],\
             ["@types/express", "npm:4.17.20"],\
@@ -4360,10 +4360,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/cookie-parser", [\
-        ["npm:1.4.5", {\
-          "packageLocation": "./.yarn/cache/@types-cookie-parser-npm-1.4.5-f2ceab7219-4585572170.zip/node_modules/@types/cookie-parser/",\
+        ["npm:1.4.6", {\
+          "packageLocation": "./.yarn/cache/@types-cookie-parser-npm-1.4.6-27287e1e43-b1bbb17bc4.zip/node_modules/@types/cookie-parser/",\
           "packageDependencies": [\
-            ["@types/cookie-parser", "npm:1.4.5"],\
+            ["@types/cookie-parser", "npm:1.4.6"],\
             ["@types/express", "npm:4.17.20"]\
           ],\
           "linkType": "HARD"\
@@ -14447,7 +14447,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/body-parser", "npm:1.19.5"],\
             ["@types/chai-as-promised", "npm:7.1.8"],\
             ["@types/config", "npm:3.3.2"],\
-            ["@types/cookie-parser", "npm:1.4.5"],\
+            ["@types/cookie-parser", "npm:1.4.6"],\
             ["@types/csurf", "npm:1.11.4"],\
             ["@types/es6-promisify", "npm:6.0.3"],\
             ["@types/express", "npm:4.17.20"],\
