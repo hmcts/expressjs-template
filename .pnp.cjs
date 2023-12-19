@@ -43,7 +43,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/cookie-parser", "npm:1.4.6"],\
             ["@types/csurf", "npm:1.11.5"],\
             ["@types/es6-promisify", "npm:6.0.4"],\
-            ["@types/express", "npm:4.17.20"],\
+            ["@types/express", "npm:4.17.21"],\
             ["@types/glob", "npm:8.1.0"],\
             ["@types/helmet", "npm:4.0.0"],\
             ["@types/jest", "npm:29.5.7"],\
@@ -4364,7 +4364,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-cookie-parser-npm-1.4.6-27287e1e43-b1bbb17bc4.zip/node_modules/@types/cookie-parser/",\
           "packageDependencies": [\
             ["@types/cookie-parser", "npm:1.4.6"],\
-            ["@types/express", "npm:4.17.20"]\
+            ["@types/express", "npm:4.17.21"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -4439,10 +4439,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/express", [\
-        ["npm:4.17.20", {\
-          "packageLocation": "./.yarn/cache/@types-express-npm-4.17.20-a63c9e93d3-bf8a97d283.zip/node_modules/@types/express/",\
+        ["npm:4.17.21", {\
+          "packageLocation": "./.yarn/cache/@types-express-npm-4.17.21-be92a0245e-fb23829863.zip/node_modules/@types/express/",\
           "packageDependencies": [\
-            ["@types/express", "npm:4.17.20"],\
+            ["@types/express", "npm:4.17.21"],\
             ["@types/body-parser", "npm:1.19.5"],\
             ["@types/express-serve-static-core", "npm:4.17.35"],\
             ["@types/qs", "npm:6.9.7"],\
@@ -4704,7 +4704,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-serve-favicon-npm-2.5.6-d001ce9b94-de0f439ae8.zip/node_modules/@types/serve-favicon/",\
           "packageDependencies": [\
             ["@types/serve-favicon", "npm:2.5.6"],\
-            ["@types/express", "npm:4.17.20"]\
+            ["@types/express", "npm:4.17.21"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -8850,7 +8850,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/express-nunjucks-virtual-e5fa6386d2/0/cache/express-nunjucks-npm-3.1.1-89debd405a-f41928106d.zip/node_modules/express-nunjucks/",\
           "packageDependencies": [\
             ["express-nunjucks", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.1.1"],\
-            ["@types/express", "npm:4.17.20"],\
+            ["@types/express", "npm:4.17.21"],\
             ["@types/nunjucks", "npm:3.2.5"],\
             ["express", "npm:4.18.2"],\
             ["nunjucks", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.2.4"],\
@@ -14432,7 +14432,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/cookie-parser", "npm:1.4.6"],\
             ["@types/csurf", "npm:1.11.5"],\
             ["@types/es6-promisify", "npm:6.0.4"],\
-            ["@types/express", "npm:4.17.20"],\
+            ["@types/express", "npm:4.17.21"],\
             ["@types/glob", "npm:8.1.0"],\
             ["@types/helmet", "npm:4.0.0"],\
             ["@types/jest", "npm:29.5.7"],\
