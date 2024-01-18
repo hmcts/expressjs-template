@@ -104,7 +104,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["stylelint", "npm:15.11.0"],\
             ["stylelint-config-standard", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:33.0.0"],\
             ["stylelint-config-standard-scss", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:9.0.0"],\
-            ["supertest", "npm:6.3.3"],\
+            ["supertest", "npm:6.3.4"],\
             ["ts-jest", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:29.1.1"],\
             ["ts-loader", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:9.5.1"],\
             ["ts-node", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:10.9.2"],\
@@ -14512,7 +14512,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["stylelint", "npm:15.11.0"],\
             ["stylelint-config-standard", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:33.0.0"],\
             ["stylelint-config-standard-scss", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:9.0.0"],\
-            ["supertest", "npm:6.3.3"],\
+            ["supertest", "npm:6.3.4"],\
             ["ts-jest", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:29.1.1"],\
             ["ts-loader", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:9.5.1"],\
             ["ts-node", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:10.9.2"],\
@@ -15585,10 +15585,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:8.0.9", {\
-          "packageLocation": "./.yarn/cache/superagent-npm-8.0.9-da05128b97-5d00cdc7ce.zip/node_modules/superagent/",\
+        ["npm:8.1.2", {\
+          "packageLocation": "./.yarn/cache/superagent-npm-8.1.2-44190e1fe9-f3601c5cca.zip/node_modules/superagent/",\
           "packageDependencies": [\
-            ["superagent", "npm:8.0.9"],\
+            ["superagent", "npm:8.1.2"],\
             ["component-emitter", "npm:1.3.0"],\
             ["cookiejar", "npm:2.1.4"],\
             ["debug", "virtual:6251d782ea0db30c21f0f319066656716c470667e40e117968e3ee896b0149dbd84beab1c1d4067d27f9cefc387fad785c8016e1253c05537454f9884ad265e8#npm:4.3.4"],\
@@ -15604,12 +15604,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["supertest", [\
-        ["npm:6.3.3", {\
-          "packageLocation": "./.yarn/cache/supertest-npm-6.3.3-2e2b5bc83a-38239e517f.zip/node_modules/supertest/",\
+        ["npm:6.3.4", {\
+          "packageLocation": "./.yarn/cache/supertest-npm-6.3.4-ddb2a7be36-875c6fa794.zip/node_modules/supertest/",\
           "packageDependencies": [\
-            ["supertest", "npm:6.3.3"],\
+            ["supertest", "npm:6.3.4"],\
             ["methods", "npm:1.1.2"],\
-            ["superagent", "npm:8.0.9"]\
+            ["superagent", "npm:8.1.2"]\
           ],\
           "linkType": "HARD"\
         }]\
