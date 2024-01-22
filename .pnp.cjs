@@ -77,7 +77,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["express-nunjucks", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.1.1"],\
             ["glob", "npm:10.3.10"],\
             ["govuk-frontend", "npm:4.7.0"],\
-            ["helmet", "npm:7.0.0"],\
+            ["helmet", "npm:7.1.0"],\
             ["html-webpack-plugin", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:5.5.3"],\
             ["husky", "npm:8.0.3"],\
             ["jest", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:29.7.0"],\
@@ -4502,7 +4502,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-helmet-npm-4.0.0-48d8baa6ce-ded60d8d99.zip/node_modules/@types/helmet/",\
           "packageDependencies": [\
             ["@types/helmet", "npm:4.0.0"],\
-            ["helmet", "npm:7.0.0"]\
+            ["helmet", "npm:7.1.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -9887,10 +9887,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["helmet", [\
-        ["npm:7.0.0", {\
-          "packageLocation": "./.yarn/cache/helmet-npm-7.0.0-13c1e96edf-3622b8b68b.zip/node_modules/helmet/",\
+        ["npm:7.1.0", {\
+          "packageLocation": "./.yarn/cache/helmet-npm-7.1.0-0f9f70fa93-16aaa0df99.zip/node_modules/helmet/",\
           "packageDependencies": [\
-            ["helmet", "npm:7.0.0"]\
+            ["helmet", "npm:7.1.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -14502,7 +14502,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["express-nunjucks", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.1.1"],\
             ["glob", "npm:10.3.10"],\
             ["govuk-frontend", "npm:4.7.0"],\
-            ["helmet", "npm:7.0.0"],\
+            ["helmet", "npm:7.1.0"],\
             ["html-webpack-plugin", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:5.5.3"],\
             ["husky", "npm:8.0.3"],\
             ["jest", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:29.7.0"],\
