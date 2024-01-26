@@ -56,7 +56,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/eslint-plugin", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:5.62.0"],\
             ["@typescript-eslint/parser", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:5.62.0"],\
             ["applicationinsights", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:2.9.2"],\
-            ["axios", "npm:1.6.6"],\
+            ["axios", "npm:1.6.7"],\
             ["axios-debug-log", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:1.0.0"],\
             ["babel-loader", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:9.1.3"],\
             ["body-parser", "npm:1.20.2"],\
@@ -5981,11 +5981,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["axios", [\
-        ["npm:1.6.6", {\
-          "packageLocation": "./.yarn/cache/axios-npm-1.6.6-a57206d7df-0a299c2264.zip/node_modules/axios/",\
+        ["npm:1.6.7", {\
+          "packageLocation": "./.yarn/cache/axios-npm-1.6.7-d7b9974d1b-87d4d42992.zip/node_modules/axios/",\
           "packageDependencies": [\
-            ["axios", "npm:1.6.6"],\
-            ["follow-redirects", "virtual:a57206d7df63450c743e1dad6cbbbe255736ff596551717a9d2763d2077f1a84cf47134f24080b064d227af32b56b6062156d3f62159fee5d2a9abc87caf3773#npm:1.15.4"],\
+            ["axios", "npm:1.6.7"],\
+            ["follow-redirects", "virtual:d7b9974d1bba76881cc57a280a16dd4914416a6fc4923c2efbb6328057412974da1e719cef1530b7a62b97d85d828f7e1d49b5f6de3b5b0854d49902ec87827c#npm:1.15.4"],\
             ["form-data", "npm:4.0.0"],\
             ["proxy-from-env", "npm:1.1.0"]\
           ],\
@@ -6006,7 +6006,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["axios-debug-log", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:1.0.0"],\
             ["@types/axios", null],\
             ["@types/debug", "npm:4.1.8"],\
-            ["axios", "npm:1.6.6"],\
+            ["axios", "npm:1.6.7"],\
             ["debug", "virtual:5506c369f7d205cc727e8f2875616dc0244b99710d92b1bad22ac883508e7a91e51874d9b6c2a625bec078bdd53505d75f79e9c1a0dce52df9bea20420686aaf#npm:4.3.4"]\
           ],\
           "packagePeers": [\
@@ -7036,7 +7036,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@xmldom/xmldom", "npm:0.8.10"],\
             ["acorn", "npm:8.10.0"],\
             ["arrify", "npm:2.0.1"],\
-            ["axios", "npm:1.6.6"],\
+            ["axios", "npm:1.6.7"],\
             ["chai", "npm:4.3.8"],\
             ["chai-deep-match", "virtual:5c085887fb64748b4da9030ead95ed658b4e6003085f56b21b3cbdc8aea6485e31a52993d02b96a7bb78cfde531fe3eeefcc5095e1be32c3d34ad8bdf46e37a8#npm:1.2.1"],\
             ["chalk", "npm:4.1.2"],\
@@ -9233,10 +9233,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:a57206d7df63450c743e1dad6cbbbe255736ff596551717a9d2763d2077f1a84cf47134f24080b064d227af32b56b6062156d3f62159fee5d2a9abc87caf3773#npm:1.15.4", {\
-          "packageLocation": "./.yarn/__virtual__/follow-redirects-virtual-16da9c0b88/0/cache/follow-redirects-npm-1.15.4-3384d6a415-e178d1deff.zip/node_modules/follow-redirects/",\
+        ["virtual:d7b9974d1bba76881cc57a280a16dd4914416a6fc4923c2efbb6328057412974da1e719cef1530b7a62b97d85d828f7e1d49b5f6de3b5b0854d49902ec87827c#npm:1.15.4", {\
+          "packageLocation": "./.yarn/__virtual__/follow-redirects-virtual-84772a0654/0/cache/follow-redirects-npm-1.15.4-3384d6a415-e178d1deff.zip/node_modules/follow-redirects/",\
           "packageDependencies": [\
-            ["follow-redirects", "virtual:a57206d7df63450c743e1dad6cbbbe255736ff596551717a9d2763d2077f1a84cf47134f24080b064d227af32b56b6062156d3f62159fee5d2a9abc87caf3773#npm:1.15.4"],\
+            ["follow-redirects", "virtual:d7b9974d1bba76881cc57a280a16dd4914416a6fc4923c2efbb6328057412974da1e719cef1530b7a62b97d85d828f7e1d49b5f6de3b5b0854d49902ec87827c#npm:1.15.4"],\
             ["@types/debug", null],\
             ["debug", null]\
           ],\
@@ -13180,7 +13180,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/openai-npm-3.2.1-8bb9cccf51-ef3942e9b5.zip/node_modules/openai/",\
           "packageDependencies": [\
             ["openai", "npm:3.2.1"],\
-            ["axios", "npm:1.6.6"],\
+            ["axios", "npm:1.6.7"],\
             ["form-data", "npm:4.0.0"]\
           ],\
           "linkType": "HARD"\
@@ -14529,7 +14529,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/eslint-plugin", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:5.62.0"],\
             ["@typescript-eslint/parser", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:5.62.0"],\
             ["applicationinsights", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:2.9.2"],\
-            ["axios", "npm:1.6.6"],\
+            ["axios", "npm:1.6.7"],\
             ["axios-debug-log", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:1.0.0"],\
             ["babel-loader", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:9.1.3"],\
             ["body-parser", "npm:1.20.2"],\
