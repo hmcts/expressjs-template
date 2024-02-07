@@ -66,7 +66,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["config", "npm:3.3.11"],\
             ["cookie-parser", "npm:1.4.6"],\
             ["copy-webpack-plugin", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:9.1.0"],\
-            ["css-loader", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:6.9.1"],\
+            ["css-loader", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:6.10.0"],\
             ["csurf", "npm:1.11.0"],\
             ["debug", "virtual:5506c369f7d205cc727e8f2875616dc0244b99710d92b1bad22ac883508e7a91e51874d9b6c2a625bec078bdd53505d75f79e9c1a0dce52df9bea20420686aaf#npm:4.3.4"],\
             ["eslint", "npm:8.56.0"],\
@@ -7492,29 +7492,33 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["css-loader", [\
-        ["npm:6.9.1", {\
-          "packageLocation": "./.yarn/cache/css-loader-npm-6.9.1-56b1641a2b-b0c1776f9c.zip/node_modules/css-loader/",\
+        ["npm:6.10.0", {\
+          "packageLocation": "./.yarn/cache/css-loader-npm-6.10.0-5561e0c62e-ee3d62b5f7.zip/node_modules/css-loader/",\
           "packageDependencies": [\
-            ["css-loader", "npm:6.9.1"]\
+            ["css-loader", "npm:6.10.0"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:6.9.1", {\
-          "packageLocation": "./.yarn/__virtual__/css-loader-virtual-7b010ae677/0/cache/css-loader-npm-6.9.1-56b1641a2b-b0c1776f9c.zip/node_modules/css-loader/",\
+        ["virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:6.10.0", {\
+          "packageLocation": "./.yarn/__virtual__/css-loader-virtual-7e9b6b34b1/0/cache/css-loader-npm-6.10.0-5561e0c62e-ee3d62b5f7.zip/node_modules/css-loader/",\
           "packageDependencies": [\
-            ["css-loader", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:6.9.1"],\
+            ["css-loader", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:6.10.0"],\
+            ["@rspack/core", null],\
+            ["@types/rspack__core", null],\
             ["@types/webpack", null],\
-            ["icss-utils", "virtual:7b010ae67761c74b616b2a25d7b933899df05f1e5a3fab4c1af6bc6bb04d280f944c817a0b8136cfa7c27148402235e9de46bbc33cea5774d4864a22c2ea8627#npm:5.1.0"],\
+            ["icss-utils", "virtual:7e9b6b34b1e52f010722cb19aa433427bf025367cf4c84793307f20cd0c983216c1b72c94eb589aed8c890d06aa08d47bd115417c284eb8e1a0672a8ac9f40c3#npm:5.1.0"],\
             ["postcss", "npm:8.4.33"],\
-            ["postcss-modules-extract-imports", "virtual:7b010ae67761c74b616b2a25d7b933899df05f1e5a3fab4c1af6bc6bb04d280f944c817a0b8136cfa7c27148402235e9de46bbc33cea5774d4864a22c2ea8627#npm:3.0.0"],\
-            ["postcss-modules-local-by-default", "virtual:7b010ae67761c74b616b2a25d7b933899df05f1e5a3fab4c1af6bc6bb04d280f944c817a0b8136cfa7c27148402235e9de46bbc33cea5774d4864a22c2ea8627#npm:4.0.4"],\
-            ["postcss-modules-scope", "virtual:7b010ae67761c74b616b2a25d7b933899df05f1e5a3fab4c1af6bc6bb04d280f944c817a0b8136cfa7c27148402235e9de46bbc33cea5774d4864a22c2ea8627#npm:3.1.1"],\
-            ["postcss-modules-values", "virtual:7b010ae67761c74b616b2a25d7b933899df05f1e5a3fab4c1af6bc6bb04d280f944c817a0b8136cfa7c27148402235e9de46bbc33cea5774d4864a22c2ea8627#npm:4.0.0"],\
+            ["postcss-modules-extract-imports", "virtual:7e9b6b34b1e52f010722cb19aa433427bf025367cf4c84793307f20cd0c983216c1b72c94eb589aed8c890d06aa08d47bd115417c284eb8e1a0672a8ac9f40c3#npm:3.0.0"],\
+            ["postcss-modules-local-by-default", "virtual:7e9b6b34b1e52f010722cb19aa433427bf025367cf4c84793307f20cd0c983216c1b72c94eb589aed8c890d06aa08d47bd115417c284eb8e1a0672a8ac9f40c3#npm:4.0.4"],\
+            ["postcss-modules-scope", "virtual:7e9b6b34b1e52f010722cb19aa433427bf025367cf4c84793307f20cd0c983216c1b72c94eb589aed8c890d06aa08d47bd115417c284eb8e1a0672a8ac9f40c3#npm:3.1.1"],\
+            ["postcss-modules-values", "virtual:7e9b6b34b1e52f010722cb19aa433427bf025367cf4c84793307f20cd0c983216c1b72c94eb589aed8c890d06aa08d47bd115417c284eb8e1a0672a8ac9f40c3#npm:4.0.0"],\
             ["postcss-value-parser", "npm:4.2.0"],\
             ["semver", "npm:7.5.4"],\
             ["webpack", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:5.89.0"]\
           ],\
           "packagePeers": [\
+            "@rspack/core",\
+            "@types/rspack__core",\
             "@types/webpack",\
             "webpack"\
           ],\
@@ -10193,10 +10197,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:7b010ae67761c74b616b2a25d7b933899df05f1e5a3fab4c1af6bc6bb04d280f944c817a0b8136cfa7c27148402235e9de46bbc33cea5774d4864a22c2ea8627#npm:5.1.0", {\
-          "packageLocation": "./.yarn/__virtual__/icss-utils-virtual-d3661a7177/0/cache/icss-utils-npm-5.1.0-8d8c062d07-5c324d2835.zip/node_modules/icss-utils/",\
+        ["virtual:7e9b6b34b1e52f010722cb19aa433427bf025367cf4c84793307f20cd0c983216c1b72c94eb589aed8c890d06aa08d47bd115417c284eb8e1a0672a8ac9f40c3#npm:5.1.0", {\
+          "packageLocation": "./.yarn/__virtual__/icss-utils-virtual-84696cbf0f/0/cache/icss-utils-npm-5.1.0-8d8c062d07-5c324d2835.zip/node_modules/icss-utils/",\
           "packageDependencies": [\
-            ["icss-utils", "virtual:7b010ae67761c74b616b2a25d7b933899df05f1e5a3fab4c1af6bc6bb04d280f944c817a0b8136cfa7c27148402235e9de46bbc33cea5774d4864a22c2ea8627#npm:5.1.0"],\
+            ["icss-utils", "virtual:7e9b6b34b1e52f010722cb19aa433427bf025367cf4c84793307f20cd0c983216c1b72c94eb589aed8c890d06aa08d47bd115417c284eb8e1a0672a8ac9f40c3#npm:5.1.0"],\
             ["@types/postcss", null],\
             ["postcss", "npm:8.4.33"]\
           ],\
@@ -13637,10 +13641,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:7b010ae67761c74b616b2a25d7b933899df05f1e5a3fab4c1af6bc6bb04d280f944c817a0b8136cfa7c27148402235e9de46bbc33cea5774d4864a22c2ea8627#npm:3.0.0", {\
-          "packageLocation": "./.yarn/__virtual__/postcss-modules-extract-imports-virtual-83399f7cfc/0/cache/postcss-modules-extract-imports-npm-3.0.0-619311282d-4b65f2f138.zip/node_modules/postcss-modules-extract-imports/",\
+        ["virtual:7e9b6b34b1e52f010722cb19aa433427bf025367cf4c84793307f20cd0c983216c1b72c94eb589aed8c890d06aa08d47bd115417c284eb8e1a0672a8ac9f40c3#npm:3.0.0", {\
+          "packageLocation": "./.yarn/__virtual__/postcss-modules-extract-imports-virtual-1a7a5f95d5/0/cache/postcss-modules-extract-imports-npm-3.0.0-619311282d-4b65f2f138.zip/node_modules/postcss-modules-extract-imports/",\
           "packageDependencies": [\
-            ["postcss-modules-extract-imports", "virtual:7b010ae67761c74b616b2a25d7b933899df05f1e5a3fab4c1af6bc6bb04d280f944c817a0b8136cfa7c27148402235e9de46bbc33cea5774d4864a22c2ea8627#npm:3.0.0"],\
+            ["postcss-modules-extract-imports", "virtual:7e9b6b34b1e52f010722cb19aa433427bf025367cf4c84793307f20cd0c983216c1b72c94eb589aed8c890d06aa08d47bd115417c284eb8e1a0672a8ac9f40c3#npm:3.0.0"],\
             ["@types/postcss", null],\
             ["postcss", "npm:8.4.33"]\
           ],\
@@ -13659,12 +13663,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:7b010ae67761c74b616b2a25d7b933899df05f1e5a3fab4c1af6bc6bb04d280f944c817a0b8136cfa7c27148402235e9de46bbc33cea5774d4864a22c2ea8627#npm:4.0.4", {\
-          "packageLocation": "./.yarn/__virtual__/postcss-modules-local-by-default-virtual-e842184d9c/0/cache/postcss-modules-local-by-default-npm-4.0.4-8827d7f55a-578b955b07.zip/node_modules/postcss-modules-local-by-default/",\
+        ["virtual:7e9b6b34b1e52f010722cb19aa433427bf025367cf4c84793307f20cd0c983216c1b72c94eb589aed8c890d06aa08d47bd115417c284eb8e1a0672a8ac9f40c3#npm:4.0.4", {\
+          "packageLocation": "./.yarn/__virtual__/postcss-modules-local-by-default-virtual-f72080a694/0/cache/postcss-modules-local-by-default-npm-4.0.4-8827d7f55a-578b955b07.zip/node_modules/postcss-modules-local-by-default/",\
           "packageDependencies": [\
-            ["postcss-modules-local-by-default", "virtual:7b010ae67761c74b616b2a25d7b933899df05f1e5a3fab4c1af6bc6bb04d280f944c817a0b8136cfa7c27148402235e9de46bbc33cea5774d4864a22c2ea8627#npm:4.0.4"],\
+            ["postcss-modules-local-by-default", "virtual:7e9b6b34b1e52f010722cb19aa433427bf025367cf4c84793307f20cd0c983216c1b72c94eb589aed8c890d06aa08d47bd115417c284eb8e1a0672a8ac9f40c3#npm:4.0.4"],\
             ["@types/postcss", null],\
-            ["icss-utils", "virtual:7b010ae67761c74b616b2a25d7b933899df05f1e5a3fab4c1af6bc6bb04d280f944c817a0b8136cfa7c27148402235e9de46bbc33cea5774d4864a22c2ea8627#npm:5.1.0"],\
+            ["icss-utils", "virtual:7e9b6b34b1e52f010722cb19aa433427bf025367cf4c84793307f20cd0c983216c1b72c94eb589aed8c890d06aa08d47bd115417c284eb8e1a0672a8ac9f40c3#npm:5.1.0"],\
             ["postcss", "npm:8.4.33"],\
             ["postcss-selector-parser", "npm:6.0.13"],\
             ["postcss-value-parser", "npm:4.2.0"]\
@@ -13684,10 +13688,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:7b010ae67761c74b616b2a25d7b933899df05f1e5a3fab4c1af6bc6bb04d280f944c817a0b8136cfa7c27148402235e9de46bbc33cea5774d4864a22c2ea8627#npm:3.1.1", {\
-          "packageLocation": "./.yarn/__virtual__/postcss-modules-scope-virtual-34aac4aa5d/0/cache/postcss-modules-scope-npm-3.1.1-e7a1c8c946-9e9d23abb0.zip/node_modules/postcss-modules-scope/",\
+        ["virtual:7e9b6b34b1e52f010722cb19aa433427bf025367cf4c84793307f20cd0c983216c1b72c94eb589aed8c890d06aa08d47bd115417c284eb8e1a0672a8ac9f40c3#npm:3.1.1", {\
+          "packageLocation": "./.yarn/__virtual__/postcss-modules-scope-virtual-513cfe19ce/0/cache/postcss-modules-scope-npm-3.1.1-e7a1c8c946-9e9d23abb0.zip/node_modules/postcss-modules-scope/",\
           "packageDependencies": [\
-            ["postcss-modules-scope", "virtual:7b010ae67761c74b616b2a25d7b933899df05f1e5a3fab4c1af6bc6bb04d280f944c817a0b8136cfa7c27148402235e9de46bbc33cea5774d4864a22c2ea8627#npm:3.1.1"],\
+            ["postcss-modules-scope", "virtual:7e9b6b34b1e52f010722cb19aa433427bf025367cf4c84793307f20cd0c983216c1b72c94eb589aed8c890d06aa08d47bd115417c284eb8e1a0672a8ac9f40c3#npm:3.1.1"],\
             ["@types/postcss", null],\
             ["postcss", "npm:8.4.33"],\
             ["postcss-selector-parser", "npm:6.0.13"]\
@@ -13707,12 +13711,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:7b010ae67761c74b616b2a25d7b933899df05f1e5a3fab4c1af6bc6bb04d280f944c817a0b8136cfa7c27148402235e9de46bbc33cea5774d4864a22c2ea8627#npm:4.0.0", {\
-          "packageLocation": "./.yarn/__virtual__/postcss-modules-values-virtual-685166be0f/0/cache/postcss-modules-values-npm-4.0.0-63d7ec543a-f7f2cdf14a.zip/node_modules/postcss-modules-values/",\
+        ["virtual:7e9b6b34b1e52f010722cb19aa433427bf025367cf4c84793307f20cd0c983216c1b72c94eb589aed8c890d06aa08d47bd115417c284eb8e1a0672a8ac9f40c3#npm:4.0.0", {\
+          "packageLocation": "./.yarn/__virtual__/postcss-modules-values-virtual-49e2f94d4d/0/cache/postcss-modules-values-npm-4.0.0-63d7ec543a-f7f2cdf14a.zip/node_modules/postcss-modules-values/",\
           "packageDependencies": [\
-            ["postcss-modules-values", "virtual:7b010ae67761c74b616b2a25d7b933899df05f1e5a3fab4c1af6bc6bb04d280f944c817a0b8136cfa7c27148402235e9de46bbc33cea5774d4864a22c2ea8627#npm:4.0.0"],\
+            ["postcss-modules-values", "virtual:7e9b6b34b1e52f010722cb19aa433427bf025367cf4c84793307f20cd0c983216c1b72c94eb589aed8c890d06aa08d47bd115417c284eb8e1a0672a8ac9f40c3#npm:4.0.0"],\
             ["@types/postcss", null],\
-            ["icss-utils", "virtual:7b010ae67761c74b616b2a25d7b933899df05f1e5a3fab4c1af6bc6bb04d280f944c817a0b8136cfa7c27148402235e9de46bbc33cea5774d4864a22c2ea8627#npm:5.1.0"],\
+            ["icss-utils", "virtual:7e9b6b34b1e52f010722cb19aa433427bf025367cf4c84793307f20cd0c983216c1b72c94eb589aed8c890d06aa08d47bd115417c284eb8e1a0672a8ac9f40c3#npm:5.1.0"],\
             ["postcss", "npm:8.4.33"]\
           ],\
           "packagePeers": [\
@@ -14539,7 +14543,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["config", "npm:3.3.11"],\
             ["cookie-parser", "npm:1.4.6"],\
             ["copy-webpack-plugin", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:9.1.0"],\
-            ["css-loader", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:6.9.1"],\
+            ["css-loader", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:6.10.0"],\
             ["csurf", "npm:1.11.0"],\
             ["debug", "virtual:5506c369f7d205cc727e8f2875616dc0244b99710d92b1bad22ac883508e7a91e51874d9b6c2a625bec078bdd53505d75f79e9c1a0dce52df9bea20420686aaf#npm:4.3.4"],\
             ["eslint", "npm:8.56.0"],\
@@ -19019,7 +19023,8 @@ class ZipFS extends BasePortableFakeFS {
           stream$1.destroy();
         },
         bytesRead: 0,
-        path: p
+        path: p,
+        pending: false
       }
     );
     const immediate = setImmediate(async () => {
@@ -19060,11 +19065,12 @@ class ZipFS extends BasePortableFakeFS {
         }
       }),
       {
-        bytesWritten: 0,
-        path: p,
         close() {
           stream$1.destroy();
-        }
+        },
+        bytesWritten: 0,
+        path: p,
+        pending: false
       }
     );
     stream$1.on(`data`, (chunk) => {
@@ -20004,18 +20010,10 @@ class ProxiedFS extends FakeFS {
     return this.baseFs.symlinkSync(mappedTarget, mappedP, type);
   }
   async readFilePromise(p, encoding) {
-    if (encoding === `utf8`) {
-      return this.baseFs.readFilePromise(this.fsMapToBase(p), encoding);
-    } else {
-      return this.baseFs.readFilePromise(this.fsMapToBase(p), encoding);
-    }
+    return this.baseFs.readFilePromise(this.fsMapToBase(p), encoding);
   }
   readFileSync(p, encoding) {
-    if (encoding === `utf8`) {
-      return this.baseFs.readFileSync(this.fsMapToBase(p), encoding);
-    } else {
-      return this.baseFs.readFileSync(this.fsMapToBase(p), encoding);
-    }
+    return this.baseFs.readFileSync(this.fsMapToBase(p), encoding);
   }
   async readdirPromise(p, opts) {
     return this.baseFs.readdirPromise(this.mapToBase(p), opts);
@@ -20741,24 +20739,14 @@ class ZipOpenFS extends BasePortableFakeFS {
   }
   async readFilePromise(p, encoding) {
     return this.makeCallPromise(p, async () => {
-      switch (encoding) {
-        case `utf8`:
-          return await this.baseFs.readFilePromise(p, encoding);
-        default:
-          return await this.baseFs.readFilePromise(p, encoding);
-      }
+      return await this.baseFs.readFilePromise(p, encoding);
     }, async (zipFs, { subPath }) => {
       return await zipFs.readFilePromise(subPath, encoding);
     });
   }
   readFileSync(p, encoding) {
     return this.makeCallSync(p, () => {
-      switch (encoding) {
-        case `utf8`:
-          return this.baseFs.readFileSync(p, encoding);
-        default:
-          return this.baseFs.readFileSync(p, encoding);
-      }
+      return this.baseFs.readFileSync(p, encoding);
     }, (zipFs, { subPath }) => {
       return zipFs.readFileSync(subPath, encoding);
     });
@@ -21450,38 +21438,28 @@ function patchFs(patchedFs, fakeFs) {
     patchedFs.realpathSync.native = patchedFs.realpathSync;
   }
   {
-    const origEmitWarning = process.emitWarning;
-    process.emitWarning = () => {
-    };
-    let patchedFsPromises;
-    try {
-      patchedFsPromises = patchedFs.promises;
-    } finally {
-      process.emitWarning = origEmitWarning;
-    }
-    if (typeof patchedFsPromises !== `undefined`) {
-      for (const fnName of ASYNC_IMPLEMENTATIONS) {
-        const origName = fnName.replace(/Promise$/, ``);
-        if (typeof patchedFsPromises[origName] === `undefined`)
-          continue;
-        const fakeImpl = fakeFs[fnName];
-        if (typeof fakeImpl === `undefined`)
-          continue;
-        if (fnName === `open`)
-          continue;
-        setupFn(patchedFsPromises, origName, (pathLike, ...args) => {
-          if (pathLike instanceof FileHandle) {
-            return pathLike[origName].apply(pathLike, args);
-          } else {
-            return fakeImpl.call(fakeFs, pathLike, ...args);
-          }
-        });
-      }
-      setupFn(patchedFsPromises, `open`, async (...args) => {
-        const fd = await fakeFs.openPromise(...args);
-        return new FileHandle(fd, fakeFs);
+    const patchedFsPromises = patchedFs.promises;
+    for (const fnName of ASYNC_IMPLEMENTATIONS) {
+      const origName = fnName.replace(/Promise$/, ``);
+      if (typeof patchedFsPromises[origName] === `undefined`)
+        continue;
+      const fakeImpl = fakeFs[fnName];
+      if (typeof fakeImpl === `undefined`)
+        continue;
+      if (fnName === `open`)
+        continue;
+      setupFn(patchedFsPromises, origName, (pathLike, ...args) => {
+        if (pathLike instanceof FileHandle) {
+          return pathLike[origName].apply(pathLike, args);
+        } else {
+          return fakeImpl.call(fakeFs, pathLike, ...args);
+        }
       });
     }
+    setupFn(patchedFsPromises, `open`, async (...args) => {
+      const fd = await fakeFs.openPromise(...args);
+      return new FileHandle(fd, fakeFs);
+    });
   }
   {
     patchedFs.read[nodeUtils.promisify.custom] = async (fd, buffer, ...args) => {
