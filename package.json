@@ -72,7 +72,7 @@
     "@codeceptjs/configure": "^0.10.0",
     "@types/chai-as-promised": "^7.1.5",
     "@types/jest": "^29.5.4",
-    "@types/supertest": "^2.0.12",
+    "@types/supertest": "^6.0.0",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
     "axios-debug-log": "^1.0.0",
