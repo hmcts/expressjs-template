@@ -34,7 +34,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@codeceptjs/allure-legacy", "npm:1.0.2"],\
             ["@codeceptjs/configure", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:1.0.0"],\
             ["@hmcts/info-provider", "npm:1.1.0"],\
-            ["@hmcts/nodejs-healthcheck", "npm:1.8.3"],\
+            ["@hmcts/nodejs-healthcheck", "npm:1.8.4"],\
             ["@hmcts/nodejs-logging", "npm:4.0.4"],\
             ["@hmcts/properties-volume", "npm:1.1.0"],\
             ["@types/body-parser", "npm:1.19.5"],\
@@ -3453,13 +3453,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@hmcts/nodejs-healthcheck", [\
-        ["npm:1.8.3", {\
-          "packageLocation": "./.yarn/cache/@hmcts-nodejs-healthcheck-npm-1.8.3-0b01c623ac-76f87a5a67.zip/node_modules/@hmcts/nodejs-healthcheck/",\
+        ["npm:1.8.4", {\
+          "packageLocation": "./.yarn/cache/@hmcts-nodejs-healthcheck-npm-1.8.4-1a9c485eb9-8b2a6d1745.zip/node_modules/@hmcts/nodejs-healthcheck/",\
           "packageDependencies": [\
-            ["@hmcts/nodejs-healthcheck", "npm:1.8.3"],\
+            ["@hmcts/nodejs-healthcheck", "npm:1.8.4"],\
             ["@hmcts/nodejs-logging", "npm:4.0.4"],\
             ["js-yaml", "npm:3.14.1"],\
-            ["superagent", "npm:7.1.5"]\
+            ["superagent", "npm:8.1.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -14569,7 +14569,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@codeceptjs/allure-legacy", "npm:1.0.2"],\
             ["@codeceptjs/configure", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:1.0.0"],\
             ["@hmcts/info-provider", "npm:1.1.0"],\
-            ["@hmcts/nodejs-healthcheck", "npm:1.8.3"],\
+            ["@hmcts/nodejs-healthcheck", "npm:1.8.4"],\
             ["@hmcts/nodejs-logging", "npm:4.0.4"],\
             ["@hmcts/properties-volume", "npm:1.1.0"],\
             ["@types/body-parser", "npm:1.19.5"],\
@@ -15713,24 +15713,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["superagent", [\
-        ["npm:7.1.5", {\
-          "packageLocation": "./.yarn/cache/superagent-npm-7.1.5-b82717b291-4782ca099b.zip/node_modules/superagent/",\
-          "packageDependencies": [\
-            ["superagent", "npm:7.1.5"],\
-            ["component-emitter", "npm:1.3.0"],\
-            ["cookiejar", "npm:2.1.4"],\
-            ["debug", "virtual:5506c369f7d205cc727e8f2875616dc0244b99710d92b1bad22ac883508e7a91e51874d9b6c2a625bec078bdd53505d75f79e9c1a0dce52df9bea20420686aaf#npm:4.3.4"],\
-            ["fast-safe-stringify", "npm:2.1.1"],\
-            ["form-data", "npm:4.0.0"],\
-            ["formidable", "npm:2.1.2"],\
-            ["methods", "npm:1.1.2"],\
-            ["mime", "npm:2.6.0"],\
-            ["qs", "npm:6.11.2"],\
-            ["readable-stream", "npm:3.6.2"],\
-            ["semver", "npm:7.6.0"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:8.1.2", {\
           "packageLocation": "./.yarn/cache/superagent-npm-8.1.2-44190e1fe9-f3601c5cca.zip/node_modules/superagent/",\
           "packageDependencies": [\
