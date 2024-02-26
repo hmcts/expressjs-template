@@ -32,7 +32,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/eslint-parser", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:7.23.10"],\
             ["@babel/preset-env", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:7.23.9"],\
             ["@codeceptjs/allure-legacy", "npm:1.0.2"],\
-            ["@codeceptjs/configure", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:1.0.0"],\
+            ["@codeceptjs/configure", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:1.0.1"],\
             ["@hmcts/info-provider", "npm:1.1.0"],\
             ["@hmcts/nodejs-healthcheck", "npm:1.8.4"],\
             ["@hmcts/nodejs-logging", "npm:4.0.4"],\
@@ -3194,10 +3194,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["npm:1.0.0", {\
-          "packageLocation": "./.yarn/cache/@codeceptjs-configure-npm-1.0.0-f2dce04bad-00720f42f4.zip/node_modules/@codeceptjs/configure/",\
+        ["npm:1.0.1", {\
+          "packageLocation": "./.yarn/cache/@codeceptjs-configure-npm-1.0.1-d9352a52f7-f570ddc1db.zip/node_modules/@codeceptjs/configure/",\
           "packageDependencies": [\
-            ["@codeceptjs/configure", "npm:1.0.0"]\
+            ["@codeceptjs/configure", "npm:1.0.1"]\
           ],\
           "linkType": "SOFT"\
         }],\
@@ -3216,10 +3216,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:1.0.0", {\
-          "packageLocation": "./.yarn/__virtual__/@codeceptjs-configure-virtual-048d7d95f5/0/cache/@codeceptjs-configure-npm-1.0.0-f2dce04bad-00720f42f4.zip/node_modules/@codeceptjs/configure/",\
+        ["virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:1.0.1", {\
+          "packageLocation": "./.yarn/__virtual__/@codeceptjs-configure-virtual-3d5db68c63/0/cache/@codeceptjs-configure-npm-1.0.1-d9352a52f7-f570ddc1db.zip/node_modules/@codeceptjs/configure/",\
           "packageDependencies": [\
-            ["@codeceptjs/configure", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:1.0.0"],\
+            ["@codeceptjs/configure", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:1.0.1"],\
             ["@types/codeceptjs", null],\
             ["codeceptjs", "npm:3.5.14"],\
             ["lodash.merge", "npm:4.6.2"],\
@@ -16137,7 +16137,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/eslint-parser", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:7.23.10"],\
             ["@babel/preset-env", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:7.23.9"],\
             ["@codeceptjs/allure-legacy", "npm:1.0.2"],\
-            ["@codeceptjs/configure", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:1.0.0"],\
+            ["@codeceptjs/configure", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:1.0.1"],\
             ["@hmcts/info-provider", "npm:1.1.0"],\
             ["@hmcts/nodejs-healthcheck", "npm:1.8.4"],\
             ["@hmcts/nodejs-logging", "npm:4.0.4"],\
