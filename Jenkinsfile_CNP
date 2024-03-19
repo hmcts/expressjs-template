@@ -12,11 +12,6 @@ withPipeline(type, product, component) {
   afterSuccess('build') {
     yarnBuilder.yarn('rebuild puppeteer')
     yarnBuilder.yarn('build')
-  }
-
-  before('functionalTest:preview') {
-    sh """
-       yarn playwright install
-    """
+    yarn playwright install
   }
 }
