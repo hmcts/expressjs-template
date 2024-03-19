@@ -93,6 +93,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["playwright", "npm:1.37.1"],\
             ["postcss", "npm:8.4.36"],\
             ["prettier", "npm:3.2.5"],\
+            ["react-native", "virtual:0bbb2d18a538ac2f8abde3aff0f9fbc37e7ae67035d4f3130fb9cc7caa41e913130836d17906bc44330406e581783eaefb45ca910be770a6664899b7fd9d8ff4#npm:0.73.6"],\
             ["request", "npm:2.88.2"],\
             ["require-directory", "npm:2.1.1"],\
             ["sass", "npm:1.72.0"],\
@@ -17643,6 +17644,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["playwright", "npm:1.37.1"],\
             ["postcss", "npm:8.4.36"],\
             ["prettier", "npm:3.2.5"],\
+            ["react-native", "virtual:0bbb2d18a538ac2f8abde3aff0f9fbc37e7ae67035d4f3130fb9cc7caa41e913130836d17906bc44330406e581783eaefb45ca910be770a6664899b7fd9d8ff4#npm:0.73.6"],\
             ["request", "npm:2.88.2"],\
             ["require-directory", "npm:2.1.1"],\
             ["sass", "npm:1.72.0"],\
