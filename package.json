@@ -56,6 +56,7 @@
     "lodash": "^4.17.21",
     "nunjucks": "^3.2.4",
     "postcss": "^8.4.27",
+    "react-native": "^0.73.6",
     "require-directory": "^2.1.1",
     "serve-favicon": "^2.5.0",
     "stylelint": "^16.0.0",

@@ -13319,7 +13319,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native@npm:^0.73.4":
+"react-native@npm:^0.73.4, react-native@npm:^0.73.6":
   version: 0.73.6
   resolution: "react-native@npm:0.73.6"
   dependencies:
@@ -13899,6 +13899,7 @@ __metadata:
     playwright: 1.42.0
     postcss: ^8.4.27
     prettier: ^3.0.0
+    react-native: ^0.73.6
     request: ^2.88.2
     require-directory: ^2.1.1
     sass: ^1.65.1
