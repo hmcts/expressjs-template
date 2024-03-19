@@ -90,6 +90,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["nodemon", "npm:3.1.0"],\
             ["nunjucks", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.2.4"],\
             ["pa11y", "npm:6.2.3"],\
+            ["playwright", "npm:1.42.0"],\
             ["postcss", "npm:8.4.36"],\
             ["prettier", "npm:3.2.5"],\
             ["request", "npm:2.88.2"],\
@@ -11272,6 +11273,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
+        ["patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=df0bf1", {\
+          "packageLocation": "./.yarn/unplugged/fsevents-patch-2882183fbf/node_modules/fsevents/",\
+          "packageDependencies": [\
+            ["fsevents", "patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"],\
+            ["node-gyp", "npm:10.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["patch:fsevents@npm%3A2.3.3#~builtin<compat/fsevents>::version=2.3.3&hash=df0bf1", {\
           "packageLocation": "./.yarn/unplugged/fsevents-patch-21ad2b1333/node_modules/fsevents/",\
           "packageDependencies": [\
@@ -16356,6 +16365,26 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["playwright", [\
+        ["npm:1.42.0", {\
+          "packageLocation": "./.yarn/cache/playwright-npm-1.42.0-add81f306b-879903e52f.zip/node_modules/playwright/",\
+          "packageDependencies": [\
+            ["playwright", "npm:1.42.0"],\
+            ["fsevents", "patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"],\
+            ["playwright-core", "npm:1.42.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["playwright-core", [\
+        ["npm:1.42.0", {\
+          "packageLocation": "./.yarn/unplugged/playwright-core-npm-1.42.0-012ffa7165/node_modules/playwright-core/",\
+          "packageDependencies": [\
+            ["playwright-core", "npm:1.42.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["polka", [\
         ["npm:0.5.2", {\
           "packageLocation": "./.yarn/cache/polka-npm-0.5.2-90b422850b-5f4994e789.zip/node_modules/polka/",\
@@ -17620,6 +17649,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["nodemon", "npm:3.1.0"],\
             ["nunjucks", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.2.4"],\
             ["pa11y", "npm:6.2.3"],\
+            ["playwright", "npm:1.42.0"],\
             ["postcss", "npm:8.4.36"],\
             ["prettier", "npm:3.2.5"],\
             ["request", "npm:2.88.2"],\
