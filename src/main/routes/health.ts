@@ -1,11 +1,11 @@
-import { app } from '../app';
+import { app as myApp } from '../app';
 
 import { Application } from 'express';
 
 const healthcheck = require('@hmcts/nodejs-healthcheck');
 
 function shutdownCheck() {
-  return app.locals.shutdown;
+  return myApp.locals.shutdown;
 }
 
 export default function (app: Application): void {
