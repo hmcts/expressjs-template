@@ -36,7 +36,7 @@ if (app.locals.ENV === 'development') {
 }
 
 const gracefulShutdownHandler = function gracefulShutdownHandler(signal: string) {
-  logger.info(`⚠️ Caught ${signal}, gracefully shutting down. Setting readiness to DOWN`); 
+  logger.info(`⚠️ Caught ${signal}, gracefully shutting down. Setting readiness to DOWN`);
   app.locals.shutdown = true;
 
   setTimeout(() => {

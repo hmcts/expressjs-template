@@ -17,8 +17,8 @@ export default function (app: Application): void {
     readinessChecks: {
       shutdownCheck: healthcheck.raw(() => {
         return shutdownCheck() ? healthcheck.down() : healthcheck.up();
-      })
-    }
+      }),
+    },
   };
 
   healthcheck.addTo(app, healthCheckConfig);
