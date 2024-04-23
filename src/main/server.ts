@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import * as fs from 'fs';
+import * as http from 'http';
 import * as https from 'https';
 import * as path from 'path';
 
@@ -8,6 +9,12 @@ import { app } from './app';
 const { Logger } = require('@hmcts/nodejs-logging');
 
 const logger = Logger.getLogger('server');
+
+let httpServer: http.Server | null = null;
+let httpsServer: https.Server | null = null;
+
+// used by shutdownCheck in readinessChecks
+app.locals.shutdown = false
 
 // TODO: set the right port for your application
 const port: number = parseInt(process.env.PORT || '3100', 10);
@@ -18,12 +25,54 @@ if (app.locals.ENV === 'development') {
     cert: fs.readFileSync(path.join(sslDirectory, 'localhost.crt')),
     key: fs.readFileSync(path.join(sslDirectory, 'localhost.key')),
   };
-  const server = https.createServer(sslOptions, app);
-  server.listen(port, () => {
+  httpsServer = https.createServer(sslOptions, app);
+  httpsServer.listen(port, () => {
     logger.info(`Application started: https://localhost:${port}`);
   });
 } else {
-  app.listen(port, () => {
+  httpServer = app.listen(port, () => {
     logger.info(`Application started: http://localhost:${port}`);
   });
 }
+
+const gracefulShutdownHandler = function gracefulShutdownHandler(signal: string) {
+  logger.info(`⚠️ Caught ${signal}, gracefully shutting down. Setting readiness to DOWN`); 
+  app.locals.shutdown = true
+
+  setTimeout(() => {
+    logger.info('Shutting down application');
+    // stop the server from accepting new connections
+    if (httpServer) {
+      httpServer.close(() => {
+        logger.info('HTTP server closed');
+      });
+    }
+    // Close HTTPS server if it's running
+    if (httpsServer) {
+      httpsServer.close(() => {
+        logger.info('HTTPS server closed');
+      });
+    }
+  }, 4000);
+};
+
+process.on('SIGINT', gracefulShutdownHandler);
+process.on('SIGTERM', gracefulShutdownHandler);
+
+
+// // SIGTERM signal handling
+// process.on('SIGTERM', () => {
+//   logger.info('SIGTERM signal received: closing servers');
+//   // Close HTTP server if it's running
+//   if (httpServer) {
+//     httpServer.close(() => {
+//       logger.info('HTTP server closed');
+//     });
+//   }
+//   // Close HTTPS server if it's running
+//   if (httpsServer) {
+//     httpsServer.close(() => {
+//       logger.info('HTTPS server closed');
+//     });
+//   }
+// });
