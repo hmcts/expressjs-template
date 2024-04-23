@@ -14,7 +14,7 @@ let httpServer: http.Server | null = null;
 let httpsServer: https.Server | null = null;
 
 // used by shutdownCheck in readinessChecks
-app.locals.shutdown = false
+app.locals.shutdown = false;
 
 // TODO: set the right port for your application
 const port: number = parseInt(process.env.PORT || '3100', 10);
@@ -37,7 +37,7 @@ if (app.locals.ENV === 'development') {
 
 const gracefulShutdownHandler = function gracefulShutdownHandler(signal: string) {
   logger.info(`⚠️ Caught ${signal}, gracefully shutting down. Setting readiness to DOWN`); 
-  app.locals.shutdown = true
+  app.locals.shutdown = true;
 
   setTimeout(() => {
     logger.info('Shutting down application');
