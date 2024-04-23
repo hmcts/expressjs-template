@@ -7,7 +7,6 @@ function shutdownCheck() {
   return app.locals.shutdown
 }
 
-
 export default function (app: Application): void {
   const healthCheckConfig = {
     checks: {

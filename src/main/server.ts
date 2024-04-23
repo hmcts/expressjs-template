@@ -58,21 +58,3 @@ const gracefulShutdownHandler = function gracefulShutdownHandler(signal: string)
 
 process.on('SIGINT', gracefulShutdownHandler);
 process.on('SIGTERM', gracefulShutdownHandler);
-
-
-// // SIGTERM signal handling
-// process.on('SIGTERM', () => {
-//   logger.info('SIGTERM signal received: closing servers');
-//   // Close HTTP server if it's running
-//   if (httpServer) {
-//     httpServer.close(() => {
-//       logger.info('HTTP server closed');
-//     });
-//   }
-//   // Close HTTPS server if it's running
-//   if (httpsServer) {
-//     httpsServer.close(() => {
-//       logger.info('HTTPS server closed');
-//     });
-//   }
-// });
