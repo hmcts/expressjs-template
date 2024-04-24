@@ -4009,7 +4009,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"anymatch@npm:^3.0.3, anymatch@npm:~3.1.1, anymatch@npm:~3.1.2":
+"anymatch@npm:^3.0.3, anymatch@npm:~3.1.2":
   version: 3.1.3
   resolution: "anymatch@npm:3.1.3"
   dependencies:
@@ -4317,13 +4317,13 @@ __metadata:
   linkType: hard
 
 "axios@npm:>1.6.0":
-  version: 1.6.7
-  resolution: "axios@npm:1.6.7"
+  version: 1.6.8
+  resolution: "axios@npm:1.6.8"
   dependencies:
-    follow-redirects: ^1.15.4
+    follow-redirects: ^1.15.6
     form-data: ^4.0.0
     proxy-from-env: ^1.1.0
-  checksum: 87d4d429927d09942771f3b3a6c13580c183e31d7be0ee12f09be6d5655304996bb033d85e54be81606f4e89684df43be7bf52d14becb73a12727bf33298a082
+  checksum: bf007fa4b207d102459300698620b3b0873503c6d47bf5a8f6e43c0c64c90035a4f698b55027ca1958f61ab43723df2781c38a99711848d232cad7accbcdfcdd
   languageName: node
   linkType: hard
 
@@ -5144,25 +5144,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chokidar@npm:3.3.1":
-  version: 3.3.1
-  resolution: "chokidar@npm:3.3.1"
-  dependencies:
-    anymatch: ~3.1.1
-    braces: ~3.0.2
-    fsevents: ~2.1.2
-    glob-parent: ~5.1.0
-    is-binary-path: ~2.1.0
-    is-glob: ~4.0.1
-    normalize-path: ~3.0.0
-    readdirp: ~3.3.0
-  dependenciesMeta:
-    fsevents:
-      optional: true
-  checksum: 84b01c2e750fbc72b9823da9fde83141c6f83a8aa1a3c2c683b4e55d40b93b5d168f6030dfb7aca27755329a464c69ac0d0f2fb39beafd2f6280fae74c3d1117
-  languageName: node
-  linkType: hard
-
 "chokidar@npm:3.5.3, chokidar@npm:>=3.0.0 <4.0.0, chokidar@npm:^3.5.2":
   version: 3.5.3
   resolution: "chokidar@npm:3.5.3"
@@ -5179,6 +5160,25 @@ __metadata:
     fsevents:
       optional: true
   checksum: b49fcde40176ba007ff361b198a2d35df60d9bb2a5aab228279eb810feae9294a6b4649ab15981304447afe1e6ffbf4788ad5db77235dc770ab777c6e771980c
+  languageName: node
+  linkType: hard
+
+"chokidar@npm:^3.6.0":
+  version: 3.6.0
+  resolution: "chokidar@npm:3.6.0"
+  dependencies:
+    anymatch: ~3.1.2
+    braces: ~3.0.2
+    fsevents: ~2.3.2
+    glob-parent: ~5.1.2
+    is-binary-path: ~2.1.0
+    is-glob: ~4.0.1
+    normalize-path: ~3.0.0
+    readdirp: ~3.6.0
+  dependenciesMeta:
+    fsevents:
+      optional: true
+  checksum: d2f29f499705dcd4f6f3bbed79a9ce2388cf530460122eed3b9c48efeab7a4e28739c6551fd15bec9245c6b9eeca7a32baa64694d64d9b6faeb74ddb8c4a413d
   languageName: node
   linkType: hard
 
@@ -7147,14 +7147,14 @@ __metadata:
   linkType: hard
 
 "express-nunjucks@npm:^3.1.1":
-  version: 3.1.1
-  resolution: "express-nunjucks@npm:3.1.1"
+  version: 3.1.2
+  resolution: "express-nunjucks@npm:3.1.2"
   dependencies:
-    nunjucks-async-loader: ^2.1.2
+    nunjucks-async-loader: ^2.1.3
   peerDependencies:
-    express: ^4.18.2
+    express: ^4.19.2
     nunjucks: ^3.2.4
-  checksum: f41928106dda3afcd8daae8a18753f110072bcc4d9db406f0f72c12943945636532eb8d0841385705c87f843607d606d80dd7b7d5e5a6a0bf248b1d187b0cce3
+  checksum: cccec33d2644032cf806907ea0764a67e829773e5baf69d70d754fd776782952f7935d63419433fe402365ae79e2fba6a5547264463f6e1b054b9732e7f6a63e
   languageName: node
   linkType: hard
 
@@ -7539,13 +7539,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"follow-redirects@npm:^1.15.4":
-  version: 1.15.4
-  resolution: "follow-redirects@npm:1.15.4"
+"follow-redirects@npm:^1.15.6":
+  version: 1.15.6
+  resolution: "follow-redirects@npm:1.15.6"
   peerDependenciesMeta:
     debug:
       optional: true
-  checksum: e178d1deff8b23d5d24ec3f7a94cde6e47d74d0dc649c35fc9857041267c12ec5d44650a0c5597ef83056ada9ea6ca0c30e7c4f97dbf07d035086be9e6a5b7b6
+  checksum: a62c378dfc8c00f60b9c80cab158ba54e99ba0239a5dd7c81245e5a5b39d10f0c35e249c3379eae719ff0285fff88c365dd446fab19dee771f1d76252df1bbf5
   languageName: node
   linkType: hard
 
@@ -7725,28 +7725,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fsevents@npm:~2.1.2":
-  version: 2.1.3
-  resolution: "fsevents@npm:2.1.3"
-  dependencies:
-    node-gyp: latest
-  checksum: b5ec0516b44d75b60af5c01ff80a80cd995d175e4640d2a92fbabd02991dd664d76b241b65feef0775c23d531c3c74742c0fbacd6205af812a9c3cef59f04292
-  conditions: os=darwin
-  languageName: node
-  linkType: hard
-
 "fsevents@patch:fsevents@2.3.2#~builtin<compat/fsevents>, fsevents@patch:fsevents@^2.3.2#~builtin<compat/fsevents>, fsevents@patch:fsevents@~2.3.2#~builtin<compat/fsevents>":
   version: 2.3.2
   resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"
-  dependencies:
-    node-gyp: latest
-  conditions: os=darwin
-  languageName: node
-  linkType: hard
-
-"fsevents@patch:fsevents@~2.1.2#~builtin<compat/fsevents>":
-  version: 2.1.3
-  resolution: "fsevents@patch:fsevents@npm%3A2.1.3#~builtin<compat/fsevents>::version=2.1.3&hash=31d12a"
   dependencies:
     node-gyp: latest
   conditions: os=darwin
@@ -7975,7 +7956,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob-parent@npm:^5.1.2, glob-parent@npm:~5.1.0, glob-parent@npm:~5.1.2":
+"glob-parent@npm:^5.1.2, glob-parent@npm:~5.1.2":
   version: 5.1.2
   resolution: "glob-parent@npm:5.1.2"
   dependencies:
@@ -11184,14 +11165,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nunjucks-async-loader@npm:^2.1.2":
-  version: 2.1.2
-  resolution: "nunjucks-async-loader@npm:2.1.2"
+"nunjucks-async-loader@npm:^2.1.3":
+  version: 2.1.3
+  resolution: "nunjucks-async-loader@npm:2.1.3"
   dependencies:
-    chokidar: 3.3.1
+    chokidar: ^3.6.0
   peerDependencies:
     nunjucks: ^3.2.4
-  checksum: 6a681533521d0e0a97cf6926dac52dc5e70ed64c3d7b9df89b2fc12e12dc61764b26d5e633adac7ecadecd7b448161817c91ddd3685455a58f4f349d13f877f4
+  checksum: 87520b30000037ca6ae643517aa81342c427e8958c2bb8bb9af080b1d9ed764c75b90d2ace2bb8c50837d20a6f018131fc6754cc17f9f31d025d37175b8d6a68
   languageName: node
   linkType: hard
 
@@ -11766,7 +11747,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"picomatch@npm:^2.0.4, picomatch@npm:^2.0.7, picomatch@npm:^2.2.1, picomatch@npm:^2.2.3, picomatch@npm:^2.3.1":
+"picomatch@npm:^2.0.4, picomatch@npm:^2.2.1, picomatch@npm:^2.2.3, picomatch@npm:^2.3.1":
   version: 2.3.1
   resolution: "picomatch@npm:2.3.1"
   checksum: 050c865ce81119c4822c45d3c84f1ced46f93a0126febae20737bd05ca20589c564d6e9226977df859ed5e03dc73f02584a2b0faad36e896936238238b0446cf
@@ -12335,15 +12316,6 @@ __metadata:
     string_decoder: ^1.1.1
     util-deprecate: ^1.0.1
   checksum: bdcbe6c22e846b6af075e32cf8f4751c2576238c5043169a1c221c92ee2878458a816a4ea33f4c67623c0b6827c8a400409bfb3cf0bf3381392d0b1dfb52ac8d
-  languageName: node
-  linkType: hard
-
-"readdirp@npm:~3.3.0":
-  version: 3.3.0
-  resolution: "readdirp@npm:3.3.0"
-  dependencies:
-    picomatch: ^2.0.7
-  checksum: f8289b21d26a6c3f56b8a52588e708f25471f7fee46e5519a155581f5595440ec7e93f7086ba52d1c7f3d5324ef55f996ffa2195145ddcdee103bf5cb671e3fd
   languageName: node
   linkType: hard
 
@@ -13938,8 +13910,8 @@ __metadata:
   linkType: hard
 
 "tar@npm:^6.1.11, tar@npm:^6.1.2":
-  version: 6.1.15
-  resolution: "tar@npm:6.1.15"
+  version: 6.2.1
+  resolution: "tar@npm:6.2.1"
   dependencies:
     chownr: ^2.0.0
     fs-minipass: ^2.0.0
@@ -13947,7 +13919,7 @@ __metadata:
     minizlib: ^2.1.1
     mkdirp: ^1.0.3
     yallist: ^4.0.0
-  checksum: f23832fceeba7578bf31907aac744ae21e74a66f4a17a9e94507acf460e48f6db598c7023882db33bab75b80e027c21f276d405e4a0322d58f51c7088d428268
+  checksum: f1322768c9741a25356c11373bce918483f40fa9a25c69c59410c8a1247632487edef5fe76c5f12ac51a6356d2f1829e96d2bc34098668a2fc34d76050ac2b6c
   languageName: node
   linkType: hard
 
