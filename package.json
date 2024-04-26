@@ -40,7 +40,7 @@
     "@types/nunjucks": "^3.2.3",
     "@types/require-directory": "^2.1.2",
     "@types/serve-favicon": "^2.5.4",
-    "applicationinsights": "^2.7.0",
+    "applicationinsights": "^3.0.0",
     "axios": "^1.4.0",
     "body-parser": "^1.20.2",
     "config": "^3.3.9",
