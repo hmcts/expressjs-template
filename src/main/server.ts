@@ -41,11 +41,11 @@ function gracefulShutdownHandler(signal: string) {
   setTimeout(() => {
     logger.info('Shutting down application');
     // Close server if it's running
-      httpsServer?.close(() => {
-        logger.info('HTTPS server closed');
-      });
+    httpsServer?.close(() => {
+      logger.info('HTTPS server closed');
+    });
   }, 4000);
-};
+}
 
 process.on('SIGINT', gracefulShutdownHandler);
 process.on('SIGTERM', gracefulShutdownHandler);
