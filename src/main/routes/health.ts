@@ -4,7 +4,7 @@ import { Application } from 'express';
 
 const healthcheck = require('@hmcts/nodejs-healthcheck');
 
-function shutdownCheck() {
+function shutdownCheck(): boolean {
   return myApp.locals.shutdown;
 }
 
