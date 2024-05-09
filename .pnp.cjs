@@ -90,7 +90,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["nodemon", "npm:3.1.0"],\
             ["nunjucks", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.2.4"],\
             ["pa11y", "npm:8.0.0"],\
-            ["playwright", "npm:1.43.1"],\
+            ["playwright", "npm:1.44.0"],\
             ["postcss", "npm:8.4.38"],\
             ["prettier", "npm:3.2.5"],\
             ["request", "npm:2.88.2"],\
@@ -16476,21 +16476,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["playwright", [\
-        ["npm:1.43.1", {\
-          "packageLocation": "./.yarn/cache/playwright-npm-1.43.1-57b872b758-de9db021f9.zip/node_modules/playwright/",\
+        ["npm:1.44.0", {\
+          "packageLocation": "./.yarn/cache/playwright-npm-1.44.0-8405de4c80-22653ded65.zip/node_modules/playwright/",\
           "packageDependencies": [\
-            ["playwright", "npm:1.43.1"],\
+            ["playwright", "npm:1.44.0"],\
             ["fsevents", "patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"],\
-            ["playwright-core", "npm:1.43.1"]\
+            ["playwright-core", "npm:1.44.0"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["playwright-core", [\
-        ["npm:1.43.1", {\
-          "packageLocation": "./.yarn/unplugged/playwright-core-npm-1.43.1-32d72955cf/node_modules/playwright-core/",\
+        ["npm:1.44.0", {\
+          "packageLocation": "./.yarn/unplugged/playwright-core-npm-1.44.0-9c7b9d5046/node_modules/playwright-core/",\
           "packageDependencies": [\
-            ["playwright-core", "npm:1.43.1"]\
+            ["playwright-core", "npm:1.44.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -17693,7 +17693,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["nodemon", "npm:3.1.0"],\
             ["nunjucks", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.2.4"],\
             ["pa11y", "npm:8.0.0"],\
-            ["playwright", "npm:1.43.1"],\
+            ["playwright", "npm:1.44.0"],\
             ["postcss", "npm:8.4.38"],\
             ["prettier", "npm:3.2.5"],\
             ["request", "npm:2.88.2"],\
