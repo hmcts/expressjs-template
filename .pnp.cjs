@@ -75,7 +75,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-jest", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:28.5.0"],\
             ["express", "npm:4.19.2"],\
             ["express-nunjucks", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.1.2"],\
-            ["glob", "npm:10.3.12"],\
+            ["glob", "npm:10.3.15"],\
             ["govuk-frontend", "npm:4.8.0"],\
             ["helmet", "npm:7.1.0"],\
             ["html-webpack-plugin", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:5.6.0"],\
@@ -6670,7 +6670,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@wdio/utils", "npm:8.29.1"],\
             ["decamelize", "npm:6.0.0"],\
             ["deepmerge-ts", "npm:5.1.0"],\
-            ["glob", "npm:10.3.12"],\
+            ["glob", "npm:10.3.15"],\
             ["import-meta-resolve", "npm:4.0.0"]\
           ],\
           "linkType": "HARD"\
@@ -8374,7 +8374,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cacache", "npm:17.1.3"],\
             ["@npmcli/fs", "npm:3.1.0"],\
             ["fs-minipass", "npm:3.0.2"],\
-            ["glob", "npm:10.3.12"],\
+            ["glob", "npm:10.3.15"],\
             ["lru-cache", "npm:7.18.3"],\
             ["minipass", "npm:5.0.0"],\
             ["minipass-collect", "npm:1.0.2"],\
@@ -12032,15 +12032,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["glob", [\
-        ["npm:10.3.12", {\
-          "packageLocation": "./.yarn/cache/glob-npm-10.3.12-f2e90133a0-2b0949d636.zip/node_modules/glob/",\
+        ["npm:10.3.15", {\
+          "packageLocation": "./.yarn/cache/glob-npm-10.3.15-501e87a16f-c7aeae0b4e.zip/node_modules/glob/",\
           "packageDependencies": [\
-            ["glob", "npm:10.3.12"],\
+            ["glob", "npm:10.3.15"],\
             ["foreground-child", "npm:3.1.1"],\
             ["jackspeak", "npm:2.3.6"],\
             ["minimatch", "npm:9.0.3"],\
             ["minipass", "npm:7.0.4"],\
-            ["path-scurry", "npm:1.10.2"]\
+            ["path-scurry", "npm:1.11.1"]\
           ],\
           "linkType": "HARD"\
         }],\
@@ -13999,7 +13999,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["js-beautify", "npm:1.14.11"],\
             ["config-chain", "npm:1.1.13"],\
             ["editorconfig", "npm:1.0.4"],\
-            ["glob", "npm:10.3.12"],\
+            ["glob", "npm:10.3.15"],\
             ["nopt", "npm:7.2.0"]\
           ],\
           "linkType": "HARD"\
@@ -16267,10 +16267,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["path-scurry", [\
-        ["npm:1.10.2", {\
-          "packageLocation": "./.yarn/cache/path-scurry-npm-1.10.2-676482c764-6739b4290f.zip/node_modules/path-scurry/",\
+        ["npm:1.11.1", {\
+          "packageLocation": "./.yarn/cache/path-scurry-npm-1.11.1-aaf8c339af-890d5abcd5.zip/node_modules/path-scurry/",\
           "packageDependencies": [\
-            ["path-scurry", "npm:1.10.2"],\
+            ["path-scurry", "npm:1.11.1"],\
             ["lru-cache", "npm:10.2.1"],\
             ["minipass", "npm:7.0.2"]\
           ],\
@@ -17612,7 +17612,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/rimraf-npm-5.0.5-19228633fd-d66eef829b.zip/node_modules/rimraf/",\
           "packageDependencies": [\
             ["rimraf", "npm:5.0.5"],\
-            ["glob", "npm:10.3.12"]\
+            ["glob", "npm:10.3.15"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -17678,7 +17678,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-jest", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:28.5.0"],\
             ["express", "npm:4.19.2"],\
             ["express-nunjucks", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.1.2"],\
-            ["glob", "npm:10.3.12"],\
+            ["glob", "npm:10.3.15"],\
             ["govuk-frontend", "npm:4.8.0"],\
             ["helmet", "npm:7.1.0"],\
             ["html-webpack-plugin", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:5.6.0"],\
