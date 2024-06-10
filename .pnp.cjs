@@ -8292,10 +8292,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["centra", [\
-        ["npm:2.6.0", {\
-          "packageLocation": "./.yarn/cache/centra-npm-2.6.0-2dce7cb28c-3b4d44762b.zip/node_modules/centra/",\
+        ["npm:2.7.0", {\
+          "packageLocation": "./.yarn/cache/centra-npm-2.7.0-d26bd18495-59ec76d9ba.zip/node_modules/centra/",\
           "packageDependencies": [\
-            ["centra", "npm:2.6.0"]\
+            ["centra", "npm:2.7.0"],\
+            ["follow-redirects", "virtual:85cf1e7152e3c0d8e39e61ad2b81b59a43fb6bdb8f3bf49869bb97804b1403ecaee4505fcb0d4869cfdd99ee3eaa880b79498575407fb770c800bf64c64156ec#npm:1.15.6"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -15963,7 +15964,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["openapi-fuzzer-core", "npm:1.0.6"],\
             ["pactum-matchers", "npm:1.1.6"],\
             ["parse-graphql", "npm:1.0.0"],\
-            ["phin", "npm:3.7.0"],\
+            ["phin", "npm:3.7.1"],\
             ["polka", "npm:0.5.2"]\
           ],\
           "linkType": "HARD"\
@@ -16245,11 +16246,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["phin", [\
-        ["npm:3.7.0", {\
-          "packageLocation": "./.yarn/cache/phin-npm-3.7.0-c9bd8efbed-b0a35e9436.zip/node_modules/phin/",\
+        ["npm:3.7.1", {\
+          "packageLocation": "./.yarn/cache/phin-npm-3.7.1-68fa368c17-eebbfb0ab6.zip/node_modules/phin/",\
           "packageDependencies": [\
-            ["phin", "npm:3.7.0"],\
-            ["centra", "npm:2.6.0"]\
+            ["phin", "npm:3.7.1"],\
+            ["centra", "npm:2.7.0"]\
           ],\
           "linkType": "HARD"\
         }]\
