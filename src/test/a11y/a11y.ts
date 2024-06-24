@@ -61,7 +61,7 @@ function expectNoErrors(messages: PallyIssue[]): void {
     throw new Error(`There are accessibility issues: \n${errorsAsJson}\n`);
   }
 }
-const delay = (ms: any) => new Promise(res => setTimeout(res, ms));
+const delay = (ms: number) => new Promise(res => setTimeout(res, ms));
 
 function testAccessibility(url: string): void {
   describe(`Page ${url}`, () => {
