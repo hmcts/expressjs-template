@@ -38,6 +38,7 @@ class PallyIssue {
 
 async function ensurePageCallWillSucceed(url: string): Promise<void> {
   return agent.get(url).then((res: supertest.Response) => {
+    console.log(res);
     if (res.redirect) {
       throw new Error(`Call to ${url} resulted in a redirect to ${res.get('Location')}`);
     }
