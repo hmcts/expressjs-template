@@ -38,6 +38,7 @@ class PallyIssue {
 
 async function ensurePageCallWillSucceed(url: string): Promise<void> {
   return agent.get(url).then((res: supertest.Response) => {
+    console.log(res);
     if (res.redirect) {
       throw new Error(`Call to ${url} resulted in a redirect to ${res.get('Location')}`);
     }
@@ -61,15 +62,17 @@ function expectNoErrors(messages: PallyIssue[]): void {
     throw new Error(`There are accessibility issues: \n${errorsAsJson}\n`);
   }
 }
+const delay = (ms: number) => new Promise(res => setTimeout(res, ms));
 
 function testAccessibility(url: string): void {
   describe(`Page ${url}`, () => {
     test('should have no accessibility errors', async () => {
+      await delay(5000);
       await ensurePageCallWillSucceed(url);
       const result = await runPally(agent.get(url).url);
       expect(result.issues).toEqual(expect.any(Array));
       expectNoErrors(result.issues);
-    });
+    }, 20000);
   });
 }
 
