@@ -61,10 +61,12 @@ function expectNoErrors(messages: PallyIssue[]): void {
     throw new Error(`There are accessibility issues: \n${errorsAsJson}\n`);
   }
 }
+const delay = ms => new Promise(res => setTimeout(res, ms));
 
 function testAccessibility(url: string): void {
   describe(`Page ${url}`, () => {
     test('should have no accessibility errors', async () => {
+      await delay(5000);
       await ensurePageCallWillSucceed(url);
       const result = await runPally(agent.get(url).url);
       expect(result.issues).toEqual(expect.any(Array));
@@ -73,16 +75,8 @@ function testAccessibility(url: string): void {
   });
 }
 
-function waitFewSeconds() {
-  console.log('Ready....go!');
-  setTimeout(() => {
-    console.log("Time's up -- stop!");
-  }, 10000);
-}
-
 describe('Accessibility', () => {
   // testing accessibility of the home page
-  waitFewSeconds();
   testAccessibility('/');
 
   // TODO: include each path of your application in accessibility checks
