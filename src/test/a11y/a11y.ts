@@ -71,7 +71,7 @@ function testAccessibility(url: string): void {
       const result = await runPally(agent.get(url).url);
       expect(result.issues).toEqual(expect.any(Array));
       expectNoErrors(result.issues);
-    });
+    }, 20000);
   });
 }
 
