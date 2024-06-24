@@ -73,8 +73,16 @@ function testAccessibility(url: string): void {
   });
 }
 
+function waitFewSeconds() {
+  console.log('Ready....go!');
+  setTimeout(() => {
+    console.log("Time's up -- stop!");
+  }, 10000);
+}
+
 describe('Accessibility', () => {
   // testing accessibility of the home page
+  waitFewSeconds();
   testAccessibility('/');
 
   // TODO: include each path of your application in accessibility checks
