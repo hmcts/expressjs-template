@@ -39,7 +39,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@hmcts/properties-volume", "npm:1.2.0"],\
             ["@types/body-parser", "npm:1.19.5"],\
             ["@types/chai-as-promised", "npm:7.1.8"],\
-            ["@types/config", "npm:3.3.4"],\
+            ["@types/config", "npm:3.3.5"],\
             ["@types/cookie-parser", "npm:1.4.7"],\
             ["@types/csurf", "npm:1.11.5"],\
             ["@types/es6-promisify", "npm:6.0.4"],\
@@ -63,7 +63,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chai", "npm:4.4.1"],\
             ["chai-as-promised", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:8.0.0"],\
             ["codeceptjs", "npm:3.5.14"],\
-            ["config", "npm:3.3.11"],\
+            ["config", "npm:3.3.12"],\
             ["cookie-parser", "npm:1.4.6"],\
             ["copy-webpack-plugin", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:9.1.0"],\
             ["css-loader", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:7.1.2"],\
@@ -5719,10 +5719,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/config", [\
-        ["npm:3.3.4", {\
-          "packageLocation": "./.yarn/cache/@types-config-npm-3.3.4-a6d2df0049-c8f2e26257.zip/node_modules/@types/config/",\
+        ["npm:3.3.5", {\
+          "packageLocation": "./.yarn/cache/@types-config-npm-3.3.5-fca7f803c9-a52d9955c1.zip/node_modules/@types/config/",\
           "packageDependencies": [\
-            ["@types/config", "npm:3.3.4"]\
+            ["@types/config", "npm:3.3.5"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -9212,10 +9212,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["config", [\
-        ["npm:3.3.11", {\
-          "packageLocation": "./.yarn/cache/config-npm-3.3.11-a270a6a709-84d783978c.zip/node_modules/config/",\
+        ["npm:3.3.12", {\
+          "packageLocation": "./.yarn/cache/config-npm-3.3.12-ad44bb207f-db1b7718ff.zip/node_modules/config/",\
           "packageDependencies": [\
-            ["config", "npm:3.3.11"],\
+            ["config", "npm:3.3.12"],\
             ["json5", "npm:2.2.3"]\
           ],\
           "linkType": "HARD"\
@@ -17677,7 +17677,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@hmcts/properties-volume", "npm:1.2.0"],\
             ["@types/body-parser", "npm:1.19.5"],\
             ["@types/chai-as-promised", "npm:7.1.8"],\
-            ["@types/config", "npm:3.3.4"],\
+            ["@types/config", "npm:3.3.5"],\
             ["@types/cookie-parser", "npm:1.4.7"],\
             ["@types/csurf", "npm:1.11.5"],\
             ["@types/es6-promisify", "npm:6.0.4"],\
@@ -17701,7 +17701,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chai", "npm:4.4.1"],\
             ["chai-as-promised", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:8.0.0"],\
             ["codeceptjs", "npm:3.5.14"],\
-            ["config", "npm:3.3.11"],\
+            ["config", "npm:3.3.12"],\
             ["cookie-parser", "npm:1.4.6"],\
             ["copy-webpack-plugin", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:9.1.0"],\
             ["css-loader", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:7.1.2"],\
