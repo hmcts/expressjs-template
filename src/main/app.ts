@@ -7,10 +7,10 @@ import { Nunjucks } from './modules/nunjucks';
 import { PropertiesVolume } from './modules/properties-volume';
 
 import * as bodyParser from 'body-parser';
+import config = require('config');
 import cookieParser from 'cookie-parser';
 import express from 'express';
 import { glob } from 'glob';
-import favicon from 'serve-favicon';
 
 const { setupDev } = require('./development');
 
@@ -28,9 +28,12 @@ new PropertiesVolume().enableFor(app);
 new AppInsights().enable();
 new Nunjucks(developmentMode).enableFor(app);
 // secure the application by adding various HTTP headers to its responses
-new Helmet(developmentMode).enableFor(app);
+new Helmet(config.get('security')).enableFor(app);
 
-app.use(favicon(path.join(__dirname, '/public/assets/images/favicon.ico')));
+app.get('/favicon.ico', (req, res) => {
+  res.sendFile(path.join(__dirname, '/public/assets/images/favicon.ico'));
+});
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
