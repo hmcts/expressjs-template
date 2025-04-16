@@ -77,6 +77,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-jest", "virtual:0fe8ae6be068d2f30e6e1c4ad9d0c715db41428fa3e9a2c42a5aa8d93fba288315271172dae737de2f4d34a9b38ebab987b8667f4cbf6aa1a2f33cbd30fb6c1b#npm:27.9.0"],\
             ["express", "npm:4.21.2"],\
             ["express-nunjucks", "npm:2.2.5"],\
+            ["express-rate-limit", "virtual:0fe8ae6be068d2f30e6e1c4ad9d0c715db41428fa3e9a2c42a5aa8d93fba288315271172dae737de2f4d34a9b38ebab987b8667f4cbf6aa1a2f33cbd30fb6c1b#npm:7.5.0"],\
             ["glob", "npm:10.4.5"],\
             ["govuk-frontend", "npm:5.9.0"],\
             ["helmet", "npm:6.2.0"],\
@@ -6006,6 +6007,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-jest", "virtual:0fe8ae6be068d2f30e6e1c4ad9d0c715db41428fa3e9a2c42a5aa8d93fba288315271172dae737de2f4d34a9b38ebab987b8667f4cbf6aa1a2f33cbd30fb6c1b#npm:27.9.0"],\
             ["express", "npm:4.21.2"],\
             ["express-nunjucks", "npm:2.2.5"],\
+            ["express-rate-limit", "virtual:0fe8ae6be068d2f30e6e1c4ad9d0c715db41428fa3e9a2c42a5aa8d93fba288315271172dae737de2f4d34a9b38ebab987b8667f4cbf6aa1a2f33cbd30fb6c1b#npm:7.5.0"],\
             ["glob", "npm:10.4.5"],\
             ["govuk-frontend", "npm:5.9.0"],\
             ["helmet", "npm:6.2.0"],\
@@ -10215,6 +10217,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["express-nunjucks", "npm:2.2.5"],\
             ["assign-deep", "npm:1.0.1"],\
             ["nunjucks-async-loader", "npm:1.1.5"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["express-rate-limit", [\
+        ["npm:7.5.0", {\
+          "packageLocation": "./.yarn/cache/express-rate-limit-npm-7.5.0-e9898135bd-2807341039.zip/node_modules/express-rate-limit/",\
+          "packageDependencies": [\
+            ["express-rate-limit", "npm:7.5.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:0fe8ae6be068d2f30e6e1c4ad9d0c715db41428fa3e9a2c42a5aa8d93fba288315271172dae737de2f4d34a9b38ebab987b8667f4cbf6aa1a2f33cbd30fb6c1b#npm:7.5.0", {\
+          "packageLocation": "./.yarn/__virtual__/express-rate-limit-virtual-65c8227a84/0/cache/express-rate-limit-npm-7.5.0-e9898135bd-2807341039.zip/node_modules/express-rate-limit/",\
+          "packageDependencies": [\
+            ["express-rate-limit", "virtual:0fe8ae6be068d2f30e6e1c4ad9d0c715db41428fa3e9a2c42a5aa8d93fba288315271172dae737de2f4d34a9b38ebab987b8667f4cbf6aa1a2f33cbd30fb6c1b#npm:7.5.0"],\
+            ["@types/express", "npm:4.17.21"],\
+            ["express", "npm:4.21.2"]\
+          ],\
+          "packagePeers": [\
+            "@types/express",\
+            "express"\
           ],\
           "linkType": "HARD"\
         }]\
