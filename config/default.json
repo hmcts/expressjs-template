@@ -4,11 +4,11 @@
     "instrumentationKey": false
   },
   "security": {
-      "referrerPolicy": "same-origin",
-      "hsts": {
-        "maxAge": 31536000,
-        "includeSubDomains": true,
-        "preload": true
-      }
+    "referrerPolicy": "same-origin",
+    "hsts": {
+      "maxAge": 31536000,
+      "includeSubDomains": true,
+      "preload": true
     }
+  }
 }
