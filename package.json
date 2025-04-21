@@ -23,7 +23,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@hmcts/info-provider": "1.2.1",
+    "@hmcts/info-provider": "1.2.3",
     "@hmcts/nodejs-healthcheck": "1.8.5",
     "@hmcts/nodejs-logging": "4.0.4",
     "@hmcts/properties-volume": "0.0.14",
