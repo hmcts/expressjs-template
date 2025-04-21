@@ -1779,13 +1779,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hmcts/info-provider@npm:1.2.1":
-  version: 1.2.1
-  resolution: "@hmcts/info-provider@npm:1.2.1"
+"@hmcts/info-provider@npm:1.2.3":
+  version: 1.2.3
+  resolution: "@hmcts/info-provider@npm:1.2.3"
   dependencies:
-    express: "npm:^4.19.2"
+    express: "npm:^4.21.2"
     js-yaml: "npm:^4.1.0"
-  checksum: 10/ec2f55f05691f4501846a584c8fe55a614f5213692e5e350e09537a75a4876dd78d684cb229ea0304bdb8298eeacbd0a89e1c6701491e4771a95b71fd42c980a
+  checksum: 10/cc712b89bb7021e2d30e885dd303609b74bcf5f98463651b9078d634e3ca5a0bf94fbf913eab7f9a8002b919e22a989c80dbd542a3d4578d3b154b4b2fc0ba07
   languageName: node
   linkType: hard
 
@@ -6911,7 +6911,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"express@npm:^4.19.2":
+"express@npm:^4.19.2, express@npm:^4.21.2":
   version: 4.21.2
   resolution: "express@npm:4.21.2"
   dependencies:
@@ -12631,7 +12631,7 @@ __metadata:
     "@babel/preset-env": "npm:^7.26.9"
     "@codeceptjs/allure-legacy": "npm:^1.0.2"
     "@codeceptjs/configure": "npm:^0.10.0"
-    "@hmcts/info-provider": "npm:1.2.1"
+    "@hmcts/info-provider": "npm:1.2.3"
     "@hmcts/nodejs-healthcheck": "npm:1.8.5"
     "@hmcts/nodejs-logging": "npm:4.0.4"
     "@hmcts/properties-volume": "npm:0.0.14"
