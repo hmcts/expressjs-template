@@ -39,7 +39,7 @@ const RAW_RUNTIME_STATE =
           ["@types/body-parser", "npm:1.19.2"],\
           ["@types/chai", "npm:5.2.1"],\
           ["@types/chai-as-promised", "npm:7.1.8"],\
-          ["@types/config", "npm:3.3.0"],\
+          ["@types/config", "npm:3.3.5"],\
           ["@types/cookie-parser", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:1.4.8"],\
           ["@types/csurf", "npm:1.11.2"],\
           ["@types/es6-promisify", "npm:6.0.1"],\
@@ -4862,10 +4862,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/config", [\
-      ["npm:3.3.0", {\
-        "packageLocation": "./.yarn/cache/@types-config-npm-3.3.0-bdb6fd80cb-d9485041cf.zip/node_modules/@types/config/",\
+      ["npm:3.3.5", {\
+        "packageLocation": "./.yarn/cache/@types-config-npm-3.3.5-fca7f803c9-6e8595d00e.zip/node_modules/@types/config/",\
         "packageDependencies": [\
-          ["@types/config", "npm:3.3.0"]\
+          ["@types/config", "npm:3.3.5"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -16520,7 +16520,7 @@ const RAW_RUNTIME_STATE =
           ["@types/body-parser", "npm:1.19.2"],\
           ["@types/chai", "npm:5.2.1"],\
           ["@types/chai-as-promised", "npm:7.1.8"],\
-          ["@types/config", "npm:3.3.0"],\
+          ["@types/config", "npm:3.3.5"],\
           ["@types/cookie-parser", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:1.4.8"],\
           ["@types/csurf", "npm:1.11.2"],\
           ["@types/es6-promisify", "npm:6.0.1"],\
