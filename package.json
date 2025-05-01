@@ -49,7 +49,7 @@
     "glob": "10.4.5",
     "govuk-frontend": "^5.9.0",
     "helmet": "6.2.0",
-    "jquery": "3.7.0",
+    "jquery": "3.7.1",
     "lodash": "4.17.21",
     "nunjucks": "3.2.4",
     "postcss": "^8.4.27",
