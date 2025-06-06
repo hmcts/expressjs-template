@@ -51,7 +51,7 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:22.14.1"],\
           ["@types/nunjucks", "npm:3.2.6"],\
           ["@types/pa11y", "npm:5.3.7"],\
-          ["@types/require-directory", "npm:2.1.2"],\
+          ["@types/require-directory", "npm:2.1.6"],\
           ["@types/serve-favicon", "npm:2.5.7"],\
           ["@types/supertest", "npm:6.0.3"],\
           ["@typescript-eslint/eslint-plugin", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:6.21.0"],\
@@ -6128,11 +6128,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/require-directory", [\
-      ["npm:2.1.2", {\
-        "packageLocation": "./.yarn/cache/@types-require-directory-npm-2.1.2-d9ec802680-fa68f3f684.zip/node_modules/@types/require-directory/",\
+      ["npm:2.1.6", {\
+        "packageLocation": "./.yarn/cache/@types-require-directory-npm-2.1.6-fdefe29c4e-7c4a9408e0.zip/node_modules/@types/require-directory/",\
         "packageDependencies": [\
           ["@types/node", "npm:22.14.1"],\
-          ["@types/require-directory", "npm:2.1.2"]\
+          ["@types/require-directory", "npm:2.1.6"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -17495,7 +17495,7 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:22.14.1"],\
           ["@types/nunjucks", "npm:3.2.6"],\
           ["@types/pa11y", "npm:5.3.7"],\
-          ["@types/require-directory", "npm:2.1.2"],\
+          ["@types/require-directory", "npm:2.1.6"],\
           ["@types/serve-favicon", "npm:2.5.7"],\
           ["@types/supertest", "npm:6.0.3"],\
           ["@typescript-eslint/eslint-plugin", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:6.21.0"],\
