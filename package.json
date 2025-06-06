@@ -30,7 +30,7 @@
     "@types/body-parser": "1.19.5",
     "@types/config": "3.3.5",
     "@types/cookie-parser": "1.4.8",
-    "@types/csurf": "1.11.2",
+    "@types/csurf": "1.11.5",
     "@types/es6-promisify": "6.0.1",
     "@types/glob": "8.1.0",
     "@types/helmet": "^4.0.0",

@@ -2811,12 +2811,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/csurf@npm:1.11.2":
-  version: 1.11.2
-  resolution: "@types/csurf@npm:1.11.2"
+"@types/csurf@npm:1.11.5":
+  version: 1.11.5
+  resolution: "@types/csurf@npm:1.11.5"
   dependencies:
     "@types/express-serve-static-core": "npm:*"
-  checksum: 10/1827f6760d43ae12390f0308289f2c40537bbcb19ec854d0c654e3129074edf6108ddab99a06986813b6cf31d4fc9fa34eaa3d418f647edf607d8af4c69d62e7
+  checksum: 10/a51b0f3276a8c88eb986709790c227c5cc4b7d663136ee360edd17ac88df1dab5d8ccf9feed737ee46530243bff11f66ead725c585e417c1ca710d0b0245ded3
   languageName: node
   linkType: hard
 
@@ -12707,7 +12707,7 @@ __metadata:
     "@types/chai-as-promised": "npm:7.1.8"
     "@types/config": "npm:3.3.5"
     "@types/cookie-parser": "npm:1.4.8"
-    "@types/csurf": "npm:1.11.2"
+    "@types/csurf": "npm:1.11.5"
     "@types/es6-promisify": "npm:6.0.1"
     "@types/express": "npm:4.17.21"
     "@types/glob": "npm:8.1.0"
