@@ -41,7 +41,7 @@ const RAW_RUNTIME_STATE =
           ["@types/chai-as-promised", "npm:7.1.8"],\
           ["@types/config", "npm:3.3.5"],\
           ["@types/cookie-parser", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:1.4.8"],\
-          ["@types/csurf", "npm:1.11.2"],\
+          ["@types/csurf", "npm:1.11.5"],\
           ["@types/es6-promisify", "npm:6.0.1"],\
           ["@types/express", "npm:4.17.21"],\
           ["@types/glob", "npm:8.1.0"],\
@@ -4920,10 +4920,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/csurf", [\
-      ["npm:1.11.2", {\
-        "packageLocation": "./.yarn/cache/@types-csurf-npm-1.11.2-6f7a2c557c-1827f6760d.zip/node_modules/@types/csurf/",\
+      ["npm:1.11.5", {\
+        "packageLocation": "./.yarn/cache/@types-csurf-npm-1.11.5-0e124e31ce-a51b0f3276.zip/node_modules/@types/csurf/",\
         "packageDependencies": [\
-          ["@types/csurf", "npm:1.11.2"],\
+          ["@types/csurf", "npm:1.11.5"],\
           ["@types/express-serve-static-core", "npm:5.0.6"]\
         ],\
         "linkType": "HARD"\
@@ -16590,7 +16590,7 @@ const RAW_RUNTIME_STATE =
           ["@types/chai-as-promised", "npm:7.1.8"],\
           ["@types/config", "npm:3.3.5"],\
           ["@types/cookie-parser", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:1.4.8"],\
-          ["@types/csurf", "npm:1.11.2"],\
+          ["@types/csurf", "npm:1.11.5"],\
           ["@types/es6-promisify", "npm:6.0.1"],\
           ["@types/express", "npm:4.17.21"],\
           ["@types/glob", "npm:8.1.0"],\
