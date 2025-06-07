@@ -42,7 +42,7 @@ const RAW_RUNTIME_STATE =
           ["@types/config", "npm:3.3.5"],\
           ["@types/cookie-parser", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:1.4.8"],\
           ["@types/csurf", "npm:1.11.5"],\
-          ["@types/es6-promisify", "npm:6.0.1"],\
+          ["@types/es6-promisify", "npm:6.0.4"],\
           ["@types/express", "npm:4.17.21"],\
           ["@types/glob", "npm:8.1.0"],\
           ["@types/helmet", "npm:4.0.0"],\
@@ -5844,10 +5844,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/es6-promisify", [\
-      ["npm:6.0.1", {\
-        "packageLocation": "./.yarn/cache/@types-es6-promisify-npm-6.0.1-96b96ac7e3-a717113805.zip/node_modules/@types/es6-promisify/",\
+      ["npm:6.0.4", {\
+        "packageLocation": "./.yarn/cache/@types-es6-promisify-npm-6.0.4-31886d2506-1df492c95d.zip/node_modules/@types/es6-promisify/",\
         "packageDependencies": [\
-          ["@types/es6-promisify", "npm:6.0.1"]\
+          ["@types/es6-promisify", "npm:6.0.4"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -17486,7 +17486,7 @@ const RAW_RUNTIME_STATE =
           ["@types/config", "npm:3.3.5"],\
           ["@types/cookie-parser", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:1.4.8"],\
           ["@types/csurf", "npm:1.11.5"],\
-          ["@types/es6-promisify", "npm:6.0.1"],\
+          ["@types/es6-promisify", "npm:6.0.4"],\
           ["@types/express", "npm:4.17.21"],\
           ["@types/glob", "npm:8.1.0"],\
           ["@types/helmet", "npm:4.0.0"],\

@@ -3416,10 +3416,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/es6-promisify@npm:6.0.1":
-  version: 6.0.1
-  resolution: "@types/es6-promisify@npm:6.0.1"
-  checksum: 10/a717113805ed9d35f02f3fdf9a4c00b0589ca32e8a66bd22b950418e21900fda060a5578fa9ad37bd7c62f17ed327bd7570cea5dac522254d720cc1a861ecf12
+"@types/es6-promisify@npm:6.0.4":
+  version: 6.0.4
+  resolution: "@types/es6-promisify@npm:6.0.4"
+  checksum: 10/1df492c95d43eee2f16f5f196d56869c5c44229a35488dced5f47a518cb17532d05407b5046b964fc51fffb94761c9d5206f320a3f816e9a5276ec2edb36dc0e
   languageName: node
   linkType: hard
 
@@ -13288,7 +13288,7 @@ __metadata:
     "@types/config": "npm:3.3.5"
     "@types/cookie-parser": "npm:1.4.8"
     "@types/csurf": "npm:1.11.5"
-    "@types/es6-promisify": "npm:6.0.1"
+    "@types/es6-promisify": "npm:6.0.4"
     "@types/express": "npm:4.17.21"
     "@types/glob": "npm:8.1.0"
     "@types/helmet": "npm:^4.0.0"
