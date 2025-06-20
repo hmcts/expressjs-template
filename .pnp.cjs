@@ -37,7 +37,7 @@ const RAW_RUNTIME_STATE =
           ["@hmcts/nodejs-logging", "npm:4.0.4"],\
           ["@hmcts/properties-volume", "npm:0.0.14"],\
           ["@types/body-parser", "npm:1.19.5"],\
-          ["@types/chai", "npm:5.2.1"],\
+          ["@types/chai", "npm:5.2.2"],\
           ["@types/chai-as-promised", "npm:7.1.8"],\
           ["@types/config", "npm:3.3.5"],\
           ["@types/cookie-parser", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:1.4.8"],\
@@ -5747,10 +5747,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/chai", [\
-      ["npm:5.2.1", {\
-        "packageLocation": "./.yarn/cache/@types-chai-npm-5.2.1-a61ccf4b35-101fcbed19.zip/node_modules/@types/chai/",\
+      ["npm:5.2.2", {\
+        "packageLocation": "./.yarn/cache/@types-chai-npm-5.2.2-175f762512-de425e7b02.zip/node_modules/@types/chai/",\
         "packageDependencies": [\
-          ["@types/chai", "npm:5.2.1"],\
+          ["@types/chai", "npm:5.2.2"],\
           ["@types/deep-eql", "npm:4.0.2"]\
         ],\
         "linkType": "HARD"\
@@ -5760,7 +5760,7 @@ const RAW_RUNTIME_STATE =
       ["npm:7.1.8", {\
         "packageLocation": "./.yarn/cache/@types-chai-as-promised-npm-7.1.8-7c01d80dfb-88e2d42f14.zip/node_modules/@types/chai-as-promised/",\
         "packageDependencies": [\
-          ["@types/chai", "npm:5.2.1"],\
+          ["@types/chai", "npm:5.2.2"],\
           ["@types/chai-as-promised", "npm:7.1.8"]\
         ],\
         "linkType": "HARD"\
@@ -8494,7 +8494,7 @@ const RAW_RUNTIME_STATE =
       ["virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:7.1.2", {\
         "packageLocation": "./.yarn/__virtual__/chai-as-promised-virtual-2ba739a521/0/cache/chai-as-promised-npm-7.1.2-ee0dcf9f07-be372540da.zip/node_modules/chai-as-promised/",\
         "packageDependencies": [\
-          ["@types/chai", "npm:5.2.1"],\
+          ["@types/chai", "npm:5.2.2"],\
           ["chai", "npm:4.3.7"],\
           ["chai-as-promised", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:7.1.2"],\
           ["check-error", "npm:1.0.3"]\
@@ -17632,7 +17632,7 @@ const RAW_RUNTIME_STATE =
           ["@hmcts/nodejs-logging", "npm:4.0.4"],\
           ["@hmcts/properties-volume", "npm:0.0.14"],\
           ["@types/body-parser", "npm:1.19.5"],\
-          ["@types/chai", "npm:5.2.1"],\
+          ["@types/chai", "npm:5.2.2"],\
           ["@types/chai-as-promised", "npm:7.1.8"],\
           ["@types/config", "npm:3.3.5"],\
           ["@types/cookie-parser", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:1.4.8"],\
@@ -18279,7 +18279,7 @@ const RAW_RUNTIME_STATE =
       ["virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.7.0", {\
         "packageLocation": "./.yarn/__virtual__/sinon-chai-virtual-72e42e3ca8/0/cache/sinon-chai-npm-3.7.0-8e6588805e-028853eb8a.zip/node_modules/sinon-chai/",\
         "packageDependencies": [\
-          ["@types/chai", "npm:5.2.1"],\
+          ["@types/chai", "npm:5.2.2"],\
           ["@types/sinon", null],\
           ["chai", "npm:4.3.7"],\
           ["sinon", "npm:15.1.0"],\
