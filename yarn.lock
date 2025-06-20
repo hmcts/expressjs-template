@@ -3465,15 +3465,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/express@npm:4.17.21":
-  version: 4.17.21
-  resolution: "@types/express@npm:4.17.21"
+"@types/express@npm:4.17.23":
+  version: 4.17.23
+  resolution: "@types/express@npm:4.17.23"
   dependencies:
     "@types/body-parser": "npm:*"
     "@types/express-serve-static-core": "npm:^4.17.33"
     "@types/qs": "npm:*"
     "@types/serve-static": "npm:*"
-  checksum: 10/7a6d26cf6f43d3151caf4fec66ea11c9d23166e4f3102edfe45a94170654a54ea08cf3103d26b3928d7ebcc24162c90488e33986b7e3a5f8941225edd5eb18c7
+  checksum: 10/cf4d540bbd90801cdc79a46107b8873404698a7fd0c3e8dd42989d52d3bd7f5b8768672e54c20835e41e27349c319bb47a404ad14c0f8db0e9d055ba1cb8a05b
   languageName: node
   linkType: hard
 
@@ -13401,7 +13401,7 @@ __metadata:
     "@types/cookie-parser": "npm:1.4.8"
     "@types/csurf": "npm:1.11.5"
     "@types/es6-promisify": "npm:6.0.4"
-    "@types/express": "npm:4.17.21"
+    "@types/express": "npm:4.17.23"
     "@types/glob": "npm:8.1.0"
     "@types/helmet": "npm:^4.0.0"
     "@types/jest": "npm:^29.5.14"

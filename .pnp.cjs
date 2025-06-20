@@ -43,7 +43,7 @@ const RAW_RUNTIME_STATE =
           ["@types/cookie-parser", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:1.4.8"],\
           ["@types/csurf", "npm:1.11.5"],\
           ["@types/es6-promisify", "npm:6.0.4"],\
-          ["@types/express", "npm:4.17.21"],\
+          ["@types/express", "npm:4.17.23"],\
           ["@types/glob", "npm:8.1.0"],\
           ["@types/helmet", "npm:4.0.0"],\
           ["@types/jest", "npm:29.5.14"],\
@@ -5797,7 +5797,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@types-cookie-parser-virtual-048ad51fdf/0/cache/@types-cookie-parser-npm-1.4.8-fa95028070-b26ace5560.zip/node_modules/@types/cookie-parser/",\
         "packageDependencies": [\
           ["@types/cookie-parser", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:1.4.8"],\
-          ["@types/express", "npm:4.17.21"]\
+          ["@types/express", "npm:4.17.23"]\
         ],\
         "packagePeers": [\
           "@types/express"\
@@ -5862,11 +5862,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/express", [\
-      ["npm:4.17.21", {\
-        "packageLocation": "./.yarn/cache/@types-express-npm-4.17.21-be92a0245e-7a6d26cf6f.zip/node_modules/@types/express/",\
+      ["npm:4.17.23", {\
+        "packageLocation": "./.yarn/cache/@types-express-npm-4.17.23-63c8c95a13-cf4d540bbd.zip/node_modules/@types/express/",\
         "packageDependencies": [\
           ["@types/body-parser", "npm:1.19.5"],\
-          ["@types/express", "npm:4.17.21"],\
+          ["@types/express", "npm:4.17.23"],\
           ["@types/express-serve-static-core", "npm:4.19.6"],\
           ["@types/qs", "npm:6.9.18"],\
           ["@types/serve-static", "npm:1.15.7"]\
@@ -11068,7 +11068,7 @@ const RAW_RUNTIME_STATE =
       ["virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.1.2", {\
         "packageLocation": "./.yarn/__virtual__/express-nunjucks-virtual-c3738214d8/0/cache/express-nunjucks-npm-3.1.2-3e9cb7ed22-d5c259a26b.zip/node_modules/express-nunjucks/",\
         "packageDependencies": [\
-          ["@types/express", "npm:4.17.21"],\
+          ["@types/express", "npm:4.17.23"],\
           ["@types/nunjucks", "npm:3.2.6"],\
           ["express", "npm:5.1.0"],\
           ["express-nunjucks", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.1.2"],\
@@ -11095,7 +11095,7 @@ const RAW_RUNTIME_STATE =
       ["virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:7.5.0", {\
         "packageLocation": "./.yarn/__virtual__/express-rate-limit-virtual-ea14b6bcdf/0/cache/express-rate-limit-npm-7.5.0-e9898135bd-eff34c83bf.zip/node_modules/express-rate-limit/",\
         "packageDependencies": [\
-          ["@types/express", "npm:4.17.21"],\
+          ["@types/express", "npm:4.17.23"],\
           ["express", "npm:5.1.0"],\
           ["express-rate-limit", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:7.5.0"]\
         ],\
@@ -17638,7 +17638,7 @@ const RAW_RUNTIME_STATE =
           ["@types/cookie-parser", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:1.4.8"],\
           ["@types/csurf", "npm:1.11.5"],\
           ["@types/es6-promisify", "npm:6.0.4"],\
-          ["@types/express", "npm:4.17.21"],\
+          ["@types/express", "npm:4.17.23"],\
           ["@types/glob", "npm:8.1.0"],\
           ["@types/helmet", "npm:4.0.0"],\
           ["@types/jest", "npm:29.5.14"],\
