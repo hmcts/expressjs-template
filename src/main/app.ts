@@ -62,7 +62,7 @@ app.use((req, res) => {
 });
 
 // error handler
-app.use((err: HTTPError, req: express.Request, res: express.Response) => {
+app.use((err: HTTPError, req: express.Request, res: express.Response, _next: express.NextFunction) => {
   logger.error(`${err.stack || err}`);
 
   // set locals, only providing error in development
