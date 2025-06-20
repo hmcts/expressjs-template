@@ -36,7 +36,7 @@ const RAW_RUNTIME_STATE =
           ["@hmcts/nodejs-healthcheck", "npm:1.8.5"],\
           ["@hmcts/nodejs-logging", "npm:4.0.4"],\
           ["@hmcts/properties-volume", "npm:0.0.14"],\
-          ["@types/body-parser", "npm:1.19.5"],\
+          ["@types/body-parser", "npm:1.19.6"],\
           ["@types/chai", "npm:5.2.2"],\
           ["@types/chai-as-promised", "npm:7.1.8"],\
           ["@types/config", "npm:3.3.5"],\
@@ -5740,6 +5740,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@types-body-parser-npm-1.19.5-97fb106976-1e251118c4.zip/node_modules/@types/body-parser/",\
         "packageDependencies": [\
           ["@types/body-parser", "npm:1.19.5"],\
+          ["@types/connect", "npm:3.4.38"],\
+          ["@types/node", "npm:24.0.3"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:1.19.6", {\
+        "packageLocation": "./.yarn/cache/@types-body-parser-npm-1.19.6-363c879d4f-33041e88ea.zip/node_modules/@types/body-parser/",\
+        "packageDependencies": [\
+          ["@types/body-parser", "npm:1.19.6"],\
           ["@types/connect", "npm:3.4.38"],\
           ["@types/node", "npm:24.0.3"]\
         ],\
@@ -17632,7 +17641,7 @@ const RAW_RUNTIME_STATE =
           ["@hmcts/nodejs-healthcheck", "npm:1.8.5"],\
           ["@hmcts/nodejs-logging", "npm:4.0.4"],\
           ["@hmcts/properties-volume", "npm:0.0.14"],\
-          ["@types/body-parser", "npm:1.19.5"],\
+          ["@types/body-parser", "npm:1.19.6"],\
           ["@types/chai", "npm:5.2.2"],\
           ["@types/chai-as-promised", "npm:7.1.8"],\
           ["@types/config", "npm:3.3.5"],\

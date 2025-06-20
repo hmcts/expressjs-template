@@ -27,7 +27,7 @@
     "@hmcts/nodejs-healthcheck": "1.8.5",
     "@hmcts/nodejs-logging": "4.0.4",
     "@hmcts/properties-volume": "0.0.14",
-    "@types/body-parser": "1.19.5",
+    "@types/body-parser": "1.19.6",
     "@types/config": "3.3.5",
     "@types/cookie-parser": "1.4.8",
     "@types/csurf": "1.11.5",
