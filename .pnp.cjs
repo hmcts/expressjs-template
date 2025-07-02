@@ -77,7 +77,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-jest", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:27.9.0"],\
           ["express", "npm:5.1.0"],\
           ["express-nunjucks", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.1.2"],\
-          ["express-rate-limit", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:7.5.0"],\
+          ["express-rate-limit", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:7.5.1"],\
           ["glob", "npm:10.4.5"],\
           ["govuk-frontend", "npm:5.9.0"],\
           ["helmet", "npm:8.1.0"],\
@@ -11102,19 +11102,19 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["express-rate-limit", [\
-      ["npm:7.5.0", {\
-        "packageLocation": "./.yarn/cache/express-rate-limit-npm-7.5.0-e9898135bd-eff34c83bf.zip/node_modules/express-rate-limit/",\
+      ["npm:7.5.1", {\
+        "packageLocation": "./.yarn/cache/express-rate-limit-npm-7.5.1-d29d074dcb-357c339845.zip/node_modules/express-rate-limit/",\
         "packageDependencies": [\
-          ["express-rate-limit", "npm:7.5.0"]\
+          ["express-rate-limit", "npm:7.5.1"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:7.5.0", {\
-        "packageLocation": "./.yarn/__virtual__/express-rate-limit-virtual-ea14b6bcdf/0/cache/express-rate-limit-npm-7.5.0-e9898135bd-eff34c83bf.zip/node_modules/express-rate-limit/",\
+      ["virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:7.5.1", {\
+        "packageLocation": "./.yarn/__virtual__/express-rate-limit-virtual-b5a19d2083/0/cache/express-rate-limit-npm-7.5.1-d29d074dcb-357c339845.zip/node_modules/express-rate-limit/",\
         "packageDependencies": [\
           ["@types/express", "npm:4.17.23"],\
           ["express", "npm:5.1.0"],\
-          ["express-rate-limit", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:7.5.0"]\
+          ["express-rate-limit", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:7.5.1"]\
         ],\
         "packagePeers": [\
           "@types/express",\
@@ -17682,7 +17682,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-jest", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:27.9.0"],\
           ["express", "npm:5.1.0"],\
           ["express-nunjucks", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.1.2"],\
-          ["express-rate-limit", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:7.5.0"],\
+          ["express-rate-limit", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:7.5.1"],\
           ["glob", "npm:10.4.5"],\
           ["govuk-frontend", "npm:5.9.0"],\
           ["helmet", "npm:8.1.0"],\
