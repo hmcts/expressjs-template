@@ -5,3 +5,4 @@ src/main/public/main*.js
 .pnp.*
 src/main/views/govuk
 .yarn/
+catalog-info.yaml
