@@ -10,7 +10,7 @@ metadata:
     jenkins.io/job-full-name: cft:HMCTS_${{ values.product }}/${{ values.destination.repo }}
     github.com/project-slug: '${{ values.destination.owner }}/${{ values.destination.repo }}'
   tags:
-    - java
+    - nodejs
   links:
     - url: https://hmcts-reform.slack.com/app_redirect?channel=${{ values.slack_contact_channel }}
       title: ${{ values.slack_contact_channel }} on Slack
