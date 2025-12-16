@@ -127,5 +127,8 @@
     "**/*": "prettier --write --ignore-unknown",
     "**/*.{js,ts}": "eslint --fix"
   },
+  "resolutions": {
+    "body-parser": "2.2.1"
+  },
   "packageManager": "yarn@4.8.1"
 }
