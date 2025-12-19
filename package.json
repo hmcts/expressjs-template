@@ -23,8 +23,8 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@hmcts/info-provider": "1.2.3",
-    "@hmcts/nodejs-healthcheck": "1.8.5",
+    "@hmcts/info-provider": "^1.2.0",
+    "@hmcts/nodejs-healthcheck": "1.8.6",
     "@hmcts/nodejs-logging": "4.0.4",
     "@hmcts/properties-volume": "0.0.14",
     "@types/body-parser": "1.19.6",
@@ -38,15 +38,15 @@
     "@types/nunjucks": "3.2.6",
     "@types/require-directory": "2.1.6",
     "applicationinsights": "2.7.0",
-    "axios": "1.7.4",
-    "body-parser": "1.20.3",
+    "axios": "1.12.0",
+    "body-parser": "2.2.1",
     "config": "3.3.12",
     "cookie-parser": "1.4.7",
     "csurf": "1.11.0",
     "express": "5.1.0",
     "express-nunjucks": "3.1.2",
     "express-rate-limit": "^7.5.0",
-    "glob": "10.4.5",
+    "glob": "10.5.0",
     "govuk-frontend": "^5.9.0",
     "helmet": "8.1.0",
     "jquery": "3.7.1",
@@ -58,7 +58,7 @@
     "stylelint": "^16.0.0",
     "stylelint-config-standard": "^36.0.0",
     "stylelint-config-standard-scss": "^13.0.0",
-    "superagent": "^10.2.1",
+    "superagent": "^10.2.2",
     "ts-node": "10.9.2",
     "tsconfig-paths": "4.2.0",
     "typescript": "5.0.4"
@@ -126,6 +126,13 @@
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown",
     "**/*.{js,ts}": "eslint --fix"
+  },
+  "resolutions": {
+    "body-parser": "2.2.1",
+    "superagent": "^10.2.2",
+    "form-data": "^4.0.1",
+    "js-yaml": "^4.1.1",
+    "glob": "^10.5.0"
   },
   "packageManager": "yarn@4.8.1"
 }
