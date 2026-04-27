@@ -3807,12 +3807,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/require-directory@npm:2.1.6":
-  version: 2.1.6
-  resolution: "@types/require-directory@npm:2.1.6"
+"@types/require-directory@npm:2.1.7":
+  version: 2.1.7
+  resolution: "@types/require-directory@npm:2.1.7"
   dependencies:
     "@types/node": "npm:*"
-  checksum: 10/7c4a9408e04d106d968a911af913ea4cad6d3c4f17eef7fa7c948835173ce596b24baf36d495575fbd975cb2aaea66de7b660292766ecc3c6168a6f5b897bde9
+  checksum: 10/d4c651171b91a83db968cb062d87545e7c6164a47e0bfb762acd7e84f6fd694a4f40eb7d9437f00ea0255064506600f6cf54c404cd617974dac385adde275943
   languageName: node
   linkType: hard
 
@@ -13346,7 +13346,7 @@ __metadata:
     "@types/node": "npm:^22.14.1"
     "@types/nunjucks": "npm:3.2.6"
     "@types/pa11y": "npm:^5.3.7"
-    "@types/require-directory": "npm:2.1.6"
+    "@types/require-directory": "npm:2.1.7"
     "@types/serve-favicon": "npm:^2.5.7"
     "@types/supertest": "npm:^6.0.3"
     "@typescript-eslint/eslint-plugin": "npm:^6.0.0"
