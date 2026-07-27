@@ -16,6 +16,7 @@ export default defineConfig([
     ignores: [
       '**/dist/**',
       '**/coverage/**',
+      '.yarn/**',
       '.pnp.*',
       'src/main/public/**',
       'src/main/views/govuk/**',
