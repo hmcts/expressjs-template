@@ -12,9 +12,6 @@
     "skipLibCheck": true,
     "lib": ["es2020", "dom", "dom.iterable"]
   },
-  "ts-node": {
-    "files": true
-  },
   "include": ["src/**/*.ts", "playwright.config.ts"],
   "exclude": ["dist", "**/__mocks__/*"]
 }
