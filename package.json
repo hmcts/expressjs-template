@@ -100,9 +100,5 @@
     ],
     "**/*.{css,json,json5,jsonc,yaml,yml,md,mdx,html}": "prettier --write"
   },
-  "resolutions": {
-    "form-data": "^4.0.1",
-    "js-yaml": "^4.1.1"
-  },
   "packageManager": "yarn@4.8.1"
 }
