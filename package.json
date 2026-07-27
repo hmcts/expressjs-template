@@ -35,7 +35,6 @@
   "dependencies": {
     "@hmcts/info-provider": "^1.4.0",
     "@hmcts/nodejs-healthcheck": "1.8.6",
-    "@hmcts/nodejs-logging": "4.0.4",
     "@hmcts/properties-volume": "1.4.1",
     "applicationinsights": "2.7.0",
     "config": "3.3.12",
@@ -44,7 +43,8 @@
     "govuk-frontend": "6.4.0",
     "helmet": "8.1.0",
     "nunjucks": "3.2.4",
-    "serve-favicon": "2.5.1"
+    "serve-favicon": "2.5.1",
+    "winston": "3.19.0"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.12.1",

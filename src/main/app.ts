@@ -1,4 +1,3 @@
-import { Logger } from '@hmcts/nodejs-logging';
 import config from 'config';
 import express from 'express';
 import RateLimit from 'express-rate-limit';
@@ -8,6 +7,7 @@ import { setupDev } from './development';
 import { HTTPError } from './HttpError';
 import { AppInsights } from './modules/appinsights';
 import { Helmet } from './modules/helmet';
+import { getLogger } from './modules/logging';
 import { Nunjucks } from './modules/nunjucks';
 import { PropertiesVolume } from './modules/properties-volume';
 import health from './routes/health';
@@ -25,7 +25,7 @@ const limiter = RateLimit({
 export const app = express();
 app.locals.ENV = env;
 
-const logger = Logger.getLogger('app');
+const logger = getLogger('app');
 
 new PropertiesVolume().enableFor(app);
 new AppInsights().enable();

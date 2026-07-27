@@ -1,13 +1,13 @@
 #!/usr/bin/env node
-import { Logger } from '@hmcts/nodejs-logging';
 import * as fs from 'fs';
 import * as http from 'http';
 import * as https from 'https';
 import * as path from 'path';
 
 import { app } from './app';
+import { getLogger } from './modules/logging';
 
-const logger = Logger.getLogger('server');
+const logger = getLogger('server');
 
 let server: http.Server | https.Server;
 
