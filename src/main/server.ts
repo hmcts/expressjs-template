@@ -5,7 +5,7 @@ import * as path from 'path';
 
 import { app } from './app';
 
-const { Logger } = require('@hmcts/nodejs-logging');
+import { Logger } from '@hmcts/nodejs-logging';
 
 const logger = Logger.getLogger('server');
 

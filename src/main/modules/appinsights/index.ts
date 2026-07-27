@@ -1,17 +1,22 @@
+import * as appInsights from 'applicationinsights';
 import config from 'config';
-
-const appInsights = require('applicationinsights');
 
 export class AppInsights {
   enable(): void {
-    if (config.get('appInsights.instrumentationKey')) {
-      appInsights.setup(config.get('appInsights.instrumentationKey')).setSendLiveMetrics(true).start();
+    const instrumentationKey = config.has('secrets.rpe.AppInsightsInstrumentationKey')
+      ? config.get<string>('secrets.rpe.AppInsightsInstrumentationKey')
+      : config.get<string | false>('appInsights.instrumentationKey');
 
-      appInsights.defaultClient.context.tags[appInsights.defaultClient.context.keys.cloudRole] =
-        'rpe-expressjs-template';
-      appInsights.defaultClient.trackTrace({
-        message: 'App insights activated',
-      });
+    if (!instrumentationKey) {
+      return;
     }
+
+    appInsights.setup(instrumentationKey).setSendLiveMetrics(true).start();
+
+    appInsights.defaultClient.context.tags[appInsights.defaultClient.context.keys.cloudRole] = 'rpe-expressjs-template';
+
+    appInsights.defaultClient.trackTrace({
+      message: 'App insights activated',
+    });
   }
 }

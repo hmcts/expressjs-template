@@ -1,91 +1,75 @@
-import { Server } from 'http';
-import { AddressInfo } from 'net';
+import type { Server } from 'http';
+import type { AddressInfo } from 'net';
 
 import { app } from '../../main/app';
 
-import supertest from 'supertest';
-
-const pa11y = require('pa11y');
+import AxeBuilder from '@axe-core/playwright';
+import { type Browser, chromium } from 'playwright';
 
 let server: Server;
-let port: number;
+let browser: Browser;
+let baseUrl: string;
 
-beforeAll(() => {
+beforeAll(async () => {
   server = app.listen(0);
+
+  await new Promise<void>((resolve, reject) => {
+    server.once('listening', resolve);
+    server.once('error', reject);
+  });
+
   const address = server.address();
-  if (address && typeof address !== 'string') {
-    port = (address as AddressInfo).port;
-  } else {
+
+  if (!address || typeof address === 'string') {
     throw new Error('Server address is not available');
   }
+
+  baseUrl = `http://localhost:${(address as AddressInfo).port}`;
+
+  browser = await chromium.launch({
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  });
 });
 
-afterAll(() => {
-  return server.close();
-});
+afterAll(async () => {
+  await browser.close();
 
-class Pa11yResult {
-  documentTitle: string;
-  pageUrl: string;
-  issues: PallyIssue[];
-  constructor(documentTitle: string, pageUrl: string, issues: PallyIssue[]) {
-    this.documentTitle = documentTitle;
-    this.pageUrl = pageUrl;
-    this.issues = issues;
-  }
-}
-
-class PallyIssue {
-  code: string;
-  context: string;
-  message: string;
-  selector: string;
-  type: string;
-  typeCode: number;
-  constructor(code: string, context: string, message: string, selector: string, type: string, typeCode: number) {
-    this.code = code;
-    this.context = context;
-    this.message = message;
-    this.selector = selector;
-    this.type = type;
-    this.typeCode = typeCode;
-  }
-}
-
-function ensurePageCallWillSucceed(url: string): Promise<void> {
-  return supertest(app)
-    .get(url)
-    .then((res: supertest.Response) => {
-      if (res.status >= 400) {
-        throw new Error(`Call to ${url} failed with status: ${res.status}`);
+  await new Promise<void>((resolve, reject) => {
+    server.close(error => {
+      if (error) {
+        reject(error);
+      } else {
+        resolve();
       }
     });
-}
-
-function runPally(url: string): Promise<Pa11yResult> {
-  const fullUrl = `http://localhost:${port}${url}`;
-  return pa11y(fullUrl, {
-    hideElements: '.govuk-footer__licence-logo, .govuk-header__logotype-crown',
-    timeout: 120000,
-    chromeLaunchConfig: { args: ['--no-sandbox', '--disable-setuid-sandbox'] },
   });
-}
+});
 
-function expectNoErrors(messages: PallyIssue[]): void {
-  const errors = messages.filter(m => m.type === 'error');
-  if (errors.length > 0) {
-    const errorsAsJson = `${JSON.stringify(errors, null, 2)}`;
-    throw new Error(`There are accessibility issues: \n${errorsAsJson}\n`);
-  }
-}
+function testAccessibility(path: string): void {
+  describe(`Page ${path}`, () => {
+    test('should have no automatically detectable accessibility violations', async () => {
+      const context = await browser.newContext();
+      const page = await context.newPage();
 
-function testAccessibility(url: string): void {
-  describe(`Page ${url}`, () => {
-    test('should have no accessibility errors', async () => {
-      await ensurePageCallWillSucceed(url);
-      const result = await runPally(url);
-      expect(result.issues).toEqual(expect.any(Array));
-      expectNoErrors(result.issues);
+      try {
+        const response = await page.goto(`${baseUrl}${path}`, {
+          waitUntil: 'load',
+        });
+
+        expect(response).not.toBeNull();
+        expect(response?.ok()).toBe(true);
+
+        const results = await new AxeBuilder({ page })
+          .exclude('.govuk-footer__licence-logo')
+          .exclude('.govuk-header__logotype-crown')
+          .analyze();
+
+        if (results.violations.length > 0) {
+          throw new Error(`There are accessibility violations:\n${JSON.stringify(results.violations, null, 2)}`);
+        }
+      } finally {
+        await context.close();
+      }
     }, 150000);
   });
 }

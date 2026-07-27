@@ -1,169 +1,357 @@
-# Express application template
+# Express.js application template
 
-## Purpose
+A minimal HMCTS template for building server-rendered frontend applications with Express, TypeScript, Nunjucks and GOV.UK Frontend.
 
-The purpose of this template is to speed up the creation of new [Express](http://expressjs.com/) frontend
-applications within HMCTS and help keep the same development standards across multiple teams.
-If you need to create a new application, you can simply use this one as a starting point and build on top of it.
+The template provides a working application skeleton and a set of development, build, test and deployment conventions. Teams should adapt the sample routes, checks, configuration and documentation for their service.
 
-## What's inside
+## What is included
 
-The template is a working application with a minimal setup. It contains:
+- Express 5 application written in TypeScript
+- Nunjucks views and GOV.UK Frontend assets
+- compiled JavaScript for production execution
+- local HTTPS development
+- Helmet security headers
+- request rate limiting
+- HMCTS health endpoint integration
+- Application Insights and HMCTS logging integration
+- unit, route, accessibility, smoke and functional tests
+- Playwright browser testing
+- Docker and HMCTS pipeline configuration
+- Yarn 4 Plug'n'Play and immutable installs
+- ESLint, Stylelint and Prettier checks
 
-- application skeleton
-- common dependencies
-- Docker setup
-- static analysis set up
-- integration with Travis CI
-- HTTPS set up for development environment
-- CSRF prevention set up
-- Header-based security provided by [Helmet](https://helmetjs.github.io/)
-- basic health endpoint
-- pa11y set up for accessibility testing
-- MIT license and contribution information
+## Requirements
 
-## Setup
+- Node.js 22.11.0 or later
+- Corepack
+- Docker and Docker Compose, when using the container workflow
 
-Located in `./bin/init.sh`. Simply run and follow the explanation how to execute it.
-
-## Getting Started
-
-### Prerequisites
-
-Running the application requires the following tools to be installed in your environment:
-
-- [Node.js](https://nodejs.org/) v12.0.0 or later
-- [yarn](https://yarnpkg.com/)
-- [Docker](https://www.docker.com)
-
-### Running the application
-
-Install dependencies by executing the following command:
+Check the active Node.js version:
 
 ```bash
-yarn install
+node --version
 ```
 
-Bundle:
+Enable Corepack and install the pinned Yarn version:
 
 ```bash
-yarn webpack
+corepack enable
+yarn install --immutable
 ```
 
-Run:
+The repository pins Yarn through the `packageManager` field in `package.json`.
+
+## Running locally
+
+Start the application in development mode:
+
+```bash
+yarn start:dev
+```
+
+The application is available at:
+
+```text
+https://localhost:3100
+```
+
+The development command generates local TLS options before starting the TypeScript server with Nodemon. The locally generated certificate is intended only for development and testing.
+
+Nodemon watches the files under `src/main` and restarts the server when relevant source files change.
+
+## Production-style build and startup
+
+Build the frontend assets and compile the server:
+
+```bash
+yarn build
+```
+
+Start the compiled application:
 
 ```bash
 yarn start
 ```
 
-The applications's home page will be available at http://localhost:3100
+The production process runs:
 
-### Running with Docker
-
-Create docker image:
-
-```bash
-docker-compose build
+```text
+dist/main/server.js
 ```
 
-Run the application by executing the following command:
+TypeScript is compiled during the build and is not executed through `ts-node` in production.
 
-```bash
-docker-compose up
-```
+The build performs the following steps:
 
-This will start the frontend container exposing the application's port
-(set to `3100` in this template app).
+1. removes the previous `dist` directory;
+2. builds minified and fingerprinted frontend assets with Webpack;
+3. compiles the server with TypeScript;
+4. copies the Nunjucks views and public assets into `dist`.
 
-In order to test if the application is up, you can visit https://localhost:3100 in your browser.
-You should get a very basic home page (no styles, etc.).
+## Common commands
 
-## Developing
+| Command                       | Purpose                                                 |
+| ----------------------------- | ------------------------------------------------------- |
+| `yarn start:dev`              | Start the local HTTPS development server with Nodemon   |
+| `yarn build`                  | Build production frontend assets and compile the server |
+| `yarn start`                  | Run the compiled production application                 |
+| `yarn typecheck`              | Type-check the project without emitting files           |
+| `yarn lint`                   | Run Stylelint, ESLint and Prettier checks               |
+| `yarn lint:fix`               | Apply Prettier and ESLint fixes                         |
+| `yarn test`                   | Run the unit tests                                      |
+| `yarn test:routes`            | Run the Express route tests                             |
+| `yarn test:a11y`              | Run automated accessibility tests                       |
+| `yarn test:functional`        | Run the Playwright functional tests                     |
+| `yarn test:functional:headed` | Run Playwright with a visible browser                   |
+| `yarn test:functional:debug`  | Run Playwright in debug mode                            |
+| `yarn test:smoke`             | Run the smoke tests against the local HTTPS application |
+| `yarn test:coverage`          | Run Jest with coverage                                  |
+| `yarn cichecks`               | Run the checks expected before a pull request           |
 
-### Code style
+## Testing
 
-We use [ESLint](https://github.com/typescript-eslint/typescript-eslint)
-alongside [sass-lint](https://github.com/sasstools/sass-lint)
+### Unit tests
 
-Running the linting with auto fix:
-
-```bash
-yarn lint --fix
-```
-
-### Running the tests
-
-This template app uses [Jest](https://jestjs.io//) as the test engine. You can run unit tests by executing
-the following command:
+Unit tests use Jest and are located under `src/test/unit`.
 
 ```bash
 yarn test
 ```
 
-Here's how to run functional tests (the template contains just one sample test):
+The sample unit test exists only to demonstrate the expected structure and should be replaced with tests for the consuming service.
+
+### Route tests
+
+Route tests use Jest and Supertest and are located under `src/test/routes`.
 
 ```bash
 yarn test:routes
 ```
 
-Running accessibility tests:
+Route tests should cover the application responses and middleware behaviour without requiring a browser.
+
+### Accessibility tests
+
+Automated accessibility tests use Axe with Playwright.
 
 ```bash
 yarn test:a11y
 ```
 
-Make sure all the paths in your application are covered by accessibility tests (see [a11y.ts](src/test/a11y/a11y.ts)).
+The template includes a baseline accessibility test for the home page. Services must extend this coverage to include their important user journeys and page states.
 
-### Security
+Automated checks do not replace manual accessibility testing.
 
-#### CSRF prevention
+### Functional tests
 
-[Cross-Site Request Forgery](https://github.com/pillarjs/understanding-csrf) prevention has already been
-set up in this template, at the application level. However, you need to make sure that CSRF token
-is present in every HTML form that requires it. For that purpose you can use the `csrfProtection` macro,
-included in this template app. Your njk file would look like this:
+Functional browser tests use Playwright Test and are located under `src/test/functional`.
 
-```
-{% from "macros/csrf.njk" import csrfProtection %}
-...
-<form ...>
-  ...
-    {{ csrfProtection(csrfToken) }}
-  ...
-</form>
-...
+Install the matching Chromium browser binary after installing or upgrading Playwright:
+
+```bash
+yarn playwright install chromium
 ```
 
-#### Helmet
+Run the functional tests:
 
-This application uses [Helmet](https://helmetjs.github.io/), which adds various security-related HTTP headers
-to the responses. Apart from default Helmet functions, following headers are set:
-
-- [Referrer-Policy](https://helmetjs.github.io/docs/referrer-policy/)
-- [Content-Security-Policy](https://helmetjs.github.io/docs/csp/)
-
-There is a configuration section related with those headers, where you can specify:
-
-- `referrerPolicy` - value of the `Referrer-Policy` header
-
-Here's an example setup:
-
-```json
-    "security": {
-      "referrerPolicy": "origin",
-    }
+```bash
+yarn test:functional
 ```
 
-Make sure you have those values set correctly for your application.
+By default, Playwright starts the local application and waits for its health endpoint before running the tests. When `TEST_URL` is set, Playwright tests that environment instead and does not start a local server.
 
-### Healthcheck
+Examples:
 
-The application exposes a health endpoint (https://localhost:3100/health), created with the use of
-[Nodejs Healthcheck](https://github.com/hmcts/nodejs-healthcheck) library. This endpoint is defined
-in [health.ts](src/main/routes/health.ts) file. Make sure you adjust it correctly in your application.
-In particular, remember to replace the sample check with checks specific to your frontend app,
-e.g. the ones verifying the state of each service it depends on.
+```bash
+TEST_URL=https://example.test yarn test:functional
+TEST_HEADLESS=false yarn test:functional
+TEST_SLOW_MO=250 yarn test:functional
+```
 
-## License
+Functional test reports and failure artefacts are written under `functional-output`.
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+### Smoke tests
+
+The smoke test uses the locally generated certificate as an additional trusted certificate:
+
+```bash
+yarn test:smoke
+```
+
+Smoke-test output is written under `smoke-output`.
+
+### Complete checks
+
+Run the normal pre-pull-request checks with:
+
+```bash
+yarn cichecks
+```
+
+This performs an immutable install, type-checks the project, builds it, runs linting, and executes the unit, route, accessibility and functional tests.
+
+## Project structure
+
+```text
+src/main/
+  assets/       Frontend TypeScript and Sass
+  modules/      Application integrations and middleware
+  public/       Generated and static public assets
+  routes/       Express routes
+  views/        Nunjucks templates
+  server.ts     Server entry point
+
+src/test/
+  a11y/         Automated accessibility tests
+  functional/   Playwright functional tests
+  routes/       Express route tests
+  smoke/        Smoke tests
+  unit/         Unit tests
+```
+
+Generated output is written to:
+
+```text
+dist/
+functional-output/
+smoke-output/
+```
+
+These directories should not be committed.
+
+## Configuration
+
+Runtime configuration uses the [`config`](https://www.npmjs.com/package/config) package.
+
+Default configuration is stored under:
+
+```text
+config/default.json
+```
+
+Services should add environment-specific configuration following HMCTS conventions and must not commit secrets.
+
+Properties mounted into `/mnt/secrets/` can be loaded through the HMCTS properties-volume integration.
+
+## Security
+
+### Security headers
+
+The application uses Helmet to add security-related HTTP headers.
+
+Review the configuration under `config` when creating a service. Content Security Policy and other security controls must reflect the resources and integrations used by that service.
+
+The template also includes request rate limiting. Teams must confirm that its limits and proxy configuration are appropriate for their deployment.
+
+### CSRF protection
+
+CSRF protection is not enabled by this minimal template because the appropriate implementation depends on the application's authentication and session model.
+
+Before adding browser-accessible `POST`, `PUT`, `PATCH` or `DELETE` routes that rely on automatically submitted credentials such as cookies, the service must:
+
+- threat-model the interaction;
+- select the approved HMCTS CSRF pattern for its session model;
+- protect all relevant routes;
+- define any necessary route exemptions explicitly;
+- add tests for valid, missing and invalid tokens.
+
+Do not assume that `SameSite` cookies or authentication through IDAM removes the need to assess CSRF. The frontend remains responsible for protecting requests authenticated through its own browser session or cookies.
+
+### Secrets
+
+Do not commit credentials, private keys or production certificates.
+
+The certificates generated under `src/main/resources/localhost-ssl` are for local development only and should be excluded from Docker build contexts and source control where appropriate.
+
+## Health endpoint
+
+The application exposes:
+
+```text
+https://localhost:3100/health
+```
+
+The endpoint is provided through `@hmcts/nodejs-healthcheck`.
+
+The template health configuration is a starting point. Consuming services must replace or supplement sample checks with checks that reflect their actual dependencies and operational requirements.
+
+Build information should be supplied by the deployment process so the health response can identify the deployed version and commit.
+
+## Logging and telemetry
+
+The template currently includes HMCTS Node.js logging and Application Insights integration.
+
+Consuming services must review:
+
+- log levels and structured fields;
+- sensitive-data redaction;
+- request and correlation identifiers;
+- Application Insights configuration;
+- the current HMCTS observability standard.
+
+Do not log secrets, authentication tokens, session identifiers or sensitive personal information.
+
+## Dependency auditing
+
+Run a production dependency audit with:
+
+```bash
+yarn npm audit --environment production
+```
+
+A clean result is:
+
+```text
+No audit suggestions
+```
+
+Any checked-in audit baseline must be reviewed when dependencies change. Do not retain an exception for a package that is no longer present.
+
+## Docker
+
+Build and run the application with Docker Compose:
+
+```bash
+docker compose build
+docker compose up
+```
+
+The application is exposed on port `3100`.
+
+Verify the health endpoint after startup:
+
+```text
+https://localhost:3100/health
+```
+
+The production container should run the compiled JavaScript from `dist`, not the TypeScript source.
+
+## Creating a service from the template
+
+When adopting this template:
+
+1. replace the package name and application metadata;
+2. replace the sample page, route and tests;
+3. configure service-specific health checks;
+4. review Helmet, rate-limit and proxy settings;
+5. decide the authentication, session and CSRF architecture before adding authenticated state-changing routes;
+6. configure logging, telemetry and redaction;
+7. update Docker, chart and pipeline metadata;
+8. extend accessibility and functional coverage to the service's important journeys;
+9. rewrite this README for the resulting service.
+
+## Contributing
+
+Before opening a pull request:
+
+```bash
+yarn cichecks
+yarn npm audit --environment production
+git diff --check
+```
+
+Keep generated output, local certificates and secrets out of commits.
+
+## Licence
+
+This project is licensed under the MIT Licence. See [LICENSE](LICENSE).

@@ -19,6 +19,19 @@ module.exports = {
     sourceType: 'module',
     project: './tsconfig.eslint.json',
   },
+
+  overrides: [
+    {
+      files: ['**/*.js'],
+      parserOptions: {
+        project: false,
+      },
+      rules: {
+        '@typescript-eslint/no-require-imports': 'off',
+      },
+    },
+  ],
+
   globals: { Atomics: 'readonly', SharedArrayBuffer: 'readonly' },
   rules: {
     '@typescript-eslint/array-type': 'error',

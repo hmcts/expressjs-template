@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports -- development-only modules must be loaded lazily */
 import * as express from 'express';
 
 const setupDev = (app: express.Express, developmentMode: boolean): void => {
@@ -14,4 +15,4 @@ const setupDev = (app: express.Express, developmentMode: boolean): void => {
   }
 };
 
-module.exports = { setupDev };
+export { setupDev };

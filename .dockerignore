@@ -11,6 +11,7 @@
 !.yarnrc.yml
 !.pnp.cjs
 
+!tsconfig.build.json
 !tsconfig.json
 !webpack/**
 !src/main/**
