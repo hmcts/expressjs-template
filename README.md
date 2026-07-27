@@ -49,7 +49,7 @@ yarn start:dev
 
 ## Requirements
 
-- Node.js 22.13.0 or later
+- Node.js 24.18.0 or later
 - Corepack
 - Docker and Docker Compose, when using the container workflow
 
