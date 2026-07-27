@@ -1,6 +1,6 @@
 import config from 'config';
 import express from 'express';
-import RateLimit from 'express-rate-limit';
+import rateLimit from 'express-rate-limit';
 import * as path from 'path';
 
 import { setupDev } from './development';
@@ -17,7 +17,7 @@ import info from './routes/info';
 const env = process.env.NODE_ENV || 'development';
 const developmentMode = env === 'development';
 
-const limiter = RateLimit({
+const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 100, // max 100 requests per windowMs
 });
