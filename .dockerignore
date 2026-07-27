@@ -10,6 +10,7 @@
 !.yarn/**
 !.yarnrc.yml
 !.pnp.cjs
+!.pnp.loader.mjs
 
 !tsconfig.build.json
 !tsconfig.json
