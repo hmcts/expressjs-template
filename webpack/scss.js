@@ -5,8 +5,6 @@ const fileNameSuffix = devMode ? '-dev' : '.[contenthash]';
 const filename = `[name]${fileNameSuffix}.css`;
 
 const miniCss = new MiniCssExtractPlugin({
-  // Options similar to the same options in webpackOptions.output
-  // both options are optional
   filename,
   chunkFilename: '[id].css',
 });
@@ -16,13 +14,7 @@ module.exports = {
     {
       test: /\.scss$/,
       use: [
-        'style-loader',
-        {
-          loader: MiniCssExtractPlugin.loader,
-          options: {
-            esModule: false,
-          },
-        },
+        MiniCssExtractPlugin.loader,
         {
           loader: 'css-loader',
           options: {
