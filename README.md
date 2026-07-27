@@ -20,6 +20,33 @@ The template provides a working application skeleton and a set of development, b
 - Yarn 4 Plug'n'Play and immutable installs
 - ESLint, Stylelint and Prettier checks
 
+## Initialise the service
+
+Run:
+
+```bash
+./bin/init.sh
+```
+
+Enter the application port, product name and component name when prompted.
+
+The script updates the template references, renames the Helm chart and removes files that are only needed by the template.
+
+Check for any remaining template references:
+
+```bash
+git grep -n \
+  -e 'rpe-expressjs-template' \
+  -e 'expressjs-template'
+```
+
+Then install dependencies and run the application:
+
+```bash
+yarn install
+yarn start:dev
+```
+
 ## Requirements
 
 - Node.js 22.11.0 or later
