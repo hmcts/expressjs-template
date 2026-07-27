@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import { Logger } from '@hmcts/nodejs-logging';
 import * as fs from 'fs';
+import * as http from 'http';
 import * as https from 'https';
 import * as path from 'path';
 
@@ -8,7 +9,7 @@ import { app } from './app';
 
 const logger = Logger.getLogger('server');
 
-let httpsServer: https.Server | null = null;
+let server: http.Server | https.Server;
 
 // used by shutdownCheck in readinessChecks
 app.locals.shutdown = false;
@@ -22,29 +23,31 @@ if (app.locals.ENV === 'development') {
     cert: fs.readFileSync(path.join(sslDirectory, 'localhost.crt')),
     key: fs.readFileSync(path.join(sslDirectory, 'localhost.key')),
   };
-  httpsServer = https.createServer(sslOptions, app);
-  httpsServer.listen(port, () => {
+
+  server = https.createServer(sslOptions, app);
+  server.listen(port, () => {
     logger.info(`Application started: https://localhost:${port}`);
   });
 } else {
-  app.listen(port, () => {
+  server = app.listen(port, () => {
     logger.info(`Application started: http://localhost:${port}`);
   });
 }
 
-function gracefulShutdownHandler(signal: string) {
+function gracefulShutdownHandler(signal: NodeJS.Signals): void {
   logger.info(`⚠️ Caught ${signal}, gracefully shutting down. Setting readiness to DOWN`);
-  // stop the server from accepting new connections
+
   app.locals.shutdown = true;
 
   setTimeout(() => {
     logger.info('Shutting down application');
-    // Close server if it's running
-    httpsServer?.close(() => {
-      logger.info('HTTPS server closed');
+
+    server.close(() => {
+      logger.info('Application server closed');
     });
   }, 4000);
 }
 
-process.on('SIGINT', gracefulShutdownHandler);
-process.on('SIGTERM', gracefulShutdownHandler);
+process.on('SIGTERM', () => {
+  gracefulShutdownHandler('SIGTERM');
+});
