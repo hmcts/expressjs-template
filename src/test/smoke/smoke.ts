@@ -1,5 +1,3 @@
-import { expect } from 'chai';
-
 const testUrl = process.env.TEST_URL || 'https://localhost:3100';
 
 describe('Smoke Test', () => {
@@ -9,11 +7,11 @@ describe('Smoke Test', () => {
         signal: AbortSignal.timeout(10_000),
       });
 
-      expect(response.status).to.equal(200);
+      expect(response.status).toBe(200);
 
       const body = await response.text();
 
-      expect(body).to.include('<h1 class="govuk-heading-xl">Default page template</h1>');
+      expect(body).toContain('<h1 class="govuk-heading-xl">Default page template</h1>');
     });
   });
 });
