@@ -29,7 +29,7 @@
     "test:functional:headed": "TEST_HEADLESS=false playwright test --project=chromium",
     "test:functional:debug": "playwright test --project=chromium --debug",
     "cichecks": "yarn install --immutable && yarn typecheck && yarn build && yarn lint && yarn test && yarn test:routes && yarn test:a11y && yarn test:functional",
-    "prepare": "husky install"
+    "postinstall": "node .husky/install.mjs"
   },
   "dependencies": {
     "@hmcts/info-provider": "^1.4.0",
@@ -66,17 +66,17 @@
     "eslint-plugin-simple-import-sort": "^14.0.0",
     "globals": "^17.8.0",
     "html-webpack-plugin": "^5.6.8",
-    "husky": "8.0.3",
+    "husky": "^9.1.7",
     "jest": "^30.4.2",
     "jest-html-reporter": "^4.4.0",
     "jest-util": "^30.4.1",
-    "lint-staged": "13.2.2",
+    "lint-staged": "^17.2.0",
     "mini-css-extract-plugin": "^2.10.2",
     "nodemon": "2.0.22",
     "playwright": "1.60.0",
     "playwright-core": "1.60.0",
     "postcss": "^8.5.23",
-    "prettier": "2.8.8",
+    "prettier": "^3.9.6",
     "sass": "^1.102.0",
     "sass-loader": "^17.0.0",
     "stylelint": "^16.0.0",
@@ -93,8 +93,15 @@
     "webpack-dev-middleware": "^8.1.0"
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown",
-    "**/*.{js,cjs,mjs,ts,cts,mts}": "eslint --fix"
+    "**/*.{js,cjs,mjs,ts,cts,mts}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "**/*.scss": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "**/*.{css,json,json5,jsonc,yaml,yml,md,mdx,html}": "prettier --write"
   },
   "resolutions": {
     "form-data": "^4.0.1",
