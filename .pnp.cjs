@@ -46,7 +46,6 @@ const RAW_RUNTIME_STATE =
           ["config", "npm:3.3.12"],\
           ["copy-webpack-plugin", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:14.0.0"],\
           ["css-loader", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:7.1.4"],\
-          ["debug", "virtual:c6f573225cf467aba23237a2c4d603f765b9d48035f2bb61c372e01179bff3a9dcab795ef6879f6cb3d1e3429172b246d6560b4c2d0c59192a416ea5994cbbff#npm:4.4.3"],\
           ["eslint", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:10.8.0"],\
           ["eslint-config-prettier", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:10.1.8"],\
           ["eslint-plugin-jest", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:29.16.0"],\
@@ -65,7 +64,6 @@ const RAW_RUNTIME_STATE =
           ["mini-css-extract-plugin", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:2.10.2"],\
           ["nodemon", "npm:2.0.22"],\
           ["nunjucks", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.2.4"],\
-          ["playwright", "npm:1.60.0"],\
           ["playwright-core", "npm:1.60.0"],\
           ["postcss", "npm:8.5.23"],\
           ["prettier", "npm:3.9.6"],\
@@ -10441,7 +10439,6 @@ const RAW_RUNTIME_STATE =
           ["config", "npm:3.3.12"],\
           ["copy-webpack-plugin", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:14.0.0"],\
           ["css-loader", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:7.1.4"],\
-          ["debug", "virtual:c6f573225cf467aba23237a2c4d603f765b9d48035f2bb61c372e01179bff3a9dcab795ef6879f6cb3d1e3429172b246d6560b4c2d0c59192a416ea5994cbbff#npm:4.4.3"],\
           ["eslint", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:10.8.0"],\
           ["eslint-config-prettier", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:10.1.8"],\
           ["eslint-plugin-jest", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:29.16.0"],\
@@ -10460,7 +10457,6 @@ const RAW_RUNTIME_STATE =
           ["mini-css-extract-plugin", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:2.10.2"],\
           ["nodemon", "npm:2.0.22"],\
           ["nunjucks", "virtual:5c86d93bc614dcc07528a847be8e69a11d4241faf459870c8d05a1091ebe7795b3662598c52ebf26e4b4ca32b1afcdc5b785498f8d4aecbf706a70c82f8b004d#npm:3.2.4"],\
-          ["playwright", "npm:1.60.0"],\
           ["playwright-core", "npm:1.60.0"],\
           ["postcss", "npm:8.5.23"],\
           ["prettier", "npm:3.9.6"],\
