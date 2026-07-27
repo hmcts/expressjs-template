@@ -3,6 +3,7 @@
   "compilerOptions": {
     "rootDir": "./src/main",
     "outDir": "./dist/main",
+    "types": ["node"],
     "noEmitOnError": true,
     "sourceMap": true
   },
