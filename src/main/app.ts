@@ -1,7 +1,11 @@
+import { Logger } from '@hmcts/nodejs-logging';
+import config from 'config';
+import express from 'express';
+import RateLimit from 'express-rate-limit';
 import * as path from 'path';
 
-import { HTTPError } from './HttpError';
 import { setupDev } from './development';
+import { HTTPError } from './HttpError';
 import { AppInsights } from './modules/appinsights';
 import { Helmet } from './modules/helmet';
 import { Nunjucks } from './modules/nunjucks';
@@ -9,11 +13,6 @@ import { PropertiesVolume } from './modules/properties-volume';
 import health from './routes/health';
 import home from './routes/home';
 import info from './routes/info';
-
-import { Logger } from '@hmcts/nodejs-logging';
-import config from 'config';
-import express from 'express';
-import RateLimit from 'express-rate-limit';
 
 const env = process.env.NODE_ENV || 'development';
 const developmentMode = env === 'development';

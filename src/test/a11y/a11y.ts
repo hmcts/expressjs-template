@@ -1,10 +1,9 @@
+import AxeBuilder from '@axe-core/playwright';
 import type { Server } from 'http';
 import type { AddressInfo } from 'net';
+import { type Browser, chromium } from 'playwright';
 
 import { app } from '../../main/app';
-
-import AxeBuilder from '@axe-core/playwright';
-import { type Browser, chromium } from 'playwright';
 
 let server: Server;
 let browser: Browser;

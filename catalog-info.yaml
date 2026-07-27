@@ -3,8 +3,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: "${{ values.product }}-${{ values.component }}"
-  description: "${{ values.description }}"
+  name: '${{ values.product }}-${{ values.component }}'
+  description: '${{ values.description }}'
   annotations:
     # This should match folder-name/job-name in Jenkins.
     jenkins.io/job-full-name: cft:HMCTS_${{ values.product }}/${{ values.destination.repo }}
@@ -20,7 +20,6 @@ spec:
   system: ${{ values.product }}
   lifecycle: experimental
   owner: ${{ values.owner }}
-
 # Uncomment the below once the project has an API file to link to
 #---
 #

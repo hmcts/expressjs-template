@@ -1,7 +1,7 @@
-import { app as myApp } from '../app';
-
 import * as healthcheck from '@hmcts/nodejs-healthcheck';
 import { Application } from 'express';
+
+import { app as myApp } from '../app';
 
 function shutdownCheck(): boolean {
   return myApp.locals.shutdown;

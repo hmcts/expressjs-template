@@ -1,7 +1,7 @@
-import { app } from '../../main/app';
-
 import { expect } from 'chai';
 import supertest from 'supertest';
+
+import { app } from '../../main/app';
 
 describe('Home page', () => {
   describe('on GET', () => {

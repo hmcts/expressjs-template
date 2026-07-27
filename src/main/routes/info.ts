@@ -1,7 +1,6 @@
-import * as os from 'os';
-
 import { infoRequestHandler } from '@hmcts/info-provider';
 import { Router } from 'express';
+import * as os from 'os';
 
 export default function (app: Router): void {
   app.get(

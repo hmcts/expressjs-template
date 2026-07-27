@@ -1,18 +1,8 @@
-# Build and generated dependency artefacts
-
 dist/
 coverage/
 functional-output/
+smoke-output/
+src/main/public/
 .pnp.*
 .yarn/
-
-# Generated frontend assets
-
-src/main/public/main*
-src/main/views/govuk/
-src/main/views/webpack/css.njk
-src/main/views/webpack/js.njk
-
-# Repository metadata not managed by Prettier
-
-catalog-info.yaml
+node_modules/

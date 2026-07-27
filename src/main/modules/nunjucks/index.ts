@@ -1,7 +1,6 @@
-import * as path from 'path';
-
 import * as express from 'express';
 import * as nunjucks from 'nunjucks';
+import * as path from 'path';
 
 export class Nunjucks {
   constructor(public developmentMode: boolean) {
