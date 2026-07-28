@@ -13,7 +13,6 @@
 
 !tsconfig.build.json
 !tsconfig.json
-!webpack/**
+!vite.config.ts
 !src/main/**
 !config/**
-!webpack.config.js

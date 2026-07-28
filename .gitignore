@@ -21,17 +21,9 @@ node_modules/
 dist/
 *.tsbuildinfo
 
-# Webpack-generated frontend files
-src/main/public/
-src/main/views/govuk/
-src/main/views/webpack/css.njk
-src/main/views/webpack/js.njk
-
 # Test output and coverage
-.nyc_output/
 coverage/
 functional-output/
-mochawesome-report/
 
 # Local development certificates
 src/main/resources/localhost-ssl/
@@ -41,7 +33,6 @@ node-rpm-packaging/
 version
 
 # Tool caches
-.sass-cache/
 .eslintcache
 
 # Logs

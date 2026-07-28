@@ -1,6 +1,5 @@
 dist/
 coverage/
 functional-output/
-src/main/public/
 .yarn/
 node_modules/

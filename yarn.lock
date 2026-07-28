@@ -5865,7 +5865,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.5.16, postcss@npm:^8.5.17":
+"postcss@npm:^8.5.16, postcss@npm:^8.5.17, postcss@npm:^8.5.23":
   version: 8.5.23
   resolution: "postcss@npm:8.5.23"
   dependencies:
@@ -6193,6 +6193,8 @@ __metadata:
     husky: "npm:^9.1.7"
     lint-staged: "npm:^17.2.0"
     nunjucks: "npm:3.2.4"
+    playwright-core: "npm:1.62.0"
+    postcss: "npm:^8.5.23"
     prettier: "npm:^3.9.6"
     sass: "npm:^1.102.0"
     stylelint: "npm:^17.14.1"
