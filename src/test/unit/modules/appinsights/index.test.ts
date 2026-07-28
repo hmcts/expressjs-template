@@ -38,15 +38,27 @@ const configGet = config.get as jest.Mock;
 const setup = appInsights.setup as jest.Mock;
 const trackTrace = appInsights.defaultClient.trackTrace as jest.Mock;
 
+const originalConnectionString = process.env.APPLICATIONINSIGHTS_CONNECTION_STRING;
+
 describe('AppInsights', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+
+    delete process.env.APPLICATIONINSIGHTS_CONNECTION_STRING;
 
     const cloudRoleKey = appInsights.defaultClient.context.keys.cloudRole;
     delete appInsights.defaultClient.context.tags[cloudRoleKey];
   });
 
-  it('does not enable App Insights when no instrumentation key is configured', () => {
+  afterAll(() => {
+    if (originalConnectionString === undefined) {
+      delete process.env.APPLICATIONINSIGHTS_CONNECTION_STRING;
+    } else {
+      process.env.APPLICATIONINSIGHTS_CONNECTION_STRING = originalConnectionString;
+    }
+  });
+
+  it('does not enable App Insights when no connection string is configured', () => {
     configHas.mockReturnValue(false);
     configGet.mockReturnValue(false);
 
@@ -56,14 +68,24 @@ describe('AppInsights', () => {
     expect(trackTrace).not.toHaveBeenCalled();
   });
 
-  it('enables App Insights using the secret instrumentation key', () => {
-    configHas.mockReturnValue(true);
-    configGet.mockReturnValue('secret-instrumentation-key');
+  it('uses the standard environment connection string', () => {
+    process.env.APPLICATIONINSIGHTS_CONNECTION_STRING = 'environment-connection-string';
 
     new AppInsights().enable();
 
-    expect(configGet).toHaveBeenCalledWith('secrets.rpe.AppInsightsInstrumentationKey');
-    expect(setup).toHaveBeenCalledWith('secret-instrumentation-key');
+    expect(configHas).not.toHaveBeenCalled();
+    expect(configGet).not.toHaveBeenCalled();
+    expect(setup).toHaveBeenCalledWith('environment-connection-string');
+  });
+
+  it('uses the Key Vault connection string', () => {
+    configHas.mockReturnValue(true);
+    configGet.mockReturnValue('secret-connection-string');
+
+    new AppInsights().enable();
+
+    expect(configGet).toHaveBeenCalledWith('secrets.rpe.AppInsightsConnectionString');
+    expect(setup).toHaveBeenCalledWith('secret-connection-string');
 
     const setupChain = setup.mock.results[0].value;
 
@@ -78,13 +100,13 @@ describe('AppInsights', () => {
     });
   });
 
-  it('falls back to the standard instrumentation key', () => {
+  it('falls back to the configured connection string', () => {
     configHas.mockReturnValue(false);
-    configGet.mockReturnValue('fallback-instrumentation-key');
+    configGet.mockReturnValue('fallback-connection-string');
 
     new AppInsights().enable();
 
-    expect(configGet).toHaveBeenCalledWith('appInsights.instrumentationKey');
-    expect(setup).toHaveBeenCalledWith('fallback-instrumentation-key');
+    expect(configGet).toHaveBeenCalledWith('appInsights.connectionString');
+    expect(setup).toHaveBeenCalledWith('fallback-connection-string');
   });
 });

@@ -10,6 +10,7 @@ COPY --chown=hmcts:hmcts . .
 # ---- Build image ----
 FROM base AS build
 
+RUN yarn install --immutable
 RUN yarn build:prod
 
 # ---- Runtime image ----
@@ -17,9 +18,10 @@ FROM base AS runtime
 
 ENV NODE_ENV=production
 
+COPY --from=build --chown=hmcts:hmcts $WORKDIR/node_modules ./node_modules
 COPY --from=build --chown=hmcts:hmcts $WORKDIR/dist ./dist
 
 # TODO: expose the right port for your application
 EXPOSE 3100
 
-CMD ["node", "--require=./.pnp.cjs", "--enable-source-maps", "dist/main/server.js"]
+CMD ["node", "--enable-source-maps", "dist/main/server.js"]

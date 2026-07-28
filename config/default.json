@@ -1,6 +1,6 @@
 {
   "appInsights": {
-    "instrumentationKey": false
+    "connectionString": false
   },
   "security": {
     "referrerPolicy": "same-origin",

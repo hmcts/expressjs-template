@@ -3,6 +3,5 @@ coverage/
 functional-output/
 smoke-output/
 src/main/public/
-.pnp.*
 .yarn/
 node_modules/
