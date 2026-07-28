@@ -1,23 +1,24 @@
 import type { Express, NextFunction, Request, RequestHandler, Response } from 'express';
 import * as nunjucks from 'nunjucks';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { Nunjucks } from '../../../../main/modules/nunjucks';
 
-jest.mock('nunjucks', () => ({
-  configure: jest.fn(),
+vi.mock('nunjucks', () => ({
+  configure: vi.fn(),
 }));
 
 describe('Nunjucks', () => {
   beforeEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
-  test.each([true, false])('configures Nunjucks when development mode is %s', developmentMode => {
+  it.each([true, false])('configures Nunjucks when development mode is %s', developmentMode => {
     let middleware: RequestHandler | undefined;
 
     const app = {
-      set: jest.fn(),
-      use: jest.fn((handler: RequestHandler) => {
+      set: vi.fn(),
+      use: vi.fn((handler: RequestHandler) => {
         middleware = handler;
       }),
     } as unknown as Express;
@@ -26,7 +27,7 @@ describe('Nunjucks', () => {
 
     expect(app.set).toHaveBeenCalledWith('view engine', 'njk');
 
-    const configure = jest.mocked(nunjucks.configure);
+    const configure = vi.mocked(nunjucks.configure);
 
     expect(configure).toHaveBeenCalledTimes(1);
 
@@ -53,7 +54,7 @@ describe('Nunjucks', () => {
       locals: {},
     } as Response;
 
-    const next = jest.fn() as NextFunction;
+    const next = vi.fn() as NextFunction;
 
     middleware?.(req, res, next);
 

@@ -205,8 +205,6 @@ The smoke test uses the locally generated certificate as an additional trusted c
 yarn test:smoke
 ```
 
-Smoke-test output is written under `smoke-output`.
-
 ### Complete checks
 
 Run the normal pre-pull-request checks with:
@@ -241,7 +239,6 @@ Generated output is written to:
 ```text
 dist/
 functional-output/
-smoke-output/
 ```
 
 These directories should not be committed.

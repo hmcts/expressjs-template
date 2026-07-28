@@ -1,26 +1,27 @@
 import * as appInsights from 'applicationinsights';
 import config from 'config';
+import { afterAll, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { AppInsights } from '../../../../main/modules/appinsights';
 
-jest.mock('config', () => ({
+vi.mock('config', () => ({
   __esModule: true,
   default: {
-    has: jest.fn(),
-    get: jest.fn(),
+    has: vi.fn(),
+    get: vi.fn(),
   },
 }));
 
-jest.mock('applicationinsights', () => {
+vi.mock('applicationinsights', () => {
   const setupChain = {
-    setSendLiveMetrics: jest.fn(),
-    start: jest.fn(),
+    setSendLiveMetrics: vi.fn(),
+    start: vi.fn(),
   };
 
   setupChain.setSendLiveMetrics.mockReturnValue(setupChain);
 
   return {
-    setup: jest.fn(() => setupChain),
+    setup: vi.fn(() => setupChain),
     defaultClient: {
       context: {
         tags: {},
@@ -28,21 +29,21 @@ jest.mock('applicationinsights', () => {
           cloudRole: 'cloudRole',
         },
       },
-      trackTrace: jest.fn(),
+      trackTrace: vi.fn(),
     },
   };
 });
 
-const configHas = config.has as jest.Mock;
-const configGet = config.get as jest.Mock;
-const setup = appInsights.setup as jest.Mock;
-const trackTrace = appInsights.defaultClient.trackTrace as jest.Mock;
+const configHas = vi.mocked(config.has);
+const configGet = vi.mocked(config.get);
+const setup = vi.mocked(appInsights.setup);
+const trackTrace = vi.mocked(appInsights.defaultClient.trackTrace);
 
 const originalConnectionString = process.env.APPLICATIONINSIGHTS_CONNECTION_STRING;
 
 describe('AppInsights', () => {
   beforeEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
 
     delete process.env.APPLICATIONINSIGHTS_CONNECTION_STRING;
 

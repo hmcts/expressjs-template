@@ -1,7 +1,7 @@
 import js from '@eslint/js';
+import vitest from '@vitest/eslint-plugin';
 import { defineConfig } from 'eslint/config';
 import eslintConfigPrettier from 'eslint-config-prettier/flat';
-import jest from 'eslint-plugin-jest';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
@@ -9,7 +9,7 @@ import tseslint from 'typescript-eslint';
 const sourceFiles = ['**/*.{js,cjs,mjs,ts,cts,mts}'];
 const typescriptFiles = ['**/*.{ts,cts,mts}'];
 const javascriptFiles = ['**/*.{js,cjs}'];
-const testFiles = ['src/test/**/*.{js,ts}'];
+const vitestFiles = ['src/test/unit/**/*.{js,ts}', 'src/test/routes/**/*.{js,ts}', 'src/test/smoke/**/*.{js,ts}'];
 
 export default defineConfig([
   {
@@ -24,7 +24,6 @@ export default defineConfig([
       'src/main/types/**',
       'src/test/config.ts',
       'functional-output/**',
-      'smoke-output/**',
     ],
   },
 
@@ -111,13 +110,13 @@ export default defineConfig([
   },
 
   {
-    ...jest.configs['flat/recommended'],
-    files: testFiles,
+    ...vitest.configs.recommended,
+    files: vitestFiles,
 
     rules: {
-      ...jest.configs['flat/recommended'].rules,
-      'jest/prefer-to-have-length': 'error',
-      'jest/valid-expect': 'off',
+      ...vitest.configs.recommended.rules,
+      'vitest/prefer-to-have-length': 'error',
+      'vitest/valid-expect': 'off',
     },
   },
 ]);

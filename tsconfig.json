@@ -3,7 +3,7 @@
     "module": "Node20",
     "target": "ES2023",
     "lib": ["ES2023", "DOM", "DOM.Iterable"],
-    "types": ["node", "jest"],
+    "types": ["node"],
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
@@ -13,6 +13,6 @@
     "useUnknownInCatchVariables": false,
     "skipLibCheck": true
   },
-  "include": ["src/**/*.ts", "playwright.config.ts"],
+  "include": ["src/**/*.ts", "playwright.config.ts", "vitest.config.ts", "vitest.smoke.config.ts"],
   "exclude": ["dist", "**/__mocks__/*"]
 }

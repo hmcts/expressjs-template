@@ -1,3 +1,5 @@
+import { describe, expect, it } from 'vitest';
+
 import { getLogger } from '../../../../main/modules/logging';
 
 describe('getLogger', () => {

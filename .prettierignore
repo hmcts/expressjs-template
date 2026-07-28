@@ -1,7 +1,6 @@
 dist/
 coverage/
 functional-output/
-smoke-output/
 src/main/public/
 .yarn/
 node_modules/
