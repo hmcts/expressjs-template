@@ -1,4 +1,4 @@
-import * as appInsights from 'applicationinsights';
+import appInsights from 'applicationinsights';
 import config from 'config';
 
 const cloudRoleName = 'rpe-expressjs-template';

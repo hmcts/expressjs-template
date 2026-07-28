@@ -30,7 +30,6 @@ src/main/views/webpack/js.njk
 # Test output and coverage
 .nyc_output/
 coverage/
-smoke-output/
 functional-output/
 mochawesome-report/
 

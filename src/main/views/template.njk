@@ -1,10 +1,14 @@
 {% extends "govuk/template.njk" %}
 
 {% block head %}
-  {% include "webpack/css.njk" %}
+  {% for stylesheet in assets.stylesheets %}
+    <link href="{{ stylesheet }}" rel="stylesheet">
+  {% endfor %}
 {% endblock %}
 
 {% block bodyEnd %}
   {# Run JavaScript at end of the <body>, to avoid blocking the initial render. #}
-  {% include "webpack/js.njk" %}
+  {% for script in assets.scripts %}
+    <script type="module" src="{{ script }}"></script>
+  {% endfor %}
 {% endblock %}

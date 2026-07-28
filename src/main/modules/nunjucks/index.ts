@@ -1,7 +1,8 @@
 import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 import type { Express } from 'express';
-import * as nunjucks from 'nunjucks';
+import nunjucks from 'nunjucks';
 
 export class Nunjucks {
   constructor(public readonly developmentMode: boolean) {}
@@ -9,8 +10,9 @@ export class Nunjucks {
   enableFor(app: Express): void {
     app.set('view engine', 'njk');
 
-    const govukTemplates = join(dirname(require.resolve('govuk-frontend/package.json')), 'dist');
-    const viewsPath = join(__dirname, '..', '..', 'views');
+    const govukPackage = fileURLToPath(import.meta.resolve('govuk-frontend/package.json'));
+    const govukTemplates = join(dirname(govukPackage), 'dist');
+    const viewsPath = join(import.meta.dirname, '..', '..', 'views');
 
     nunjucks.configure([govukTemplates, viewsPath], {
       autoescape: true,

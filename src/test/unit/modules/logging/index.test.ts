@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { getLogger } from '../../../../main/modules/logging';
+import { getLogger } from '../../../../main/modules/logging/index.js';
 
 describe('getLogger', () => {
   it('returns a logger for the requested component', () => {

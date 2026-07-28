@@ -1,8 +1,8 @@
-import * as appInsights from 'applicationinsights';
+import appInsights from 'applicationinsights';
 import config from 'config';
 import { afterAll, beforeEach, describe, expect, it, vi } from 'vitest';
 
-import { AppInsights } from '../../../../main/modules/appinsights';
+import { AppInsights } from '../../../../main/modules/appinsights/index.js';
 
 vi.mock('config', () => ({
   __esModule: true,
@@ -13,23 +13,28 @@ vi.mock('config', () => ({
 }));
 
 vi.mock('applicationinsights', () => {
+  const defaultClient = {
+    context: {
+      tags: {},
+      keys: {
+        cloudRole: 'cloudRole',
+      },
+    },
+    trackTrace: vi.fn(),
+  };
+
   const setupChain = {
     setSendLiveMetrics: vi.fn(),
     start: vi.fn(),
   };
 
   setupChain.setSendLiveMetrics.mockReturnValue(setupChain);
+  setupChain.start.mockReturnValue(setupChain);
 
   return {
-    setup: vi.fn(() => setupChain),
-    defaultClient: {
-      context: {
-        tags: {},
-        keys: {
-          cloudRole: 'cloudRole',
-        },
-      },
-      trackTrace: vi.fn(),
+    default: {
+      setup: vi.fn(() => setupChain),
+      defaultClient,
     },
   };
 });

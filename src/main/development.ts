@@ -1,18 +1,14 @@
-/* eslint-disable @typescript-eslint/no-require-imports -- development-only modules must be loaded lazily */
-import * as express from 'express';
+import type { Express } from 'express';
 
-const setupDev = (app: express.Express, developmentMode: boolean): void => {
-  if (developmentMode) {
-    const webpackDev = require('webpack-dev-middleware');
-    const webpack = require('webpack');
-    const webpackconfig = require('../../webpack.config');
-    const compiler = webpack(webpackconfig);
-    app.use(
-      webpackDev(compiler, {
-        publicPath: '/',
-      })
-    );
-  }
-};
+export async function setupDev(app: Express): Promise<void> {
+  const { createServer } = await import('vite');
 
-export { setupDev };
+  const vite = await createServer({
+    server: {
+      middlewareMode: true,
+    },
+    appType: 'custom',
+  });
+
+  app.use(vite.middlewares);
+}

@@ -8,7 +8,6 @@ import tseslint from 'typescript-eslint';
 
 const sourceFiles = ['**/*.{js,cjs,mjs,ts,cts,mts}'];
 const typescriptFiles = ['**/*.{ts,cts,mts}'];
-const javascriptFiles = ['**/*.{js,cjs}'];
 const vitestFiles = ['src/test/unit/**/*.{js,ts}', 'src/test/routes/**/*.{js,ts}', 'src/test/smoke/**/*.{js,ts}'];
 
 export default defineConfig([
@@ -94,18 +93,6 @@ export default defineConfig([
           argsIgnorePattern: '^_',
         },
       ],
-    },
-  },
-
-  {
-    files: javascriptFiles,
-
-    languageOptions: {
-      sourceType: 'commonjs',
-    },
-
-    rules: {
-      '@typescript-eslint/no-require-imports': 'off',
     },
   },
 
