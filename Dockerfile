@@ -10,7 +10,7 @@ COPY --chown=hmcts:hmcts . .
 # ---- Build image ----
 FROM base AS build
 
-RUN yarn install --immutable
+RUN yarn install --immutable --inline-builds
 RUN yarn build:prod
 
 # ---- Runtime image ----
