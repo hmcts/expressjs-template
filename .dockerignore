@@ -9,6 +9,7 @@
 !version
 !.yarn/**
 !.yarnrc.yml
+!.husky/install.mjs
 
 !tsconfig.build.json
 !tsconfig.json
