@@ -6,6 +6,8 @@ export default defineConfig({
     include: ['src/test/unit/**/*.test.ts', 'src/test/routes/**/*.ts'],
     coverage: {
       provider: 'v8',
+      reporter: ['text', 'lcov'],
+      include: ['src/main/**/*.ts'],
     },
   },
 });

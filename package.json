@@ -22,7 +22,7 @@
     "lint:fix": "eslint . --fix && prettier --write .",
     "test": "vitest run",
     "test:unit": "vitest run src/test/unit",
-    "test:coverage": "vitest run src/test/unit --coverage",
+    "test:coverage": "vitest run --coverage",
     "test:routes": "vitest run src/test/routes",
     "test:a11y": "playwright test --project=accessibility",
     "test:smoke": "NODE_EXTRA_CA_CERTS=src/main/resources/localhost-ssl/localhost.crt vitest run --config vitest.smoke.config.ts",
