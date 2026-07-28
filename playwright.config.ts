@@ -7,7 +7,6 @@ const headless = process.env.TEST_HEADLESS ? process.env.TEST_HEADLESS === 'true
 const slowMo = Number.parseInt(process.env.TEST_SLOW_MO ?? (headless ? '0' : '250'), 10);
 
 export default defineConfig({
-  testDir: './src/test/functional',
   outputDir: './functional-output/functional/results',
 
   timeout: 30_000,
@@ -61,6 +60,14 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
+      testDir: './src/test/functional',
+      use: {
+        ...devices['Desktop Chrome'],
+      },
+    },
+    {
+      name: 'accessibility',
+      testDir: './src/test/a11y',
       use: {
         ...devices['Desktop Chrome'],
       },

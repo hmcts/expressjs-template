@@ -24,7 +24,7 @@
     "test:unit": "jest",
     "test:coverage": "jest --coverage",
     "test:routes": "jest -c jest.routes.config.js",
-    "test:a11y": "jest --detectOpenHandles -c jest.a11y.config.js --maxWorkers 15",
+    "test:a11y": "playwright test --project=accessibility",
     "test:smoke": "NODE_EXTRA_CA_CERTS=src/main/resources/localhost-ssl/localhost.crt jest -c jest.smoke.config.js",
     "test:functional": "playwright test --project=chromium",
     "test:functional:headed": "TEST_HEADLESS=false playwright test --project=chromium",
