@@ -215,8 +215,6 @@ rename_chart
 clean_readme
 check_for_remaining_template_references
 
-git diff --check
-
 rm -- "${SCRIPT_DIR}/init.sh"
 
 echo
