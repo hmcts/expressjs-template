@@ -1,4 +1,3 @@
-```bash
 #!/usr/bin/env bash
 #
 # Initialise a service created from this template.
@@ -79,6 +78,15 @@ readonly new_slug="${product}-${component}"
 readonly old_chart_directory="charts/${old_slug}"
 readonly new_chart_directory="charts/${new_slug}"
 
+# Search only template-owned source files. Vendored/generated package-manager
+# files must not be modified by template replacement.
+readonly -a template_search_paths=(
+  "."
+  ":(exclude)bin/init.sh"
+  ":(exclude).yarn/**"
+  ":(exclude).pnp.*"
+)
+
 printf '\nInitialising service:\n'
 printf '  Port:      %s\n' "${port}"
 printf '  Product:   %s\n' "${product}"
@@ -95,10 +103,9 @@ replace_port() {
       's/(?<![0-9])3100(?![0-9])/$ENV{PORT}/g' \
       "${file}"
   done < <(
-    git grep -Il \
-      -e "${old_port}" \
-      -- . \
-      ':(exclude)bin/init.sh' ||
+    git grep -IlE \
+      -e "(^|[^0-9])${old_port}([^0-9]|$)" \
+      -- "${template_search_paths[@]}" ||
       true
   )
 }
@@ -122,12 +129,11 @@ replace_template_names() {
         }ge
       ' "${file}"
   done < <(
-    git grep -Il \
+    git grep -IlE \
       -e "${old_slug}" \
-      -e "${old_product}" \
       -e "${old_component}" \
-      -- . \
-      ':(exclude)bin/init.sh' ||
+      -e "(^|[^[:alnum:]_])${old_product}([^[:alnum:]_]|$)" \
+      -- "${template_search_paths[@]}" ||
       true
   )
 }
@@ -185,10 +191,12 @@ check_for_remaining_template_references() {
   local remaining_references
 
   remaining_references="$(
-    git grep -In -E \
-      -e "${old_slug}|${old_component}|(^|[^[:alnum:]_])${old_product}([^[:alnum:]_]|$)" \
-      -- . \
-      ':(exclude)bin/init.sh' \
+    git grep -InE \
+      -e "${old_slug}" \
+      -e "${old_component}" \
+      -e "(^|[^[:alnum:]_])${old_product}([^[:alnum:]_]|$)" \
+      -e "(^|[^0-9])${old_port}([^0-9]|$)" \
+      -- "${template_search_paths[@]}" \
       2>/dev/null ||
       true
   )"
@@ -200,11 +208,11 @@ check_for_remaining_template_references() {
   fi
 }
 
+remove_template_workflows
 replace_port
 replace_template_names
 rename_chart
 clean_readme
-remove_template_workflows
 check_for_remaining_template_references
 
 git diff --check
@@ -215,4 +223,3 @@ echo
 echo "Initialisation complete."
 echo
 git status --short
-```
