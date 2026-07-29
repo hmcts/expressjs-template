@@ -45,6 +45,8 @@ function gracefulShutdownHandler(signal: NodeJS.Signals): void {
   }, shutdownDelayMs);
 }
 
-process.on('SIGTERM', () => {
-  gracefulShutdownHandler('SIGTERM');
-});
+for (const signal of ['SIGTERM', 'SIGINT'] as const) {
+  process.once(signal, () => {
+    gracefulShutdownHandler(signal);
+  });
+}
