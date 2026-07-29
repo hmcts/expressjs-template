@@ -2,7 +2,7 @@ import healthcheck from '@hmcts/nodejs-healthcheck';
 import type { Application } from 'express';
 
 function shutdownCheck(app: Application): boolean {
-  return app.locals.shutdown;
+  return app.locals.shutdown === true;
 }
 
 export default function (app: Application): void {

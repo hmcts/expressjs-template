@@ -15,8 +15,8 @@ export interface Assets {
 
 const entryPoint = 'src/main/assets/js/index.ts';
 
-export function getAssets(productionMode: boolean): Assets {
-  if (!productionMode) {
+export function getAssets(isProduction: boolean): Assets {
+  if (!isProduction) {
     return {
       scripts: ['/@vite/client', `/${entryPoint}`],
       stylesheets: [],
