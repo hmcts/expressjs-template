@@ -1,73 +1,77 @@
-import * as path from 'path';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-import { HTTPError } from './HttpError';
-import { AppInsights } from './modules/appinsights';
-import { Helmet } from './modules/helmet';
-import { Nunjucks } from './modules/nunjucks';
-import { PropertiesVolume } from './modules/properties-volume';
+import express, { type Express, type NextFunction, type Request, type Response } from 'express';
+import rateLimit from 'express-rate-limit';
 
-import * as bodyParser from 'body-parser';
-import config = require('config');
-import cookieParser from 'cookie-parser';
-import express from 'express';
-import RateLimit from 'express-rate-limit';
-import { glob } from 'glob';
+import { setupDev } from './development.js';
+import { HttpError } from './http-error.js';
+import { AppInsights } from './modules/appinsights/index.js';
+import { getAssets } from './modules/assets/index.js';
+import { Helmet } from './modules/helmet/index.js';
+import { getLogger } from './modules/logging/index.js';
+import { Nunjucks } from './modules/nunjucks/index.js';
+import { PropertiesVolume } from './modules/properties-volume/index.js';
+import { registerRoutes } from './routes/index.js';
 
-const { setupDev } = require('./development');
+export async function createApp(): Promise<Express> {
+  const env = process.env.NODE_ENV ?? 'development';
+  const developmentMode = env === 'development';
+  const productionMode = env === 'production';
 
-const { Logger } = require('@hmcts/nodejs-logging');
+  const app = express();
+  const logger = getLogger('app');
 
-const env = process.env.NODE_ENV || 'development';
-const developmentMode = env === 'development';
+  app.locals.ENV = env;
+  app.locals.shutdown = false;
+  app.locals.assets = getAssets(productionMode);
 
-const limiter = RateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100, // max 100 requests per windowMs
-});
+  new PropertiesVolume().enableFor(app);
+  new AppInsights().enable();
+  new Nunjucks(developmentMode).enableFor(app);
+  new Helmet(developmentMode).enableFor(app);
 
-export const app = express();
-app.locals.ENV = env;
+  if (developmentMode) {
+    await setupDev(app);
+  }
 
-const logger = Logger.getLogger('app');
+  const govukPackage = fileURLToPath(import.meta.resolve('govuk-frontend/package.json'));
+  const govukAssets = join(dirname(govukPackage), 'dist', 'govuk', 'assets');
 
-new PropertiesVolume().enableFor(app);
-new AppInsights().enable();
-new Nunjucks(developmentMode).enableFor(app);
-// secure the application by adding various HTTP headers to its responses
-new Helmet(config.get('security')).enableFor(app);
+  app.use('/assets/fonts', express.static(join(govukAssets, 'fonts')));
+  app.use('/assets/images', express.static(join(govukAssets, 'images')));
 
-app.get('/favicon.ico', limiter, (req, res) => {
-  res.sendFile(path.join(__dirname, '/public/assets/images/favicon.ico'));
-});
+  const limiter = rateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 100,
+  });
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
-app.use((req, res, next) => {
-  res.setHeader('Cache-Control', 'no-cache, max-age=0, must-revalidate, no-store');
-  next();
-});
+  app.get('/favicon.ico', limiter, (_req, res) => {
+    res.sendFile(join(govukAssets, 'images', 'favicon.ico'));
+  });
 
-glob
-  .sync(__dirname + '/routes/**/*.+(ts|js)')
-  .map(filename => require(filename))
-  .forEach(route => route.default(app));
+  app.use(express.json());
+  app.use(express.urlencoded({ extended: false }));
+  app.use(express.static(join(import.meta.dirname, 'public')));
 
-setupDev(app, developmentMode);
-// returning "not found" page for requests with paths not resolved by the router
-app.use((req, res) => {
-  res.status(404);
-  res.render('not-found');
-});
+  app.use((_req, res, next) => {
+    res.setHeader('Cache-Control', 'no-cache, max-age=0, must-revalidate, no-store');
+    next();
+  });
 
-// error handler
-app.use((err: HTTPError, req: express.Request, res: express.Response, _next: express.NextFunction) => {
-  logger.error(`${err.stack || err}`);
+  registerRoutes(app);
 
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = env === 'development' ? err : {};
-  res.status(err.status || 500);
-  res.render('error');
-});
+  app.use((_req, res) => {
+    res.status(404).render('not-found');
+  });
+
+  app.use((err: HttpError, _req: Request, res: Response, _next: NextFunction) => {
+    logger.error(`${err.stack || err}`);
+
+    res.locals.message = err.message;
+    res.locals.error = developmentMode ? err : {};
+    res.status(err.statusCode || 500).render('error');
+  });
+
+  return app;
+}

@@ -1,17 +1,17 @@
 #!groovy
 
-@Library("Infrastructure")
+@Library('Infrastructure@2.4.3')
 
-def type = "nodejs"
-def product = "rpe"
-def component = "expressjs-template"
+def type = 'nodejs'
+def product = 'rpe'
+def component = 'expressjs-template'
 
 def yarnBuilder = new uk.gov.hmcts.contino.YarnBuilder(this)
 
 withPipeline(type, product, component) {
   afterSuccess('build') {
-    yarnBuilder.yarn('playwright install')
-    yarnBuilder.yarn('rebuild puppeteer')
+    yarnBuilder.yarn('typecheck')
     yarnBuilder.yarn('build')
+    yarnBuilder.yarn('playwright install chromium')
   }
 }

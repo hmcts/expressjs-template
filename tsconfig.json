@@ -1,24 +1,18 @@
 {
   "compilerOptions": {
-    "outDir": "./src/",
-    "module": "commonjs",
+    "module": "NodeNext",
+    "target": "ES2023",
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "types": ["node"],
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "target": "ES2020",
     "strict": true,
-    "noImplicitAny": true,
+    "isolatedModules": true,
     "noImplicitThis": false,
-    "moduleResolution": "node",
     "noUnusedLocals": true,
-    "experimentalDecorators": true,
     "useUnknownInCatchVariables": false,
-    "skipLibCheck": true,
-    "lib": ["es2020", "dom", "dom.iterable"],
-    "baseUrl": "src/main",
-    "paths": {
-      "router/*": ["router/*"],
-      "routes/*": ["routes/*"]
-    }
+    "skipLibCheck": true
   },
-  "exclude": ["**/*.test.ts", "**/codecept.conf.ts", "**/__mocks__/*"]
+  "include": ["src/**/*.ts", "playwright.config.ts", "vitest.config.ts", "vitest.smoke.config.ts"],
+  "exclude": ["dist", "**/__mocks__/*"]
 }

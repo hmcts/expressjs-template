@@ -7,5 +7,5 @@ nodejs:
   #  keyVaults:
   #    rpe:
   #      secrets:
-  #        - AppInsightsInstrumentationKey
+  #        - AppInsightsConnectionString
   environment:

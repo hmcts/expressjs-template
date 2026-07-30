@@ -1,17 +1,18 @@
-import * as path from 'path';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-import * as express from 'express';
-import * as nunjucks from 'nunjucks';
+import type { Express } from 'express';
+import nunjucks from 'nunjucks';
 
 export class Nunjucks {
-  constructor(public developmentMode: boolean) {
-    this.developmentMode = developmentMode;
-  }
+  constructor(public readonly developmentMode: boolean) {}
 
-  enableFor(app: express.Express): void {
+  enableFor(app: Express): void {
     app.set('view engine', 'njk');
-    const govukTemplates = path.dirname(require.resolve('govuk-frontend/package.json')) + '/dist';
-    const viewsPath = path.join(__dirname, '..', '..', 'views');
+
+    const govukPackage = fileURLToPath(import.meta.resolve('govuk-frontend/package.json'));
+    const govukTemplates = join(dirname(govukPackage), 'dist');
+    const viewsPath = join(import.meta.dirname, '..', '..', 'views');
 
     nunjucks.configure([govukTemplates, viewsPath], {
       autoescape: true,

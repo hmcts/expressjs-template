@@ -1,14 +1,14 @@
-import * as os from 'os';
+import { hostname } from 'node:os';
 
 import { infoRequestHandler } from '@hmcts/info-provider';
-import { Router } from 'express';
+import type { Router } from 'express';
 
 export default function (app: Router): void {
   app.get(
     '/info',
     infoRequestHandler({
       extraBuildInfo: {
-        host: os.hostname(),
+        host: hostname(),
         name: 'expressjs-template',
         uptime: process.uptime(),
       },

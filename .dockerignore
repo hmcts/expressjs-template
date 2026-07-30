@@ -9,10 +9,10 @@
 !version
 !.yarn/**
 !.yarnrc.yml
-!.pnp.cjs
+!.husky/install.mjs
 
+!tsconfig.build.json
 !tsconfig.json
-!webpack/**
+!vite.config.ts
 !src/main/**
 !config/**
-!webpack.config.js

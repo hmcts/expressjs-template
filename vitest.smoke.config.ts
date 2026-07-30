@@ -1,0 +1,19 @@
+import { defineConfig } from 'vitest/config';
+
+export default defineConfig({
+  test: {
+    environment: 'node',
+    include: ['src/test/smoke/**/*.test.ts'],
+    testTimeout: 15_000,
+
+    reporters: [
+      'default',
+      [
+        'junit',
+        {
+          outputFile: './smoke-output/smoke-result.xml',
+        },
+      ],
+    ],
+  },
+});

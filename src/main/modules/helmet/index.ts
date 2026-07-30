@@ -1,41 +1,33 @@
-import * as express from 'express';
+import type { Express } from 'express';
 import helmet from 'helmet';
 
 const googleAnalyticsDomain = '*.google-analytics.com';
 const self = "'self'";
+const govukFrontendScriptHash = "'sha256-GUQ5ad8JK5KmEWmROf3LZd9ge94daqNvd8xy9YS1iDw='";
 
-/**
- * Module that enables helmet in the application
- */
 export class Helmet {
-  private readonly developmentMode: boolean;
-  constructor(developmentMode: boolean) {
-    this.developmentMode = developmentMode;
-  }
+  constructor(private readonly developmentMode: boolean) {}
 
-  public enableFor(app: express.Express): void {
-    // include default helmet functions
-    const scriptSrc = [self, googleAnalyticsDomain, "'sha256-+6WnXIl4mbFTCARd8N3COQmT3bJJmo32N8q8ZSQAIcU='"];
+  public enableFor(app: Express): void {
+    const connectSrc = [self];
+    const styleSrc = [self];
 
     if (this.developmentMode) {
-      // Uncaught EvalError: Refused to evaluate a string as JavaScript because 'unsafe-eval'
-      // is not an allowed source of script in the following Content Security Policy directive:
-      // "script-src 'self' *.google-analytics.com 'sha256-+6WnXIl4mbFTCARd8N3COQmT3bJJmo32N8q8ZSQAIcU='".
-      // seems to be related to webpack
-      scriptSrc.push("'unsafe-eval'");
+      connectSrc.push('wss://localhost:*');
+      styleSrc.push("'unsafe-inline'");
     }
 
     app.use(
       helmet({
         contentSecurityPolicy: {
           directives: {
-            connectSrc: [self],
+            connectSrc,
             defaultSrc: ["'none'"],
             fontSrc: [self, 'data:'],
             imgSrc: [self, googleAnalyticsDomain],
             objectSrc: [self],
-            scriptSrc,
-            styleSrc: [self],
+            scriptSrc: [self, googleAnalyticsDomain, govukFrontendScriptHash],
+            styleSrc,
           },
         },
         referrerPolicy: { policy: 'origin' },

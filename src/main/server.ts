@@ -1,51 +1,52 @@
 #!/usr/bin/env node
-import * as fs from 'fs';
-import * as https from 'https';
-import * as path from 'path';
 
-import { app } from './app';
+import { readFileSync } from 'node:fs';
+import { createServer as createHttpServer } from 'node:http';
+import { createServer as createHttpsServer } from 'node:https';
+import { join } from 'node:path';
 
-const { Logger } = require('@hmcts/nodejs-logging');
+import { createApp } from './app.js';
+import { getLogger } from './modules/logging/index.js';
 
-const logger = Logger.getLogger('server');
+const app = await createApp();
+const logger = getLogger('server');
 
-let httpsServer: https.Server | null = null;
+const port = Number.parseInt(process.env.PORT ?? '3100', 10);
+const developmentMode = app.locals.ENV === 'development';
+const shutdownDelayMs = 4_000;
 
-// used by shutdownCheck in readinessChecks
-app.locals.shutdown = false;
+const server = developmentMode
+  ? createHttpsServer(
+      {
+        cert: readFileSync(join(import.meta.dirname, 'resources', 'localhost-ssl', 'localhost.crt')),
+        key: readFileSync(join(import.meta.dirname, 'resources', 'localhost-ssl', 'localhost.key')),
+      },
+      app
+    )
+  : createHttpServer(app);
 
-// TODO: set the right port for your application
-const port: number = parseInt(process.env.PORT || '3100', 10);
+const protocol = developmentMode ? 'https' : 'http';
 
-if (app.locals.ENV === 'development') {
-  const sslDirectory = path.join(__dirname, 'resources', 'localhost-ssl');
-  const sslOptions = {
-    cert: fs.readFileSync(path.join(sslDirectory, 'localhost.crt')),
-    key: fs.readFileSync(path.join(sslDirectory, 'localhost.key')),
-  };
-  httpsServer = https.createServer(sslOptions, app);
-  httpsServer.listen(port, () => {
-    logger.info(`Application started: https://localhost:${port}`);
-  });
-} else {
-  app.listen(port, () => {
-    logger.info(`Application started: http://localhost:${port}`);
-  });
-}
+server.listen(port, () => {
+  logger.info(`Application started: ${protocol}://localhost:${port}`);
+});
 
-function gracefulShutdownHandler(signal: string) {
+function gracefulShutdownHandler(signal: NodeJS.Signals): void {
   logger.info(`⚠️ Caught ${signal}, gracefully shutting down. Setting readiness to DOWN`);
-  // stop the server from accepting new connections
+
   app.locals.shutdown = true;
 
   setTimeout(() => {
     logger.info('Shutting down application');
-    // Close server if it's running
-    httpsServer?.close(() => {
-      logger.info('HTTPS server closed');
+
+    server.close(() => {
+      logger.info('Application server closed');
     });
-  }, 4000);
+  }, shutdownDelayMs);
 }
 
-process.on('SIGINT', gracefulShutdownHandler);
-process.on('SIGTERM', gracefulShutdownHandler);
+for (const signal of ['SIGTERM', 'SIGINT'] as const) {
+  process.once(signal, () => {
+    gracefulShutdownHandler(signal);
+  });
+}

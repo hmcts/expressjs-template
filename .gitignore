@@ -1,40 +1,59 @@
+# Dependencies
 node_modules/
-.nyc_output
-.sass-cache
-*.css
 
+# Yarn-generated state
+#
+# Keep the repository-managed Yarn cache and configuration directories,
+# but ignore machine-specific installation state.
+.yarn/*
+!.yarn/cache/
+!.yarn/cache/**
+!.yarn/patches/
+!.yarn/patches/**
+!.yarn/plugins/
+!.yarn/plugins/**
+!.yarn/releases/
+!.yarn/releases/**
+!.yarn/versions/
+!.yarn/versions/**
+
+# Build artefacts
+dist/
+*.tsbuildinfo
+
+# Test output and coverage
+coverage/
+functional-output/
+smoke-output/
+
+# Local development certificates
+src/main/resources/localhost-ssl/
+
+# Package and deployment output
+node-rpm-packaging/
+version
+
+# Tool caches
+.eslintcache
+
+# Logs
+*.log
+npm-debug.log.*
+yarn-debug.log*
+yarn-error.log*
+
+# IntelliJ IDEA
 .idea/
 *.iml
 
-*swp
-*log
-.DS_Store
-
-src/main/public/img/lib/*
-src/main/public/js/lib/**/*.js
-src/main/public/stylesheets/lib/*
-src/main/resources/localhost-ssl
-
-node-rpm-packaging/
-mochawesome-report/
-npm-debug.log.*
-
+# Eclipse
 .project
 .settings/
-dist/
-public/
-src/main/views/govuk
-coverage/
-smoke-output/
-functional-output/
-version
 
-.eslintcache
+# Editor temporary files
+*.swp
+*.swo
+*~
 
-.yarn/*
-!.yarn/cache/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
+# macOS
+.DS_Store

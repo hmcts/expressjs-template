@@ -1,11 +1,8 @@
-import { app as myApp } from '../app';
+import healthcheck from '@hmcts/nodejs-healthcheck';
+import type { Application } from 'express';
 
-import { Application } from 'express';
-
-const healthcheck = require('@hmcts/nodejs-healthcheck');
-
-function shutdownCheck(): boolean {
-  return myApp.locals.shutdown;
+function shutdownCheck(app: Application): boolean {
+  return app.locals.shutdown === true;
 }
 
 export default function (app: Application): void {
@@ -16,7 +13,7 @@ export default function (app: Application): void {
     },
     readinessChecks: {
       shutdownCheck: healthcheck.raw(() => {
-        return shutdownCheck() ? healthcheck.down() : healthcheck.up();
+        return shutdownCheck(app) ? healthcheck.down() : healthcheck.up();
       }),
     },
   };

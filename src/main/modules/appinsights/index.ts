@@ -1,17 +1,26 @@
+import appInsights from 'applicationinsights';
 import config from 'config';
 
-const appInsights = require('applicationinsights');
+const cloudRoleName = 'rpe-expressjs-template';
 
 export class AppInsights {
   enable(): void {
-    if (config.get('appInsights.instrumentationKey')) {
-      appInsights.setup(config.get('appInsights.instrumentationKey')).setSendLiveMetrics(true).start();
+    const connectionString =
+      process.env.APPLICATIONINSIGHTS_CONNECTION_STRING ||
+      (config.has('secrets.rpe.AppInsightsConnectionString')
+        ? config.get<string>('secrets.rpe.AppInsightsConnectionString')
+        : config.get<string | false>('appInsights.connectionString'));
 
-      appInsights.defaultClient.context.tags[appInsights.defaultClient.context.keys.cloudRole] =
-        'rpe-expressjs-template';
-      appInsights.defaultClient.trackTrace({
-        message: 'App insights activated',
-      });
+    if (!connectionString) {
+      return;
     }
+
+    appInsights.setup(connectionString).setSendLiveMetrics(true).start();
+
+    appInsights.defaultClient.context.tags[appInsights.defaultClient.context.keys.cloudRole] = cloudRoleName;
+
+    appInsights.defaultClient.trackTrace({
+      message: 'App insights activated',
+    });
   }
 }
