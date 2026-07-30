@@ -24,7 +24,7 @@ export default defineConfig({
     [
       'junit',
       {
-        outputFile: './functional-output/functional/reports/playwright-results.xml',
+        outputFile: './functional-output/functional/reports/playwright-result.xml',
       },
     ],
   ],
