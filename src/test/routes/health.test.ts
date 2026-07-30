@@ -10,20 +10,12 @@ describe('Health routes', () => {
     app.locals.shutdown = false;
   });
 
-  test('returns health status', async () => {
-    const response = await supertest(app).get('/health');
-
-    expect(response.status).toBe(200);
-  });
-
-  test('is live', async () => {
-    const response = await supertest(app).get('/health/liveness');
-
-    expect(response.status).toBe(200);
-  });
-
-  test('is ready while the application is running', async () => {
-    const response = await supertest(app).get('/health/readiness');
+  test.each([
+    { route: '/health', behaviour: 'returns health status' },
+    { route: '/health/liveness', behaviour: 'is live' },
+    { route: '/health/readiness', behaviour: 'is ready while the application is running' },
+  ])('$behaviour', async ({ route }) => {
+    const response = await supertest(app).get(route);
 
     expect(response.status).toBe(200);
   });
