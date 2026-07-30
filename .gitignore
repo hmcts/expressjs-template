@@ -24,6 +24,7 @@ dist/
 # Test output and coverage
 coverage/
 functional-output/
+smoke-output/
 
 # Local development certificates
 src/main/resources/localhost-ssl/
