@@ -6186,7 +6186,6 @@ __metadata:
     husky: "npm:9.1.7"
     lint-staged: "npm:17.2.0"
     nunjucks: "npm:3.2.4"
-    playwright-core: "npm:1.62.0"
     postcss: "npm:8.5.23"
     prettier: "npm:3.9.6"
     sass: "npm:1.102.0"
