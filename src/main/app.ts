@@ -5,7 +5,7 @@ import express, { type Express, type NextFunction, type Request, type Response }
 import rateLimit from 'express-rate-limit';
 
 import { setupDev } from './development.js';
-import { HTTPError } from './HttpError.js';
+import { HttpError } from './http-error.js';
 import { AppInsights } from './modules/appinsights/index.js';
 import { getAssets } from './modules/assets/index.js';
 import { Helmet } from './modules/helmet/index.js';
@@ -65,12 +65,12 @@ export async function createApp(): Promise<Express> {
     res.status(404).render('not-found');
   });
 
-  app.use((err: HTTPError, _req: Request, res: Response, _next: NextFunction) => {
+  app.use((err: HttpError, _req: Request, res: Response, _next: NextFunction) => {
     logger.error(`${err.stack || err}`);
 
     res.locals.message = err.message;
     res.locals.error = developmentMode ? err : {};
-    res.status(err.status || 500).render('error');
+    res.status(err.statusCode || 500).render('error');
   });
 
   return app;
