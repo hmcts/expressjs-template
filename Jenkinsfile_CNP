@@ -1,6 +1,6 @@
 #!groovy
 
-@Library('Infrastructure')
+@Library('Infrastructure@2.4.3')
 
 def type = 'nodejs'
 def product = 'rpe'
