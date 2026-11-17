@@ -3565,7 +3565,7 @@ const RAW_RUNTIME_STATE =
           ["ignore", "npm:5.3.2"],\
           ["import-fresh", "npm:3.3.1"],\
           ["js-yaml", "npm:4.3.2"],\
-          ["minimatch", "npm:10.2.6"],\
+          ["minimatch", "npm:11.0.1"],\
           ["strip-json-comments", "npm:3.1.1"]\
         ],\
         "linkType": "HARD"\
@@ -3711,7 +3711,7 @@ const RAW_RUNTIME_STATE =
           ["@humanwhocodes/config-array", "npm:0.13.0"],\
           ["@humanwhocodes/object-schema", "npm:2.0.3"],\
           ["debug", "virtual:66b3390b4eccbfa0e7f88b649ba0bbc12a2944432838d6fddbf862e3ce97448fd27286b33697fdcd278339dcbac4ff595eb84b91eeb93160166752a0fcae7007#npm:4.4.0"],\
-          ["minimatch", "npm:10.2.6"]\
+          ["minimatch", "npm:11.0.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -3771,6 +3771,15 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@isaacs/fs-minipass", "npm:4.0.1"],\
           ["minipass", "npm:7.1.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@isaacs/nonrecursive-glob-match", [\
+      ["npm:1.1.0", {\
+        "packageLocation": "./.yarn/cache/@isaacs-nonrecursive-glob-match-npm-1.1.0-93d6912161-ef0e63803b.zip/node_modules/@isaacs/nonrecursive-glob-match/",\
+        "packageDependencies": [\
+          ["@isaacs/nonrecursive-glob-match", "npm:1.1.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -5467,7 +5476,7 @@ const RAW_RUNTIME_STATE =
           ["debug", "virtual:66b3390b4eccbfa0e7f88b649ba0bbc12a2944432838d6fddbf862e3ce97448fd27286b33697fdcd278339dcbac4ff595eb84b91eeb93160166752a0fcae7007#npm:4.4.0"],\
           ["globby", "npm:11.1.0"],\
           ["is-glob", "npm:4.0.3"],\
-          ["minimatch", "npm:10.2.6"],\
+          ["minimatch", "npm:11.0.1"],\
           ["semver", "npm:7.7.1"],\
           ["ts-api-utils", "virtual:88326ae743654e05e15e92ace6b2f6c4198dec265c25fcb62f41e780e47a315976b2a61f6d94673415a11a24eb50f6d3e9ede4fa2b78c9d140a9662c0e758e26#npm:1.4.3"],\
           ["typescript", "patch:typescript@npm%3A5.0.4#optional!builtin<compat/typescript>::version=5.0.4&hash=b5f058"]\
@@ -5508,7 +5517,7 @@ const RAW_RUNTIME_STATE =
           ["debug", "virtual:66b3390b4eccbfa0e7f88b649ba0bbc12a2944432838d6fddbf862e3ce97448fd27286b33697fdcd278339dcbac4ff595eb84b91eeb93160166752a0fcae7007#npm:4.4.0"],\
           ["globby", "npm:11.1.0"],\
           ["is-glob", "npm:4.0.3"],\
-          ["minimatch", "npm:10.2.6"],\
+          ["minimatch", "npm:11.0.1"],\
           ["semver", "npm:7.7.1"],\
           ["ts-api-utils", "virtual:d44a3cefb1f8a38db5d391e0f3ab56f3e1053d8ef22be0913b60f869394d986eb1615e1a5a3b7414ed60fd976ca20708a094bfdb7a89f5543b8316c44d4bca54#npm:1.4.3"],\
           ["typescript", null]\
@@ -9210,7 +9219,7 @@ const RAW_RUNTIME_STATE =
           ["@one-ini/wasm", "npm:0.1.1"],\
           ["commander", "npm:10.0.1"],\
           ["editorconfig", "npm:1.0.4"],\
-          ["minimatch", "npm:10.2.6"],\
+          ["minimatch", "npm:11.0.1"],\
           ["semver", "npm:7.7.1"]\
         ],\
         "linkType": "HARD"\
@@ -9686,7 +9695,7 @@ const RAW_RUNTIME_STATE =
           ["json-stable-stringify-without-jsonify", "npm:1.0.1"],\
           ["levn", "npm:0.4.1"],\
           ["lodash.merge", "npm:4.6.2"],\
-          ["minimatch", "npm:10.2.6"],\
+          ["minimatch", "npm:11.0.1"],\
           ["natural-compare", "npm:1.4.0"],\
           ["optionator", "npm:0.9.4"],\
           ["strip-ansi", "npm:6.0.1"],\
@@ -9794,7 +9803,7 @@ const RAW_RUNTIME_STATE =
           ["has", "npm:1.0.4"],\
           ["is-core-module", "npm:2.16.1"],\
           ["is-glob", "npm:4.0.3"],\
-          ["minimatch", "npm:10.2.6"],\
+          ["minimatch", "npm:11.0.1"],\
           ["object.values", "npm:1.2.1"],\
           ["resolve", "patch:resolve@npm%3A1.22.10#optional!builtin<compat/resolve>::version=1.22.10&hash=c3c19d"],\
           ["semver", "npm:6.3.1"],\
@@ -10875,7 +10884,7 @@ const RAW_RUNTIME_STATE =
           ["foreground-child", "npm:3.3.1"],\
           ["glob", "npm:12.0.0"],\
           ["jackspeak", "npm:4.2.3"],\
-          ["minimatch", "npm:10.2.6"],\
+          ["minimatch", "npm:11.0.1"],\
           ["minipass", "npm:7.1.2"],\
           ["package-json-from-dist", "npm:1.0.1"],\
           ["path-scurry", "npm:2.0.2"]\
@@ -14040,11 +14049,12 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["minimatch", [\
-      ["npm:10.2.6", {\
-        "packageLocation": "./.yarn/cache/minimatch-npm-10.2.6-fd0d1cf467-a5e43f7c57.zip/node_modules/minimatch/",\
+      ["npm:11.0.1", {\
+        "packageLocation": "./.yarn/cache/minimatch-npm-11.0.1-eb20b95c63-93f7925d97.zip/node_modules/minimatch/",\
         "packageDependencies": [\
+          ["@isaacs/nonrecursive-glob-match", "npm:1.1.0"],\
           ["brace-expansion", "npm:5.0.12"],\
-          ["minimatch", "npm:10.2.6"]\
+          ["minimatch", "npm:11.0.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -14194,7 +14204,7 @@ const RAW_RUNTIME_STATE =
           ["is-path-inside", "npm:3.0.3"],\
           ["js-yaml", "npm:4.3.2"],\
           ["log-symbols", "npm:4.1.0"],\
-          ["minimatch", "npm:10.2.6"],\
+          ["minimatch", "npm:11.0.1"],\
           ["mocha", "npm:11.7.5"],\
           ["ms", "npm:2.1.3"],\
           ["picocolors", "npm:1.1.1"],\
@@ -14504,7 +14514,7 @@ const RAW_RUNTIME_STATE =
           ["chokidar", "npm:3.6.0"],\
           ["debug", "virtual:2e71ccda0bb8e9b150eba16d9555040ae3f5a03be41bbaba1c15a7310399806e2c8e36c9e19d1b8015c6bb7294dccf844594ece9e99a12b6d5722662eca0b9b2#npm:3.2.7"],\
           ["ignore-by-default", "npm:1.0.1"],\
-          ["minimatch", "npm:10.2.6"],\
+          ["minimatch", "npm:11.0.1"],\
           ["nodemon", "npm:2.0.22"],\
           ["pstree.remy", "npm:1.1.8"],\
           ["semver", "npm:5.7.2"],\
@@ -17852,7 +17862,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@istanbuljs/schema", "npm:0.1.3"],\
           ["glob", "npm:12.0.0"],\
-          ["minimatch", "npm:10.2.6"],\
+          ["minimatch", "npm:11.0.1"],\
           ["test-exclude", "npm:6.0.0"]\
         ],\
         "linkType": "HARD"\
