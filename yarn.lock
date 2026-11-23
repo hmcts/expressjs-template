@@ -4607,12 +4607,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"brace-expansion@npm:5.0.12":
-  version: 5.0.12
-  resolution: "brace-expansion@npm:5.0.12"
+"brace-expansion@npm:5.1.0":
+  version: 5.1.0
+  resolution: "brace-expansion@npm:5.1.0"
   dependencies:
     balanced-match: "npm:^4.0.2"
-  checksum: 10/65b550f1836e3b43f512f12afbc3be96616eee5c353e16d70181b7dffec8c08beabffb51d69a3bbdb27d675840725cbab025fda9d10716b5cda7dd864dc7bc4a
+  checksum: 10/60a4caf41000afc451c8e46633a5af354e482e114048094fd2e2b8675496fabb956025bda3228a2b99e38c339e666eb72c3416568440746e0401da6127179ac3
   languageName: node
   linkType: hard
 
