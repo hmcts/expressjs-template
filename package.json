@@ -29,7 +29,7 @@
     "@hmcts/properties-volume": "0.0.14",
     "@types/body-parser": "1.19.6",
     "@types/config": "3.3.5",
-    "@types/cookie-parser": "1.4.9",
+    "@types/cookie-parser": "1.4.10",
     "@types/csurf": "1.11.5",
     "@types/es6-promisify": "6.0.4",
     "@types/glob": "8.1.0",
